@@ -30,6 +30,23 @@ def title(rid: str) -> str:
 
 
 def main() -> int:
+    origin = EXTRACTED / "assets" / "orespawn"
+    if not (origin / "sounds.json").exists():
+        print(
+            f"The extracted original jar is missing.\n"
+            f"  expected: {origin}\n"
+            f"\n"
+            f"This repository ships no textures or sounds. Unpack your own copy of\n"
+            f"orespawn-1.7.10-20.3.jar into reference/jar/extracted/ first:\n"
+            f"\n"
+            f"  mkdir -p reference/jar/extracted\n"
+            f"  cd reference/jar/extracted && unzip /path/to/orespawn-1.7.10-20.3.jar\n"
+            f"\n"
+            f"See README.md, \"Build it yourself\", step 3.",
+            file=sys.stderr,
+        )
+        return 2
+
     manifest = json.loads((ROOT / "docs" / "catalog" / "manifest.json").read_text(encoding="utf-8"))
     problems = []
     for d in OWNED:
