@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EIE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:redstone_block"
+    },
+    "I": {
+      "type": "neoforge:components",
+      "items": "orespawn:ultimateaxe",
+      "components": {
+        "minecraft:damage": 0
+      },
+      "strict": false
+    }
+  },
+  "result": {
+    "id": "orespawn:chainsawsmall"
+  }
+}

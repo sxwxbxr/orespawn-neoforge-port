@@ -1,0 +1,8 @@
+{
+  "type": "orespawn:legacy",
+  "dispatcher": "orespawn:village_dungeon",
+  "biomes": "orespawn:villages",
+  "step": "top_layer_modification",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

@@ -1,0 +1,10352 @@
+[
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:spider_spawn_egg",
+   "meta": 52,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySpiderSpawnBlock",
+    "id": "orespawn:orespider",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2326
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:bat_spawn_egg",
+   "meta": 65,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBatSpawnBlock",
+    "id": "orespawn:orebat",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2329
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:cow_spawn_egg",
+   "meta": 92,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCowSpawnBlock",
+    "id": "orespawn:orecow",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2332
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:pig_spawn_egg",
+   "meta": 90,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyPigSpawnBlock",
+    "id": "orespawn:orepig",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2335
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:squid_spawn_egg",
+   "meta": 94,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySquidSpawnBlock",
+    "id": "orespawn:oresquid",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2338
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:chicken_spawn_egg",
+   "meta": 93,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyChickenSpawnBlock",
+    "id": "orespawn:orechicken",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2341
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:creeper_spawn_egg",
+   "meta": 50,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCreeperSpawnBlock",
+    "id": "orespawn:orecreeper",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2344
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:skeleton_spawn_egg",
+   "meta": 51,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySkeletonSpawnBlock",
+    "id": "orespawn:oreskeleton",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2347
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:zombie_spawn_egg",
+   "meta": 54,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyZombieSpawnBlock",
+    "id": "orespawn:orezombie",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2350
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:slime_spawn_egg",
+   "meta": 55,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySlimeSpawnBlock",
+    "id": "orespawn:oreslime",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2353
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:ghast_spawn_egg",
+   "meta": 56,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGhastSpawnBlock",
+    "id": "orespawn:oreghast",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2356
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:zombified_piglin_spawn_egg",
+   "meta": 57,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyZombiePigmanSpawnBlock",
+    "id": "orespawn:orezombiepigman",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2359
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:enderman_spawn_egg",
+   "meta": 58,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEndermanSpawnBlock",
+    "id": "orespawn:oreenderman",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2362
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:cave_spider_spawn_egg",
+   "meta": 59,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCaveSpiderSpawnBlock",
+    "id": "orespawn:orecavespider",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2365
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:silverfish_spawn_egg",
+   "meta": 60,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySilverfishSpawnBlock",
+    "id": "orespawn:oresilverfish",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2368
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:magma_cube_spawn_egg",
+   "meta": 62,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyMagmaCubeSpawnBlock",
+    "id": "orespawn:oremagmacube",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2371
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:witch_spawn_egg",
+   "meta": 66,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyWitchSpawnBlock",
+    "id": "orespawn:orewitch",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2374
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:sheep_spawn_egg",
+   "meta": 91,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySheepSpawnBlock",
+    "id": "orespawn:oresheep",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2377
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:wolf_spawn_egg",
+   "meta": 95,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyWolfSpawnBlock",
+    "id": "orespawn:orewolf",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2380
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:mooshroom_spawn_egg",
+   "meta": 96,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyMooshroomSpawnBlock",
+    "id": "orespawn:oremooshroom",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2383
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:ocelot_spawn_egg",
+   "meta": 98,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyOcelotSpawnBlock",
+    "id": "orespawn:oreocelot",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2386
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:blaze_spawn_egg",
+   "meta": 61,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBlazeSpawnBlock",
+    "id": "orespawn:oreblaze",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2389
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "WitherSkeletonEgg",
+   "id": "orespawn:eggwitherskeleton",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyWitherSkeletonSpawnBlock",
+    "id": "orespawn:orewitherskeleton",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2392
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "EnderDragonEgg",
+   "id": "orespawn:eggenderdragon",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEnderDragonSpawnBlock",
+    "id": "orespawn:oreenderdragon",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2395
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SnowGolemEgg",
+   "id": "orespawn:eggsnowgolem",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySnowGolemSpawnBlock",
+    "id": "orespawn:oresnowgolem",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2398
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "IronGolemEgg",
+   "id": "orespawn:eggirongolem",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyIronGolemSpawnBlock",
+    "id": "orespawn:oreirongolem",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2401
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "WitherBossEgg",
+   "id": "orespawn:eggwitherboss",
+   "meta": 64,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyWitherBossSpawnBlock",
+    "id": "orespawn:orewitherboss",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2404
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "GirlfriendEgg",
+   "id": "orespawn:egggirlfriend",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGirlfriendSpawnBlock",
+    "id": "orespawn:oregirlfriend",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2407
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BoyfriendEgg",
+   "id": "orespawn:eggboyfriend",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBoyfriendSpawnBlock",
+    "id": "orespawn:oreboyfriend",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2410
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "RedCowEgg",
+   "id": "orespawn:eggredcow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyRedCowSpawnBlock",
+    "id": "orespawn:oreredcow",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2413
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CrystalCowEgg",
+   "id": "orespawn:eggcrystalcow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCrystalCowSpawnBlock",
+    "id": "orespawn:orecrystalcow",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2416
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:villager_spawn_egg",
+   "meta": 120,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyVillagerSpawnBlock",
+    "id": "orespawn:orevillager",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2419
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "GoldCowEgg",
+   "id": "orespawn:egggoldcow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGoldCowSpawnBlock",
+    "id": "orespawn:oregoldcow",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2422
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "EnchantedCowEgg",
+   "id": "orespawn:eggenchantedcow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEnchantedCowSpawnBlock",
+    "id": "orespawn:oreenchantedcow",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2425
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MOTHRAEgg",
+   "id": "orespawn:eggmothra",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyMOTHRASpawnBlock",
+    "id": "orespawn:oremothra",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2428
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "AloEgg",
+   "id": "orespawn:eggalosaurus",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyAloSpawnBlock",
+    "id": "orespawn:orealosaurus",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2431
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CryoEgg",
+   "id": "orespawn:eggcryolophosaurus",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCryoSpawnBlock",
+    "id": "orespawn:orecryolophosaurus",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2434
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CamaEgg",
+   "id": "orespawn:eggcamarasaurus",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCamaSpawnBlock",
+    "id": "orespawn:orecamarasaurus",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2437
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "VeloEgg",
+   "id": "orespawn:eggvelocityraptor",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyVeloSpawnBlock",
+    "id": "orespawn:orevelocityraptor",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2440
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "HydroEgg",
+   "id": "orespawn:egghydrolisc",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyHydroSpawnBlock",
+    "id": "orespawn:orehydrolisc",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2443
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BasilEgg",
+   "id": "orespawn:eggbasilisc",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBasilSpawnBlock",
+    "id": "orespawn:orebasilisc",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2446
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "DragonflyEgg",
+   "id": "orespawn:eggdragonfly",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyDragonflySpawnBlock",
+    "id": "orespawn:oredragonfly",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2449
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "EmperorScorpionEgg",
+   "id": "orespawn:eggemperorscorpion",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEmperorScorpionSpawnBlock",
+    "id": "orespawn:oreemperorscorpion",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2452
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ScorpionEgg",
+   "id": "orespawn:eggscorpion",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyScorpionSpawnBlock",
+    "id": "orespawn:orescorpion",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2455
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CaveFisherEgg",
+   "id": "orespawn:eggcavefisher",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCaveFisherSpawnBlock",
+    "id": "orespawn:orecavefisher",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2458
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SpyroEgg",
+   "id": "orespawn:eggspyro",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySpyroSpawnBlock",
+    "id": "orespawn:orespyro",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2461
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BaryonyxEgg",
+   "id": "orespawn:eggbaryonyx",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBaryonyxSpawnBlock",
+    "id": "orespawn:orebaryonyx",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2464
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "GammaMetroidEgg",
+   "id": "orespawn:egggammametroid",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGammaMetroidSpawnBlock",
+    "id": "orespawn:oregammametroid",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2467
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CockateilEgg",
+   "id": "orespawn:eggcockateil",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCockateilSpawnBlock",
+    "id": "orespawn:orecockateil",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2470
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "KyuubiEgg",
+   "id": "orespawn:eggkyuubi",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyKyuubiSpawnBlock",
+    "id": "orespawn:orekyuubi",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2473
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "AlienEgg",
+   "id": "orespawn:eggalien",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyAlienSpawnBlock",
+    "id": "orespawn:orealien",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2476
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "AttackSquidEgg",
+   "id": "orespawn:eggattacksquid",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyAttackSquidSpawnBlock",
+    "id": "orespawn:oreattacksquid",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2479
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "WaterDragonEgg",
+   "id": "orespawn:eggwaterdragon",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyWaterDragonSpawnBlock",
+    "id": "orespawn:orewaterdragon",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2482
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "KrakenEgg",
+   "id": "orespawn:eggkraken",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyKrakenSpawnBlock",
+    "id": "orespawn:orekraken",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2485
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "LizardEgg",
+   "id": "orespawn:egglizard",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyLizardSpawnBlock",
+    "id": "orespawn:orelizard",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2488
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CephadromeEgg",
+   "id": "orespawn:eggcephadrome",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCephadromeSpawnBlock",
+    "id": "orespawn:orecephadrome",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2491
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "DragonEgg",
+   "id": "orespawn:eggdragon",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyDragonSpawnBlock",
+    "id": "orespawn:oredragon",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2494
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BeeEgg",
+   "id": "orespawn:eggbee",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBeeSpawnBlock",
+    "id": "orespawn:orebee",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2497
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.spawn_egg",
+   "id": "minecraft:horse_spawn_egg",
+   "meta": 100,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyHorseSpawnBlock",
+    "id": "orespawn:orehorse",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2500
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TrooperBugEgg",
+   "id": "orespawn:eggtrooper",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTrooperBugSpawnBlock",
+    "id": "orespawn:oretrooper",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2503
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SpitBugEgg",
+   "id": "orespawn:eggspit",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySpitBugSpawnBlock",
+    "id": "orespawn:orespit",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2506
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "StinkBugEgg",
+   "id": "orespawn:eggstink",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyStinkBugSpawnBlock",
+    "id": "orespawn:orestink",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2509
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "OstrichEgg",
+   "id": "orespawn:eggostrich",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyOstrichSpawnBlock",
+    "id": "orespawn:oreostrich",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2512
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "GazelleEgg",
+   "id": "orespawn:egggazelle",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGazelleSpawnBlock",
+    "id": "orespawn:oregazelle",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2515
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ChipmunkEgg",
+   "id": "orespawn:eggchipmunk",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyChipmunkSpawnBlock",
+    "id": "orespawn:orechipmunk",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2518
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CreepingHorrorEgg",
+   "id": "orespawn:eggcreepinghorror",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCreepingHorrorSpawnBlock",
+    "id": "orespawn:orecreepinghorror",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2521
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TerribleTerrorEgg",
+   "id": "orespawn:eggterribleterror",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTerribleTerrorSpawnBlock",
+    "id": "orespawn:oreterribleterror",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2524
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CliffRacerEgg",
+   "id": "orespawn:eggcliffracer",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCliffRacerSpawnBlock",
+    "id": "orespawn:orecliffracer",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2527
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TriffidEgg",
+   "id": "orespawn:eggtriffid",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTriffidSpawnBlock",
+    "id": "orespawn:oretriffid",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2530
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "PitchBlackEgg",
+   "id": "orespawn:eggnightmare",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyPitchBlackSpawnBlock",
+    "id": "orespawn:orenightmare",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2533
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "LurkingTerrorEgg",
+   "id": "orespawn:egglurkingterror",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyLurkingTerrorSpawnBlock",
+    "id": "orespawn:orelurkingterror",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2536
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "EnderKnightEgg",
+   "id": "orespawn:eggenderknight",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEnderKnightSpawnBlock",
+    "id": "orespawn:oreenderknight",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2539
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "EnderReaperEgg",
+   "id": "orespawn:eggenderreaper",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEnderReaperSpawnBlock",
+    "id": "orespawn:oreenderreaper",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2542
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyGodzillaSpawnBlock",
+   "id": "orespawn:oregodzilla",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaPartSpawnBlock",
+    "id": "orespawn:oregodzillapart",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2545
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "GodzillaEgg",
+   "id": "orespawn:egggodzilla",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGodzillaSpawnBlock",
+    "id": "orespawn:oregodzilla",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2548
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyTheKingSpawnBlock",
+   "id": "orespawn:oretheking",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingPartSpawnBlock",
+    "id": "orespawn:orethekingpart",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2551
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TheKingEgg",
+   "id": "orespawn:eggtheking",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTheKingSpawnBlock",
+    "id": "orespawn:oretheking",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2554
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyTheQueenSpawnBlock",
+   "id": "orespawn:orethequeen",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenPartSpawnBlock",
+    "id": "orespawn:orethequeenpart",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2557
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TheQueenEgg",
+   "id": "orespawn:eggthequeen",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTheQueenSpawnBlock",
+    "id": "orespawn:orethequeen",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2560
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SmallWormEgg",
+   "id": "orespawn:eggsmallworm",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySmallWormSpawnBlock",
+    "id": "orespawn:oresmallworm",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2563
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MediumWormEgg",
+   "id": "orespawn:eggmediumworm",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyMediumWormSpawnBlock",
+    "id": "orespawn:oremediumworm",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2566
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "LargeWormEgg",
+   "id": "orespawn:egglargeworm",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyLargeWormSpawnBlock",
+    "id": "orespawn:orelargeworm",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2569
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CassowaryEgg",
+   "id": "orespawn:eggcassowary",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCassowarySpawnBlock",
+    "id": "orespawn:orecassowary",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2572
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CloudSharkEgg",
+   "id": "orespawn:eggcloudshark",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCloudSharkSpawnBlock",
+    "id": "orespawn:orecloudshark",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2575
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "GoldFishEgg",
+   "id": "orespawn:egggoldfish",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyGoldFishSpawnBlock",
+    "id": "orespawn:oregoldfish",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2578
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "LeafMonsterEgg",
+   "id": "orespawn:eggleafmonster",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyLeafMonsterSpawnBlock",
+    "id": "orespawn:oreleafmonster",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2581
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TshirtEgg",
+   "id": "orespawn:eggtshirt",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTshirtSpawnBlock",
+    "id": "orespawn:oretshirt",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2584
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BeaverEgg",
+   "id": "orespawn:eggbeaver",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBeaverSpawnBlock",
+    "id": "orespawn:orebeaver",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2587
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "UrchinEgg",
+   "id": "orespawn:eggurchin",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyUrchinSpawnBlock",
+    "id": "orespawn:oreurchin",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2590
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "FlounderEgg",
+   "id": "orespawn:eggflounder",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyFlounderSpawnBlock",
+    "id": "orespawn:oreflounder",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2593
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SkateEgg",
+   "id": "orespawn:eggskate",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySkateSpawnBlock",
+    "id": "orespawn:oreskate",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2596
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "RotatorEgg",
+   "id": "orespawn:eggrotator",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyRotatorSpawnBlock",
+    "id": "orespawn:orerotator",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2599
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "PeacockEgg",
+   "id": "orespawn:eggpeacock",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyPeacockSpawnBlock",
+    "id": "orespawn:orepeacock",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2602
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "FairyEgg",
+   "id": "orespawn:eggfairy",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyFairySpawnBlock",
+    "id": "orespawn:orefairy",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2605
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "DungeonBeastEgg",
+   "id": "orespawn:eggdungeonbeast",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyDungeonBeastSpawnBlock",
+    "id": "orespawn:oredungeonbeast",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2608
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "VortexEgg",
+   "id": "orespawn:eggvortex",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyVortexSpawnBlock",
+    "id": "orespawn:orevortex",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2611
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "RatEgg",
+   "id": "orespawn:eggrat",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyRatSpawnBlock",
+    "id": "orespawn:orerat",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2614
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "WhaleEgg",
+   "id": "orespawn:eggwhale",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyWhaleSpawnBlock",
+    "id": "orespawn:orewhale",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2617
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "IrukandjiEgg",
+   "id": "orespawn:eggirukandji",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyIrukandjiSpawnBlock",
+    "id": "orespawn:oreirukandji",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2620
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TRexEgg",
+   "id": "orespawn:eggtrex",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyTRexSpawnBlock",
+    "id": "orespawn:oretrex",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2623
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "HerculesEgg",
+   "id": "orespawn:egghercules",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyHerculesSpawnBlock",
+    "id": "orespawn:orehercules",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2626
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MantisEgg",
+   "id": "orespawn:eggmantis",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyMantisSpawnBlock",
+    "id": "orespawn:oremantis",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2629
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "StinkyEgg",
+   "id": "orespawn:eggstinky",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyStinkySpawnBlock",
+    "id": "orespawn:orestinky",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2632
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "EasterBunnyEgg",
+   "id": "orespawn:eggeasterbunny",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyEasterBunnySpawnBlock",
+    "id": "orespawn:oreeasterbunny",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2635
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CriminalEgg",
+   "id": "orespawn:eggcriminal",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCriminalSpawnBlock",
+    "id": "orespawn:orecriminal",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2638
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BrutalflyEgg",
+   "id": "orespawn:eggbrutalfly",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyBrutalflySpawnBlock",
+    "id": "orespawn:orebrutalfly",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2641
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "NastysaurusEgg",
+   "id": "orespawn:eggnastysaurus",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyNastysaurusSpawnBlock",
+    "id": "orespawn:orenastysaurus",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2644
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "PointysaurusEgg",
+   "id": "orespawn:eggpointysaurus",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyPointysaurusSpawnBlock",
+    "id": "orespawn:orepointysaurus",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2647
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CricketEgg",
+   "id": "orespawn:eggcricket",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCricketSpawnBlock",
+    "id": "orespawn:orecricket",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2650
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "FrogEgg",
+   "id": "orespawn:eggfrog",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyFrogSpawnBlock",
+    "id": "orespawn:orefrog",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2653
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SpiderDriverEgg",
+   "id": "orespawn:eggspiderdriver",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySpiderDriverSpawnBlock",
+    "id": "orespawn:orespiderdriver",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2656
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CrabEgg",
+   "id": "orespawn:eggcrab",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCrabSpawnBlock",
+    "id": "orespawn:orecrab",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2659
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CaterKillerEgg",
+   "id": "orespawn:eggcaterkiller",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyCaterKillerSpawnBlock",
+    "id": "orespawn:orecaterkiller",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2662
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MolenoidEgg",
+   "id": "orespawn:eggmolenoid",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyMolenoidSpawnBlock",
+    "id": "orespawn:oremolenoid",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2665
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SeaMonsterEgg",
+   "id": "orespawn:eggseamonster",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySeaMonsterSpawnBlock",
+    "id": "orespawn:oreseamonster",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2668
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "SeaViperEgg",
+   "id": "orespawn:eggseaviper",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MySeaViperSpawnBlock",
+    "id": "orespawn:oreseaviper",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2671
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "RubberDuckyEgg",
+   "id": "orespawn:eggrubberducky",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyRubberDuckySpawnBlock",
+    "id": "orespawn:orerubberducky",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2674
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "HammerheadEgg",
+   "id": "orespawn:egghammerhead",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyHammerheadSpawnBlock",
+    "id": "orespawn:orehammerhead",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2677
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "LeonEgg",
+   "id": "orespawn:eggleon",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.water_bucket",
+    "id": "minecraft:water_bucket",
+    "meta": 0
+   },
+   {
+    "item": "MyLeonSpawnBlock",
+    "id": "orespawn:oreleon",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2680
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CrystalPlanksBlock",
+   "id": "orespawn:crystalplanks",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyCrystalTreeLog",
+    "id": "orespawn:crystaltreelog",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2739
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CrystalWorkbenchBlock",
+   "id": "orespawn:crystalworkbench",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2740
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CrystalFurnaceBlock",
+   "id": "orespawn:crystalfurnace",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "FFF",
+   "F F",
+   "FFF"
+  ],
+  "key": {
+   "F": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2741
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Blocks.chest",
+   "id": "minecraft:chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "FFF",
+   "F F",
+   "FFF"
+  ],
+  "key": {
+   "F": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2742
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Items.wooden_door",
+   "id": "minecraft:oak_door",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "FF ",
+   "FF ",
+   "FF "
+  ],
+  "key": {
+   "F": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2743
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Items.wooden_door",
+   "id": "minecraft:oak_door",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " FF",
+   " FF",
+   " FF"
+  ],
+  "key": {
+   "F": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2744
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "UraniumNugget",
+   "id": "orespawn:uranium_nugget",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyOreUraniumBlock",
+    "id": "orespawn:oreuranium",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.3,
+  "source_line": 2751
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "TitaniumNugget",
+   "id": "orespawn:titanium_nugget",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyOreTitaniumBlock",
+    "id": "orespawn:oretitanium",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.3,
+  "source_line": 2753
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MySalt",
+   "id": "orespawn:salt",
+   "meta": 0,
+   "count": 8
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyOreSaltBlock",
+    "id": "orespawn:oresalt",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.1,
+  "source_line": 2755
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyPopcorn",
+   "id": "orespawn:popcorn",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyCornCob",
+    "id": "orespawn:corn_seed",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.1,
+  "source_line": 2757
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyCornDog",
+   "id": "orespawn:corndog_cooked",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyRawCornDog",
+    "id": "orespawn:corndog_raw",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.4,
+  "source_line": 2759
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyBacon",
+   "id": "orespawn:cookedbacon",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyRawBacon",
+    "id": "orespawn:bacon",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2761
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyCrystalPinkIngot",
+   "id": "orespawn:crystalpink_ingot",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "CrystalCrystal",
+    "id": "orespawn:crystalcrystal",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.3,
+  "source_line": 2763
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyTigersEyeIngot",
+   "id": "orespawn:tigerseye_ingot",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "TigersEye",
+    "id": "orespawn:tigerseye",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.3,
+  "source_line": 2765
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyPeacock",
+   "id": "orespawn:cookedpeacock",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyRawPeacock",
+    "id": "orespawn:rawpeacock",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.4,
+  "source_line": 2767
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "MyCrabMeat",
+   "id": "orespawn:cookedcrabmeat",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyRawCrabMeat",
+    "id": "orespawn:crabmeat",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2769
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "Items.cooked_fished",
+   "id": "minecraft:cooked_cod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyGreenFish",
+    "id": "orespawn:greenfish",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2771
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "Items.cooked_fished",
+   "id": "minecraft:cooked_cod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBlueFish",
+    "id": "orespawn:bluefish",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2772
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "Items.cooked_fished",
+   "id": "minecraft:cooked_cod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyPinkFish",
+    "id": "orespawn:pinkfish",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2773
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "Items.cooked_fished",
+   "id": "minecraft:cooked_cod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyRockFish",
+    "id": "orespawn:rockfish",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2774
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "Items.cooked_fished",
+   "id": "minecraft:cooked_cod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyWoodFish",
+    "id": "orespawn:woodfish",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2775
+ },
+ {
+  "type": "smelting",
+  "result": {
+   "item": "Items.cooked_fished",
+   "id": "minecraft:cooked_cod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyGreyFish",
+    "id": "orespawn:greyfish",
+    "meta": 32767
+   }
+  ],
+  "xp": 0.2,
+  "source_line": 2776
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateSword",
+   "id": "orespawn:ultimatesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " T ",
+   " U ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2809
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateSword",
+   "id": "orespawn:ultimatesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "T  ",
+   "U  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2810
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateSword",
+   "id": "orespawn:ultimatesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  T",
+   "  U",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2811
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimatePickaxe",
+   "id": "orespawn:ultimatepickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TUT",
+   " U ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2812
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateShovel",
+   "id": "orespawn:ultimateshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " U ",
+   " T ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2813
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateShovel",
+   "id": "orespawn:ultimateshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "U  ",
+   "T  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2814
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateShovel",
+   "id": "orespawn:ultimateshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  U",
+   "  T",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2815
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateHoe",
+   "id": "orespawn:ultimatehoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TU ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2816
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateAxe",
+   "id": "orespawn:ultimateaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TU ",
+   "TI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2817
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateBow",
+   "id": "orespawn:ultimatebow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " TS",
+   "I S",
+   " US"
+  ],
+  "key": {
+   "S": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   },
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2818
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MySkateBow",
+   "id": "orespawn:skatebow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " TS",
+   "T S",
+   " TS"
+  ],
+  "key": {
+   "S": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   },
+   "T": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2819
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyUltimateFishingRod",
+   "id": "orespawn:ultimatefishingrod",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  T",
+   " US",
+   "I S"
+  ],
+  "key": {
+   "S": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   },
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2820
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyNightmareSword",
+   "id": "orespawn:nightmaresword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "ODO",
+   "RTR",
+   "OIO"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "O": {
+    "item": "MyNightmareScale",
+    "id": "orespawn:nightmarescale",
+    "meta": 0
+   },
+   "D": {
+    "item": "Items.diamond",
+    "id": "minecraft:diamond",
+    "meta": 0
+   },
+   "R": {
+    "item": "Items.redstone",
+    "id": "minecraft:redstone",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2821
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldSword",
+   "id": "orespawn:emeraldsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2834
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldSword",
+   "id": "orespawn:emeraldsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2835
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldSword",
+   "id": "orespawn:emeraldsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2836
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRoseSword",
+   "id": "orespawn:rosesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Blocks.red_flower",
+    "id": [
+     "minecraft:poppy",
+     "minecraft:blue_orchid",
+     "minecraft:allium",
+     "minecraft:azure_bluet",
+     "minecraft:red_tulip",
+     "minecraft:orange_tulip",
+     "minecraft:white_tulip",
+     "minecraft:pink_tulip",
+     "minecraft:oxeye_daisy"
+    ],
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2837
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRoseSword",
+   "id": "orespawn:rosesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Blocks.red_flower",
+    "id": [
+     "minecraft:poppy",
+     "minecraft:blue_orchid",
+     "minecraft:allium",
+     "minecraft:azure_bluet",
+     "minecraft:red_tulip",
+     "minecraft:orange_tulip",
+     "minecraft:white_tulip",
+     "minecraft:pink_tulip",
+     "minecraft:oxeye_daisy"
+    ],
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2838
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRoseSword",
+   "id": "orespawn:rosesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Blocks.red_flower",
+    "id": [
+     "minecraft:poppy",
+     "minecraft:blue_orchid",
+     "minecraft:allium",
+     "minecraft:azure_bluet",
+     "minecraft:red_tulip",
+     "minecraft:orange_tulip",
+     "minecraft:white_tulip",
+     "minecraft:pink_tulip",
+     "minecraft:oxeye_daisy"
+    ],
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2839
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldPickaxe",
+   "id": "orespawn:emeraldpickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2840
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldShovel",
+   "id": "orespawn:emeraldshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2841
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldShovel",
+   "id": "orespawn:emeraldshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2842
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldShovel",
+   "id": "orespawn:emeraldshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2843
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldHoe",
+   "id": "orespawn:emeraldhoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2844
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEmeraldAxe",
+   "id": "orespawn:emeraldaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2845
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyExperienceSword",
+   "id": "orespawn:experiencesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EIE",
+   "EEE"
+  ],
+  "key": {
+   "I": {
+    "item": "MyEmeraldSword",
+    "id": "orespawn:emeraldsword",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.experience_bottle",
+    "id": "minecraft:experience_bottle",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2846
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyPoisonSword",
+   "id": "orespawn:poisonsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EIE",
+   "EEE"
+  ],
+  "key": {
+   "I": {
+    "item": "MyEmeraldSword",
+    "id": "orespawn:emeraldsword",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyDeadStinkBug",
+    "id": "orespawn:deadstinkbug",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2847
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRatSword",
+   "id": "orespawn:ratsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalRat",
+    "id": "orespawn:crystalrat",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2848
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRatSword",
+   "id": "orespawn:ratsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalRat",
+    "id": "orespawn:crystalrat",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2849
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRatSword",
+   "id": "orespawn:ratsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalRat",
+    "id": "orespawn:crystalrat",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2850
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyFairySword",
+   "id": "orespawn:fairysword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalFairy",
+    "id": "orespawn:crystalfairy",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2851
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyFairySword",
+   "id": "orespawn:fairysword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalFairy",
+    "id": "orespawn:crystalfairy",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2852
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyFairySword",
+   "id": "orespawn:fairysword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalFairy",
+    "id": "orespawn:crystalfairy",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2853
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodSword",
+   "id": "orespawn:crystalwoodsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2859
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodSword",
+   "id": "orespawn:crystalwoodsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2860
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodSword",
+   "id": "orespawn:crystalwoodsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2861
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodPickaxe",
+   "id": "orespawn:crystalwoodpickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2862
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodShovel",
+   "id": "orespawn:crystalwoodshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2863
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodShovel",
+   "id": "orespawn:crystalwoodshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2864
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodShovel",
+   "id": "orespawn:crystalwoodshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2865
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodHoe",
+   "id": "orespawn:crystalwoodhoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2866
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalWoodAxe",
+   "id": "orespawn:crystalwoodaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2867
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Blocks.chest",
+   "id": "minecraft:chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "E E",
+   "EEE"
+  ],
+  "key": {
+   "E": {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2868
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkSword",
+   "id": "orespawn:crystalpinksword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2874
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkSword",
+   "id": "orespawn:crystalpinksword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2875
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkSword",
+   "id": "orespawn:crystalpinksword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2876
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkPickaxe",
+   "id": "orespawn:crystalpinkpickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2877
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkShovel",
+   "id": "orespawn:crystalpinkshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2878
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkShovel",
+   "id": "orespawn:crystalpinkshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2879
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkShovel",
+   "id": "orespawn:crystalpinkshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2880
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkHoe",
+   "id": "orespawn:crystalpinkhoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2881
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkAxe",
+   "id": "orespawn:crystalpinkaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2882
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Items.bucket",
+   "id": "minecraft:bucket",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "I I",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2883
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeSword",
+   "id": "orespawn:tigerseye_sword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2889
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeSword",
+   "id": "orespawn:tigerseye_sword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2890
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeSword",
+   "id": "orespawn:tigerseye_sword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2891
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyePickaxe",
+   "id": "orespawn:tigerseye_pickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2892
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeShovel",
+   "id": "orespawn:tigerseye_shovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2893
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeShovel",
+   "id": "orespawn:tigerseye_shovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2894
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeShovel",
+   "id": "orespawn:tigerseye_shovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2895
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeHoe",
+   "id": "orespawn:tigerseye_hoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2896
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeAxe",
+   "id": "orespawn:tigerseye_axe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2897
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneSword",
+   "id": "orespawn:crystalstonesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2903
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneSword",
+   "id": "orespawn:crystalstonesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2904
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneSword",
+   "id": "orespawn:crystalstonesword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2905
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStonePickaxe",
+   "id": "orespawn:crystalstonepickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2906
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneShovel",
+   "id": "orespawn:crystalstoneshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2907
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneShovel",
+   "id": "orespawn:crystalstoneshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2908
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneShovel",
+   "id": "orespawn:crystalstoneshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2909
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneHoe",
+   "id": "orespawn:crystalstonehoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2910
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalStoneAxe",
+   "id": "orespawn:crystalstoneaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "E": {
+    "item": "CrystalStone",
+    "id": "orespawn:crystalstone",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2911
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubySword",
+   "id": "orespawn:rubysword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2917
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubySword",
+   "id": "orespawn:rubysword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2918
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubySword",
+   "id": "orespawn:rubysword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2919
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubyPickaxe",
+   "id": "orespawn:rubypickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2920
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubyShovel",
+   "id": "orespawn:rubyshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2921
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubyShovel",
+   "id": "orespawn:rubyshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2922
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubyShovel",
+   "id": "orespawn:rubyshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2923
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubyHoe",
+   "id": "orespawn:rubyhoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2924
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyRubyAxe",
+   "id": "orespawn:rubyaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2925
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystSword",
+   "id": "orespawn:amethystsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " E ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2931
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystSword",
+   "id": "orespawn:amethystsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "E  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2932
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystSword",
+   "id": "orespawn:amethystsword",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  E",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2933
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystPickaxe",
+   "id": "orespawn:amethystpickaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2934
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystShovel",
+   "id": "orespawn:amethystshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   " E ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2935
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystShovel",
+   "id": "orespawn:amethystshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "E  ",
+   "I  ",
+   "I  "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2936
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystShovel",
+   "id": "orespawn:amethystshovel",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "  E",
+   "  I",
+   "  I"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2937
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystHoe",
+   "id": "orespawn:amethysthoe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   " I ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2938
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyAmethystAxe",
+   "id": "orespawn:amethystaxe",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EE ",
+   "EI ",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2939
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyHammy",
+   "id": "orespawn:hammysmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyUltimateSword",
+    "id": "orespawn:ultimatesword",
+    "meta": 0
+   },
+   {
+    "item": "MyUltimateSword",
+    "id": "orespawn:ultimatesword",
+    "meta": 0
+   },
+   {
+    "item": "MyBigHammer",
+    "id": "orespawn:bighammer",
+    "meta": 0
+   },
+   {
+    "item": "GreenGoo",
+    "id": "orespawn:greengoo",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2940
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyBattleAxe",
+   "id": "orespawn:battleaxesmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyUltimateSword",
+    "id": "orespawn:ultimatesword",
+    "meta": 0
+   },
+   {
+    "item": "MyUltimateAxe",
+    "id": "orespawn:ultimateaxe",
+    "meta": 0
+   },
+   {
+    "item": "GreenGoo",
+    "id": "orespawn:greengoo",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2941
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyChainsaw",
+   "id": "orespawn:chainsawsmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EIE",
+   "EEE"
+  ],
+  "key": {
+   "I": {
+    "item": "MyUltimateAxe",
+    "id": "orespawn:ultimateaxe",
+    "meta": 0
+   },
+   "E": {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2942
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyQueenBattleAxe",
+   "id": "orespawn:queenbattleaxesmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EIE",
+   "EIE",
+   " I "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "E": {
+    "item": "MyQueenScale",
+    "id": "orespawn:queenscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2943
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyBertha",
+   "id": "orespawn:berthasmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "BerthaHandle",
+    "id": "orespawn:bbhandle",
+    "meta": 0
+   },
+   {
+    "item": "BerthaGuard",
+    "id": "orespawn:bbguard",
+    "meta": 0
+   },
+   {
+    "item": "BerthaBlade",
+    "id": "orespawn:bbblade",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2944
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BerthaHandle",
+   "id": "orespawn:bbhandle",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyRayGun",
+    "id": "orespawn:raygun",
+    "meta": 0
+   },
+   {
+    "item": "MyBigHammer",
+    "id": "orespawn:bighammer",
+    "meta": 0
+   },
+   {
+    "item": "MyMantisClaw",
+    "id": "orespawn:mantisclaw",
+    "meta": 0
+   },
+   {
+    "item": "MyWaterDragonScale",
+    "id": "orespawn:waterdragonscale",
+    "meta": 0
+   },
+   {
+    "item": "GreenGoo",
+    "id": "orespawn:greengoo",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2945
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BerthaGuard",
+   "id": "orespawn:bbguard",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MolenoidNose",
+    "id": "orespawn:molenoidnose",
+    "meta": 0
+   },
+   {
+    "item": "SeaMonsterScale",
+    "id": "orespawn:seamonsterscale",
+    "meta": 0
+   },
+   {
+    "item": "MyMothScale",
+    "id": "orespawn:mothscale",
+    "meta": 0
+   },
+   {
+    "item": "MyBasiliskScale",
+    "id": "orespawn:basiliskscale",
+    "meta": 0
+   },
+   {
+    "item": "MyNightmareScale",
+    "id": "orespawn:nightmarescale",
+    "meta": 0
+   },
+   {
+    "item": "MyEmperorScorpionScale",
+    "id": "orespawn:emperorscorpionscale",
+    "meta": 0
+   },
+   {
+    "item": "MyJumpyBugScale",
+    "id": "orespawn:jumpybugscale",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2946
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "BerthaBlade",
+   "id": "orespawn:bbblade",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyKrakenTooth",
+    "id": "orespawn:krakentooth",
+    "meta": 0
+   },
+   {
+    "item": "WormTooth",
+    "id": "orespawn:wormtooth",
+    "meta": 0
+   },
+   {
+    "item": "TRexTooth",
+    "id": "orespawn:trextooth",
+    "meta": 0
+   },
+   {
+    "item": "MyUltimateSword",
+    "id": "orespawn:ultimatesword",
+    "meta": 0
+   },
+   {
+    "item": "CaterKillerJaw",
+    "id": "orespawn:caterkillerjaw",
+    "meta": 0
+   },
+   {
+    "item": "SeaViperTongue",
+    "id": "orespawn:seavipertongue",
+    "meta": 0
+   },
+   {
+    "item": "VortexEye",
+    "id": "orespawn:vortexeye",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2947
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MySlice",
+   "id": "orespawn:slicesmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBertha",
+    "id": "orespawn:berthasmall",
+    "meta": 0
+   },
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2948
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyIrukandjiArrow",
+   "id": "orespawn:irukandjiarrow",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   },
+   {
+    "item": "MyIrukandji",
+    "id": "orespawn:deadirukandji",
+    "meta": 0
+   },
+   {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2949
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.bed",
+   "id": "minecraft:red_bed",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   },
+   {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   },
+   {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2950
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MySquidZooka",
+   "id": "orespawn:squidzookasmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   {
+    "item": "Items.dye",
+    "id": "minecraft:ink_sac",
+    "meta": 0
+   },
+   {
+    "item": "Items.dye",
+    "id": "minecraft:ink_sac",
+    "meta": 0
+   },
+   {
+    "item": "Items.dye",
+    "id": "minecraft:ink_sac",
+    "meta": 0
+   },
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2951
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyIngotUranium",
+   "id": "orespawn:ingoturanium",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "UUU",
+   "UUU",
+   "UUU"
+  ],
+  "key": {
+   "U": {
+    "item": "UraniumNugget",
+    "id": "orespawn:uranium_nugget",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2952
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "UraniumNugget",
+   "id": "orespawn:uranium_nugget",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2953
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyIngotTitanium",
+   "id": "orespawn:ingottitanium",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "UUU",
+   "UUU",
+   "UUU"
+  ],
+  "key": {
+   "U": {
+    "item": "TitaniumNugget",
+    "id": "orespawn:titanium_nugget",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2954
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "TitaniumNugget",
+   "id": "orespawn:titanium_nugget",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2955
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyBlockUraniumBlock",
+   "id": "orespawn:blockuranium",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "UUU",
+   "UUU",
+   "UUU"
+  ],
+  "key": {
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2956
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyIngotUranium",
+   "id": "orespawn:ingoturanium",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBlockUraniumBlock",
+    "id": "orespawn:blockuranium",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2957
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyBlockTitaniumBlock",
+   "id": "orespawn:blocktitanium",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2958
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyIngotTitanium",
+   "id": "orespawn:ingottitanium",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBlockTitaniumBlock",
+    "id": "orespawn:blocktitanium",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2959
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyBlockMobzillaScaleBlock",
+   "id": "orespawn:blockmobzillascale",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "MyGodzillaScale",
+    "id": "orespawn:godzillascale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2960
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyGodzillaScale",
+   "id": "orespawn:godzillascale",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBlockMobzillaScaleBlock",
+    "id": "orespawn:blockmobzillascale",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2961
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyBlockRubyBlock",
+   "id": "orespawn:blockruby",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2962
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyRuby",
+   "id": "orespawn:ruby",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBlockRubyBlock",
+    "id": "orespawn:blockruby",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2963
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyBlockAmethystBlock",
+   "id": "orespawn:blockamethyst",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2964
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyCrystalPinkBlock",
+   "id": "orespawn:crystalpink_block",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2965
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyTigersEyeBlock",
+   "id": "orespawn:tigerseye_block",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2966
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyAmethyst",
+   "id": "orespawn:amethyst",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBlockAmethystBlock",
+    "id": "orespawn:blockamethyst",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2967
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyCrystalPinkIngot",
+   "id": "orespawn:crystalpink_ingot",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyCrystalPinkBlock",
+    "id": "orespawn:crystalpink_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2968
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyTigersEyeIngot",
+   "id": "orespawn:tigerseye_ingot",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyTigersEyeBlock",
+    "id": "orespawn:tigerseye_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2969
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEnderPearlBlock",
+   "id": "orespawn:blockenderpearl",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "Items.ender_pearl",
+    "id": "minecraft:ender_pearl",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2970
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.ender_pearl",
+   "id": "minecraft:ender_pearl",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyEnderPearlBlock",
+    "id": "orespawn:blockenderpearl",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2971
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyEyeOfEnderBlock",
+   "id": "orespawn:blockeyeofender",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TTT",
+   "TTT",
+   "TTT"
+  ],
+  "key": {
+   "T": {
+    "item": "Items.ender_eye",
+    "id": "minecraft:ender_eye",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2972
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Items.ender_eye",
+   "id": "minecraft:ender_eye",
+   "meta": 0,
+   "count": 9
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyEyeOfEnderBlock",
+    "id": "orespawn:blockeyeofender",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2973
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyThunderStaff",
+   "id": "orespawn:thunderstaff",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "DR ",
+   "RR ",
+   "  R"
+  ],
+  "key": {
+   "D": {
+    "item": "Items.diamond",
+    "id": "minecraft:diamond",
+    "meta": 0
+   },
+   "R": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2974
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyWrench",
+   "id": "orespawn:wrench",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "D D",
+   " D ",
+   " D "
+  ],
+  "key": {
+   "D": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2975
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyButter",
+   "id": "orespawn:butter",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.milk_bucket",
+    "id": "minecraft:milk_bucket",
+    "meta": 0
+   },
+   {
+    "item": "Items.milk_bucket",
+    "id": "minecraft:milk_bucket",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2978
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyCheese",
+   "id": "orespawn:cheese",
+   "meta": 0,
+   "count": 2
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.milk_bucket",
+    "id": "minecraft:milk_bucket",
+    "meta": 0
+   },
+   {
+    "item": "Items.milk_bucket",
+    "id": "minecraft:milk_bucket",
+    "meta": 0
+   },
+   {
+    "item": "Items.milk_bucket",
+    "id": "minecraft:milk_bucket",
+    "meta": 0
+   },
+   {
+    "item": "Items.milk_bucket",
+    "id": "minecraft:milk_bucket",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2979
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyButteredPopcorn",
+   "id": "orespawn:popcorn_buttered",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyPopcorn",
+    "id": "orespawn:popcorn",
+    "meta": 0
+   },
+   {
+    "item": "MyButter",
+    "id": "orespawn:butter",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2980
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyButteredSaltedPopcorn",
+   "id": "orespawn:popcorn_buttered_salted",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyButteredPopcorn",
+    "id": "orespawn:popcorn_buttered",
+    "meta": 0
+   },
+   {
+    "item": "MySalt",
+    "id": "orespawn:salt",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2981
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyButteredSaltedPopcorn",
+   "id": "orespawn:popcorn_buttered_salted",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyPopcorn",
+    "id": "orespawn:popcorn",
+    "meta": 0
+   },
+   {
+    "item": "MySalt",
+    "id": "orespawn:salt",
+    "meta": 0
+   },
+   {
+    "item": "MyButter",
+    "id": "orespawn:butter",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2982
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyPopcornBag",
+   "id": "orespawn:popcorn_bag",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyButteredSaltedPopcorn",
+    "id": "orespawn:popcorn_buttered_salted",
+    "meta": 0
+   },
+   {
+    "item": "MyButteredSaltedPopcorn",
+    "id": "orespawn:popcorn_buttered_salted",
+    "meta": 0
+   },
+   {
+    "item": "MyButteredSaltedPopcorn",
+    "id": "orespawn:popcorn_buttered_salted",
+    "meta": 0
+   },
+   {
+    "item": "MyButteredSaltedPopcorn",
+    "id": "orespawn:popcorn_buttered_salted",
+    "meta": 0
+   },
+   {
+    "item": "MyButteredSaltedPopcorn",
+    "id": "orespawn:popcorn_buttered_salted",
+    "meta": 0
+   },
+   {
+    "item": "MyButteredSaltedPopcorn",
+    "id": "orespawn:popcorn_buttered_salted",
+    "meta": 0
+   },
+   {
+    "item": "Items.paper",
+    "id": "minecraft:paper",
+    "meta": 0
+   },
+   {
+    "item": "Items.paper",
+    "id": "minecraft:paper",
+    "meta": 0
+   },
+   {
+    "item": "Items.paper",
+    "id": "minecraft:paper",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2983
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyRawCornDog",
+   "id": "orespawn:corndog_raw",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyCornCob",
+    "id": "orespawn:corn_seed",
+    "meta": 0
+   },
+   {
+    "item": "Items.chicken",
+    "id": "minecraft:chicken",
+    "meta": 0
+   },
+   {
+    "item": "Items.porkchop",
+    "id": "minecraft:porkchop",
+    "meta": 0
+   },
+   {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2984
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyRawBacon",
+   "id": "orespawn:bacon",
+   "meta": 0,
+   "count": 2
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MySalt",
+    "id": "orespawn:salt",
+    "meta": 0
+   },
+   {
+    "item": "Items.porkchop",
+    "id": "minecraft:porkchop",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2985
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyButterCandy",
+   "id": "orespawn:buttercandy",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyButter",
+    "id": "orespawn:butter",
+    "meta": 0
+   },
+   {
+    "item": "Items.sugar",
+    "id": "minecraft:sugar",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2986
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MySalad",
+   "id": "orespawn:salad",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyLettuce",
+    "id": "orespawn:lettuce_seed",
+    "meta": 0
+   },
+   {
+    "item": "MyTomato",
+    "id": "orespawn:tomato_seed",
+    "meta": 0
+   },
+   {
+    "item": "MyRadish",
+    "id": "orespawn:radish",
+    "meta": 0
+   },
+   {
+    "item": "Items.carrot",
+    "id": "minecraft:carrot",
+    "meta": 0
+   },
+   {
+    "item": "Items.bowl",
+    "id": "minecraft:bowl",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2987
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyBLT",
+   "id": "orespawn:blt_sandwich",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyBacon",
+    "id": "orespawn:cookedbacon",
+    "meta": 0
+   },
+   {
+    "item": "MyLettuce",
+    "id": "orespawn:lettuce_seed",
+    "meta": 0
+   },
+   {
+    "item": "MyTomato",
+    "id": "orespawn:tomato_seed",
+    "meta": 0
+   },
+   {
+    "item": "MyButter",
+    "id": "orespawn:butter",
+    "meta": 0
+   },
+   {
+    "item": "Items.bread",
+    "id": "minecraft:bread",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2988
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyPizzaItem",
+   "id": "orespawn:pizza_item",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyTomato",
+    "id": "orespawn:tomato_seed",
+    "meta": 0
+   },
+   {
+    "item": "MyCheese",
+    "id": "orespawn:cheese",
+    "meta": 0
+   },
+   {
+    "item": "MyBacon",
+    "id": "orespawn:cookedbacon",
+    "meta": 0
+   },
+   {
+    "item": "Items.bread",
+    "id": "minecraft:bread",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2989
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyDuctTapeItem",
+   "id": "orespawn:ducttape_item",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "AAA",
+   "RRR"
+  ],
+  "key": {
+   "R": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   },
+   "A": {
+    "item": "Items.slime_ball",
+    "id": "minecraft:slime_ball",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 2990
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyCrabbyPatty",
+   "id": "orespawn:crabbypatty",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyCrabMeat",
+    "id": "orespawn:cookedcrabmeat",
+    "meta": 0
+   },
+   {
+    "item": "MyLettuce",
+    "id": "orespawn:lettuce_seed",
+    "meta": 0
+   },
+   {
+    "item": "MyTomato",
+    "id": "orespawn:tomato_seed",
+    "meta": 0
+   },
+   {
+    "item": "Items.bread",
+    "id": "minecraft:bread",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 2991
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ZooCage2",
+   "id": "orespawn:zoo2",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Blocks.iron_block",
+    "id": "minecraft:iron_block",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.glass",
+    "id": "minecraft:glass",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.quartz_block",
+    "id": "minecraft:quartz_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3002
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ZooCage4",
+   "id": "orespawn:zoo4",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "ZooCage2",
+    "id": "orespawn:zoo2",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.iron_block",
+    "id": "minecraft:iron_block",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.glass",
+    "id": "minecraft:glass",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.quartz_block",
+    "id": "minecraft:quartz_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3003
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ZooCage6",
+   "id": "orespawn:zoo6",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "ZooCage4",
+    "id": "orespawn:zoo4",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.iron_block",
+    "id": "minecraft:iron_block",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.glass",
+    "id": "minecraft:glass",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.quartz_block",
+    "id": "minecraft:quartz_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3004
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ZooCage8",
+   "id": "orespawn:zoo8",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "ZooCage6",
+    "id": "orespawn:zoo6",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.iron_block",
+    "id": "minecraft:iron_block",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.glass",
+    "id": "minecraft:glass",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.quartz_block",
+    "id": "minecraft:quartz_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3005
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ZooCage10",
+   "id": "orespawn:zoo10",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "ZooCage8",
+    "id": "orespawn:zoo8",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.iron_block",
+    "id": "minecraft:iron_block",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.glass",
+    "id": "minecraft:glass",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.quartz_block",
+    "id": "minecraft:quartz_block",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3006
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "InstantShelter",
+   "id": "orespawn:instantshelter",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 0
+   },
+   {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.cobblestone",
+    "id": "minecraft:cobblestone",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3009
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "InstantGarden",
+   "id": "orespawn:instantgarden",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 0
+   },
+   {
+    "item": "Items.wheat",
+    "id": "minecraft:wheat",
+    "meta": 0
+   },
+   {
+    "item": "Items.gunpowder",
+    "id": "minecraft:gunpowder",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3010
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CreeperLauncher",
+   "id": "orespawn:creeperlauncher",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.paper",
+    "id": "minecraft:paper",
+    "meta": 0
+   },
+   {
+    "item": "Items.redstone",
+    "id": "minecraft:redstone",
+    "meta": 0
+   },
+   {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3011
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "NetherLost",
+   "id": "orespawn:netherlost",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.nether_star",
+    "id": "minecraft:nether_star",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.netherrack",
+    "id": "minecraft:netherrack",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3012
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Sifter",
+   "id": "orespawn:sifter",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "RRR",
+   "RAR",
+   "RRR"
+  ],
+  "key": {
+   "R": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "A": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3013
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MagicApple",
+   "id": "orespawn:magicapple",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "RRR",
+   "RAR",
+   "RRR"
+  ],
+  "key": {
+   "R": {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 32767
+   },
+   "A": {
+    "item": "Items.apple",
+    "id": "minecraft:apple",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3015
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "RandomDungeon",
+   "id": "orespawn:randomdungeon",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "RRR",
+   "RAR",
+   "RRR"
+  ],
+  "key": {
+   "R": {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 32767
+   },
+   "A": {
+    "item": "Items.coal",
+    "id": "minecraft:coal",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3017
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MinersDream",
+   "id": "orespawn:minersdream",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "CCC",
+   "RRR",
+   "GGG"
+  ],
+  "key": {
+   "R": {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 32767
+   },
+   "C": {
+    "item": "Blocks.cactus",
+    "id": "minecraft:cactus",
+    "meta": 32767
+   },
+   "G": {
+    "item": "Items.gunpowder",
+    "id": "minecraft:gunpowder",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3020,
+  "condition": "OreSpawnMain.MinersDreamExpensive == 0"
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MinersDream",
+   "id": "orespawn:minersdream",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "CCC",
+   "RRR",
+   "GGG"
+  ],
+  "key": {
+   "R": {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 32767
+   },
+   "C": {
+    "item": "Blocks.cactus",
+    "id": "minecraft:cactus",
+    "meta": 32767
+   },
+   "G": {
+    "item": "Blocks.tnt",
+    "id": "minecraft:tnt",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3024,
+  "condition": "NOT(OreSpawnMain.MinersDreamExpensive == 0)"
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyStepUp",
+   "id": "orespawn:step_up",
+   "meta": 0,
+   "count": 8
+  },
+  "pattern": [
+   "GC ",
+   " C ",
+   " C "
+  ],
+  "key": {
+   "C": {
+    "item": "Blocks.cobblestone",
+    "id": "minecraft:cobblestone",
+    "meta": 32767
+   },
+   "G": {
+    "item": "Items.gunpowder",
+    "id": "minecraft:gunpowder",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3027
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyStepDown",
+   "id": "orespawn:step_down",
+   "meta": 0,
+   "count": 8
+  },
+  "pattern": [
+   " C ",
+   " C ",
+   "GC "
+  ],
+  "key": {
+   "C": {
+    "item": "Blocks.cobblestone",
+    "id": "minecraft:cobblestone",
+    "meta": 32767
+   },
+   "G": {
+    "item": "Items.gunpowder",
+    "id": "minecraft:gunpowder",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3029
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyStepAccross",
+   "id": "orespawn:step_accross",
+   "meta": 0,
+   "count": 8
+  },
+  "pattern": [
+   " C ",
+   "GC ",
+   " C "
+  ],
+  "key": {
+   "C": {
+    "item": "Blocks.cobblestone",
+    "id": "minecraft:cobblestone",
+    "meta": 32767
+   },
+   "G": {
+    "item": "Items.gunpowder",
+    "id": "minecraft:gunpowder",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3031
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ExtremeTorch",
+   "id": "orespawn:extremetorch",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.redstone",
+    "id": "minecraft:redstone",
+    "meta": 0
+   },
+   {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   {
+    "item": "Items.coal",
+    "id": "minecraft:coal",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3033
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "ExtremeTorch",
+   "id": "orespawn:extremetorch",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.redstone",
+    "id": "minecraft:redstone",
+    "meta": 0
+   },
+   {
+    "item": "Blocks.torch",
+    "id": "minecraft:torch",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3034
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CrystalSticks",
+   "id": "orespawn:crystalsticks",
+   "meta": 0,
+   "count": 6
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   },
+   {
+    "item": "CrystalPlanksBlock",
+    "id": "orespawn:crystalplanks",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3035
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "CrystalTorch",
+   "id": "orespawn:crystaltorch",
+   "meta": 0,
+   "count": 6
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "CrystalCoal",
+    "id": "orespawn:crystalcoal",
+    "meta": 0
+   },
+   {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3036
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "KrakenRepellent",
+   "id": "orespawn:krakenrepellent",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "D D",
+   "STS",
+   "D D"
+  ],
+  "key": {
+   "D": {
+    "item": "MyDeadStinkBug",
+    "id": "orespawn:deadstinkbug",
+    "meta": 0
+   },
+   "T": {
+    "item": "ExtremeTorch",
+    "id": "orespawn:extremetorch",
+    "meta": 32767
+   },
+   "S": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3040
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CreeperRepellent",
+   "id": "orespawn:creeperrepellent",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "D D",
+   "STS",
+   "D D"
+  ],
+  "key": {
+   "D": {
+    "item": "GreenGoo",
+    "id": "orespawn:greengoo",
+    "meta": 0
+   },
+   "T": {
+    "item": "ExtremeTorch",
+    "id": "orespawn:extremetorch",
+    "meta": 32767
+   },
+   "S": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3042
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyAppleSeed",
+   "id": "orespawn:appletree_seed",
+   "meta": 0,
+   "count": 6
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.apple",
+    "id": "minecraft:apple",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3048
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyCherrySeed",
+   "id": "orespawn:cherrytree_seed",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyCherry",
+    "id": "orespawn:cherries",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3050
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyPeachSeed",
+   "id": "orespawn:peachtree_seed",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyPeach",
+    "id": "orespawn:peach",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3052
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyExperienceCatcher",
+   "id": "orespawn:experiencecatcher",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.glass_bottle",
+    "id": "minecraft:glass_bottle",
+    "meta": 0
+   },
+   {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 3054
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyExperienceTreeSeed",
+   "id": "orespawn:experiencetree_seed",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EAE",
+   "EEE"
+  ],
+  "key": {
+   "A": {
+    "item": "MyAppleSeed",
+    "id": "orespawn:appletree_seed",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.experience_bottle",
+    "id": "minecraft:experience_bottle",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 3056
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MyRayGun",
+   "id": "orespawn:raygun",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Blocks.redstone_block",
+    "id": "minecraft:redstone_block",
+    "meta": 0
+   },
+   {
+    "item": "MyRayGun",
+    "id": "orespawn:raygun",
+    "meta": 32767
+   }
+  ],
+  "xp": null,
+  "source_line": 3184
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "MySquidZooka",
+   "id": "orespawn:squidzookasmall",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "Items.dye",
+    "id": "minecraft:ink_sac",
+    "meta": 0
+   },
+   {
+    "item": "MySquidZooka",
+    "id": "orespawn:squidzookasmall",
+    "meta": 32767
+   }
+  ],
+  "xp": null,
+  "source_line": 3187
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "UltimateHelmet",
+   "id": "orespawn:ultimate_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "TIT",
+   "U U"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4658
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "UltimateHelmet",
+   "id": "orespawn:ultimate_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "TIT",
+   "U U",
+   "   "
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4659
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "UltimateBody",
+   "id": "orespawn:ultimate_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "I I",
+   "TTT",
+   "UUU"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4660
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "UltimateLegs",
+   "id": "orespawn:ultimate_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "III",
+   "T T",
+   "U U"
+  ],
+  "key": {
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   },
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4661
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "UltimateBoots",
+   "id": "orespawn:ultimate_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "T T",
+   "U U"
+  ],
+  "key": {
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4662
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "UltimateBoots",
+   "id": "orespawn:ultimate_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "T T",
+   "U U",
+   "   "
+  ],
+  "key": {
+   "U": {
+    "item": "MyIngotUranium",
+    "id": "orespawn:ingoturanium",
+    "meta": 0
+   },
+   "T": {
+    "item": "MyIngotTitanium",
+    "id": "orespawn:ingottitanium",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4663
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LavaEelHelmet",
+   "id": "orespawn:lavaeel_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyLavaEel",
+    "id": "orespawn:lavaeel",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4668
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LavaEelHelmet",
+   "id": "orespawn:lavaeel_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyLavaEel",
+    "id": "orespawn:lavaeel",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4669
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LavaEelBody",
+   "id": "orespawn:lavaeel_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyLavaEel",
+    "id": "orespawn:lavaeel",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4670
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LavaEelLegs",
+   "id": "orespawn:lavaeel_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyLavaEel",
+    "id": "orespawn:lavaeel",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4671
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LavaEelBoots",
+   "id": "orespawn:lavaeel_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyLavaEel",
+    "id": "orespawn:lavaeel",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4672
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MothScaleHelmet",
+   "id": "orespawn:mothscale_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyMothScale",
+    "id": "orespawn:mothscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4677
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MothScaleHelmet",
+   "id": "orespawn:mothscale_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyMothScale",
+    "id": "orespawn:mothscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4678
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MothScaleBody",
+   "id": "orespawn:mothscale_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyMothScale",
+    "id": "orespawn:mothscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4679
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MothScaleLegs",
+   "id": "orespawn:mothscale_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyMothScale",
+    "id": "orespawn:mothscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4680
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MothScaleBoots",
+   "id": "orespawn:mothscale_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyMothScale",
+    "id": "orespawn:mothscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4681
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "EmeraldHelmet",
+   "id": "orespawn:emerald_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4686
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "EmeraldHelmet",
+   "id": "orespawn:emerald_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4687
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "EmeraldBody",
+   "id": "orespawn:emerald_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4688
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "EmeraldLegs",
+   "id": "orespawn:emerald_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4689
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "EmeraldBoots",
+   "id": "orespawn:emerald_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "Items.emerald",
+    "id": "minecraft:emerald",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4690
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "RubyHelmet",
+   "id": "orespawn:ruby_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4695
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "RubyHelmet",
+   "id": "orespawn:ruby_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4696
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "RubyBody",
+   "id": "orespawn:ruby_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4697
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "RubyLegs",
+   "id": "orespawn:ruby_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4698
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "RubyBoots",
+   "id": "orespawn:ruby_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyRuby",
+    "id": "orespawn:ruby",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4699
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "AmethystHelmet",
+   "id": "orespawn:amethyst_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4704
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "AmethystHelmet",
+   "id": "orespawn:amethyst_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4705
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "AmethystBody",
+   "id": "orespawn:amethyst_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4706
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "AmethystLegs",
+   "id": "orespawn:amethyst_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4707
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "AmethystBoots",
+   "id": "orespawn:amethyst_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyAmethyst",
+    "id": "orespawn:amethyst",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4708
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CrystalPinkHelmet",
+   "id": "orespawn:pink_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4713
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CrystalPinkHelmet",
+   "id": "orespawn:pink_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4714
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CrystalPinkBody",
+   "id": "orespawn:pink_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4715
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CrystalPinkLegs",
+   "id": "orespawn:pink_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4716
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CrystalPinkBoots",
+   "id": "orespawn:pink_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4717
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MobzillaHelmet",
+   "id": "orespawn:mobzilla_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyGodzillaScale",
+    "id": "orespawn:godzillascale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4734
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MobzillaHelmet",
+   "id": "orespawn:mobzilla_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyGodzillaScale",
+    "id": "orespawn:godzillascale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4735
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MobzillaBody",
+   "id": "orespawn:mobzilla_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyGodzillaScale",
+    "id": "orespawn:godzillascale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4736
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MobzillaLegs",
+   "id": "orespawn:mobzilla_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyGodzillaScale",
+    "id": "orespawn:godzillascale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4737
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MobzillaBoots",
+   "id": "orespawn:mobzilla_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyGodzillaScale",
+    "id": "orespawn:godzillascale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4738
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LapisHelmet",
+   "id": "orespawn:lapis_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "Blocks.lapis_block",
+    "id": "minecraft:lapis_block",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4739
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LapisHelmet",
+   "id": "orespawn:lapis_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "Blocks.lapis_block",
+    "id": "minecraft:lapis_block",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4740
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LapisBody",
+   "id": "orespawn:lapis_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "Blocks.lapis_block",
+    "id": "minecraft:lapis_block",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4741
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LapisLegs",
+   "id": "orespawn:lapis_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "Blocks.lapis_block",
+    "id": "minecraft:lapis_block",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4742
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "LapisBoots",
+   "id": "orespawn:lapis_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "Blocks.lapis_block",
+    "id": "minecraft:lapis_block",
+    "meta": 32767
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4743
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "QueenHelmet",
+   "id": "orespawn:queen_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyQueenScale",
+    "id": "orespawn:queenscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4744
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "QueenHelmet",
+   "id": "orespawn:queen_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyQueenScale",
+    "id": "orespawn:queenscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4745
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "QueenBody",
+   "id": "orespawn:queen_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyQueenScale",
+    "id": "orespawn:queenscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4746
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "QueenLegs",
+   "id": "orespawn:queen_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyQueenScale",
+    "id": "orespawn:queenscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4747
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "QueenBoots",
+   "id": "orespawn:queen_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyQueenScale",
+    "id": "orespawn:queenscale",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4748
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "PeacockFeatherHelmet",
+   "id": "orespawn:peacock_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4753
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "PeacockFeatherHelmet",
+   "id": "orespawn:peacock_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4754
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "PeacockFeatherBody",
+   "id": "orespawn:peacock_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4755
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "PeacockFeatherLegs",
+   "id": "orespawn:peacock_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4756
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "PeacockFeatherBoots",
+   "id": "orespawn:peacock_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyPeacockFeather",
+    "id": "orespawn:peacockfeather",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4757
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "TigersEyeHelmet",
+   "id": "orespawn:tigerseye_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "***",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4762
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "TigersEyeHelmet",
+   "id": "orespawn:tigerseye_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "   "
+  ],
+  "key": {
+   "*": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4763
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "TigersEyeBody",
+   "id": "orespawn:tigerseye_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "* *",
+   "***",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4764
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "TigersEyeLegs",
+   "id": "orespawn:tigerseye_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4765
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "TigersEyeBoots",
+   "id": "orespawn:tigerseye_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "* *",
+   "* *"
+  ],
+  "key": {
+   "*": {
+    "item": "MyTigersEyeIngot",
+    "id": "orespawn:tigerseye_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4766
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "ExperienceHelmet",
+   "id": "orespawn:experience_helmet",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EAE",
+   "EEE"
+  ],
+  "key": {
+   "A": {
+    "item": "EmeraldHelmet",
+    "id": "orespawn:emerald_helmet",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.experience_bottle",
+    "id": "minecraft:experience_bottle",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4771
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "ExperienceBody",
+   "id": "orespawn:experience_chest",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EAE",
+   "EEE"
+  ],
+  "key": {
+   "A": {
+    "item": "EmeraldBody",
+    "id": "orespawn:emerald_chest",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.experience_bottle",
+    "id": "minecraft:experience_bottle",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4772
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "ExperienceLegs",
+   "id": "orespawn:experience_leggings",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EAE",
+   "EEE"
+  ],
+  "key": {
+   "A": {
+    "item": "EmeraldLegs",
+    "id": "orespawn:emerald_leggings",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.experience_bottle",
+    "id": "minecraft:experience_bottle",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4773
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "ExperienceBoots",
+   "id": "orespawn:experience_boots",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "EEE",
+   "EAE",
+   "EEE"
+  ],
+  "key": {
+   "A": {
+    "item": "EmeraldBoots",
+    "id": "orespawn:emerald_boots",
+    "meta": 0
+   },
+   "E": {
+    "item": "Items.experience_bottle",
+    "id": "minecraft:experience_bottle",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4774
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "Blocks.web",
+   "id": "minecraft:cobweb",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "***",
+   "* *",
+   "***"
+  ],
+  "key": {
+   "*": {
+    "item": "Items.string",
+    "id": "minecraft:string",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 4775
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CageEmpty",
+   "id": "orespawn:cageempty",
+   "meta": 0,
+   "count": 2
+  },
+  "pattern": [
+   "IWI",
+   "W W",
+   "IWI"
+  ],
+  "key": {
+   "W": {
+    "item": "Items.stick",
+    "id": "minecraft:stick",
+    "meta": 0
+   },
+   "I": {
+    "item": "Items.iron_ingot",
+    "id": "minecraft:iron_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 5011
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "CageEmpty",
+   "id": "orespawn:cageempty",
+   "meta": 0,
+   "count": 2
+  },
+  "pattern": [
+   "IWI",
+   "W W",
+   "IWI"
+  ],
+  "key": {
+   "W": {
+    "item": "CrystalSticks",
+    "id": "orespawn:crystalsticks",
+    "meta": 0
+   },
+   "I": {
+    "item": "MyCrystalPinkIngot",
+    "id": "orespawn:crystalpink_ingot",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 5012
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Blocks.planks",
+   "id": "minecraft:oak_planks",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MySkyTreeLog",
+    "id": "orespawn:skytreelog",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 5023
+ },
+ {
+  "type": "shapeless",
+  "result": {
+   "item": "Blocks.planks",
+   "id": "minecraft:oak_planks",
+   "meta": 0,
+   "count": 4
+  },
+  "pattern": [],
+  "key": {},
+  "ingredients": [
+   {
+    "item": "MyDT",
+    "id": "orespawn:duplicatortreelog",
+    "meta": 0
+   }
+  ],
+  "xp": null,
+  "source_line": 5025
+ },
+ {
+  "type": "shaped",
+  "result": {
+   "item": "MyElevator",
+   "id": "orespawn:elevator",
+   "meta": 0,
+   "count": 1
+  },
+  "pattern": [
+   "   ",
+   "WWW",
+   "DRD"
+  ],
+  "key": {
+   "W": {
+    "item": "Blocks.planks",
+    "id": [
+     "minecraft:oak_planks",
+     "minecraft:spruce_planks",
+     "minecraft:birch_planks",
+     "minecraft:jungle_planks",
+     "minecraft:acacia_planks",
+     "minecraft:dark_oak_planks"
+    ],
+    "meta": 32767
+   },
+   "R": {
+    "item": "Items.redstone",
+    "id": "minecraft:redstone",
+    "meta": 0
+   },
+   "D": {
+    "item": "Items.diamond",
+    "id": "minecraft:diamond",
+    "meta": 0
+   }
+  },
+  "ingredients": [],
+  "xp": null,
+  "source_line": 5034
+ }
+]

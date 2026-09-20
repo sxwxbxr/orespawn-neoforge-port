@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:krakentooth"
+    },
+    {
+      "item": "orespawn:wormtooth"
+    },
+    {
+      "item": "orespawn:trextooth"
+    },
+    {
+      "type": "neoforge:components",
+      "items": "orespawn:ultimatesword",
+      "components": {
+        "minecraft:damage": 0
+      },
+      "strict": false
+    },
+    {
+      "item": "orespawn:caterkillerjaw"
+    },
+    {
+      "item": "orespawn:seavipertongue"
+    },
+    {
+      "item": "orespawn:vortexeye"
+    }
+  ],
+  "result": {
+    "id": "orespawn:bbblade"
+  }
+}

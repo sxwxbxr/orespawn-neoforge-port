@@ -1,0 +1,20 @@
+{
+  "feature": "orespawn:ore_spawn_ores",
+  "placement": [
+    {
+      "type": "orespawn:legacy_count",
+      "stat": "spawn_ores",
+      "extra": 20,
+      "bonus_one_in": 20,
+      "bonus": 30,
+      "less_ore_divisor": 3
+    },
+    {
+      "type": "orespawn:legacy_ore_position",
+      "offset": 3,
+      "spread": 10,
+      "y_bound": 128,
+      "stat": "spawn_ores"
+    }
+  ]
+}

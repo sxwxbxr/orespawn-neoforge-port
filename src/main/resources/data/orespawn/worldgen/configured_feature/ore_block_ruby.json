@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:blockruby"
+    },
+    "size_stat": "block_ruby",
+    "target": "stone"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TU",
+    " I",
+    " I"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "T": {
+      "item": "orespawn:ingottitanium"
+    },
+    "U": {
+      "item": "orespawn:ingoturanium"
+    }
+  },
+  "result": {
+    "id": "orespawn:ultimatehoe"
+  }
+}

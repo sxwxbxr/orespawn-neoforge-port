@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "UUU",
+    "UUU",
+    "UUU"
+  ],
+  "key": {
+    "U": {
+      "item": "orespawn:titanium_nugget"
+    }
+  },
+  "result": {
+    "id": "orespawn:ingottitanium"
+  }
+}

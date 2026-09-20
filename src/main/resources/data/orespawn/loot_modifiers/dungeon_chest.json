@@ -1,0 +1,32 @@
+{
+  "type": "orespawn:legacy_chest_content",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/simple_dungeon"
+    }
+  ],
+  "draws_min": 8,
+  "draws_max": 8,
+  "total_weight": 128,
+  "entries": [
+    {
+      "item": "orespawn:ruby",
+      "min": 1,
+      "max": 1,
+      "weight": 3
+    },
+    {
+      "item": "orespawn:amethyst",
+      "min": 1,
+      "max": 1,
+      "weight": 3
+    },
+    {
+      "item": "orespawn:thunderstaff",
+      "min": 1,
+      "max": 1,
+      "weight": 2
+    }
+  ]
+}

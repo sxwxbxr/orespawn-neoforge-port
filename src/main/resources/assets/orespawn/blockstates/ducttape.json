@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "uses=0": {
+      "model": "orespawn:block/ducttape"
+    },
+    "uses=1": {
+      "model": "orespawn:block/ducttape_slice1"
+    },
+    "uses=2": {
+      "model": "orespawn:block/ducttape_slice2"
+    },
+    "uses=3": {
+      "model": "orespawn:block/ducttape_slice3"
+    },
+    "uses=4": {
+      "model": "orespawn:block/ducttape_slice4"
+    },
+    "uses=5": {
+      "model": "orespawn:block/ducttape_slice5"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "orespawn:ultimate_chest",
+    "orespawn:lavaeel_chest",
+    "orespawn:mothscale_chest",
+    "orespawn:emerald_chest",
+    "orespawn:experience_chest",
+    "orespawn:ruby_chest",
+    "orespawn:amethyst_chest",
+    "orespawn:pink_chest",
+    "orespawn:tigerseye_chest",
+    "orespawn:peacock_chest",
+    "orespawn:mobzilla_chest",
+    "orespawn:royal_chest",
+    "orespawn:lapis_chest",
+    "orespawn:queen_chest"
+  ]
+}

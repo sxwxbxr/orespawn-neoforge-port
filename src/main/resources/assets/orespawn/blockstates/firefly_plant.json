@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "orespawn:block/firefly_plant_stage0"
+    },
+    "age=1": {
+      "model": "orespawn:block/firefly_plant_stage0"
+    },
+    "age=2": {
+      "model": "orespawn:block/firefly_plant_stage1"
+    },
+    "age=3": {
+      "model": "orespawn:block/firefly_plant_stage1"
+    },
+    "age=4": {
+      "model": "orespawn:block/firefly_plant_stage2"
+    },
+    "age=5": {
+      "model": "orespawn:block/firefly_plant_stage2"
+    },
+    "age=6": {
+      "model": "orespawn:block/firefly_plant_stage2"
+    },
+    "age=7": {
+      "model": "orespawn:block/firefly_plant_stage3"
+    }
+  }
+}

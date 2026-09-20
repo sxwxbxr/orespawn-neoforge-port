@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1470231607,
+    "separation": 2,
+    "spacing": 7,
+    "spread_type": "linear"
+  },
+  "structures": [
+    {
+      "structure": "orespawn:village_dungeon",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Run directories from the dev launches
+run/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+bin/
+
+# Python authoring tools
+__pycache__/
+*.pyc
+
+src/generated/resources/.cache/
+.cache/
+
+# The original jar and the decompiled 20.2 sources are reference material, not ours.
+reference/
+
+# --- Originalassets: nie committen ---------------------------------------
+# Texturen, Sounds und die daraus erzeugten Indizes stammen byteweise aus dem
+# Jar von OreSpawn 1.7.10 v20.3. Der Autor hat die Weiterverbreitung untersagt
+# ("No permission is given to redistribute OreSpawn by itself, in whole or in
+# part"), und ein Teil der Kreaturmodelle gehoert Dritten. Belege in
+# docs/research/04-history-license-ports.md.
+#
+# Sie bleiben lokal liegen, damit der Mod hier baut. Wer das Repo klont,
+# erzeugt sie mit `python tools/assets.py` aus seiner eigenen Kopie des
+# Original-Jars. Siehe README, Abschnitt "Assets".
+src/main/resources/assets/orespawn/textures/
+src/main/resources/assets/orespawn/sounds/
+src/main/resources/assets/orespawn/sounds.json
+src/main/resources/assets/orespawn/lang/en_us.json

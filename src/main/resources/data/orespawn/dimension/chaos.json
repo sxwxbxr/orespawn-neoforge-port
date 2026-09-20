@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:chaos",
+  "generator": {
+    "type": "orespawn:chaos",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "orespawn:chaos"
+    }
+  }
+}

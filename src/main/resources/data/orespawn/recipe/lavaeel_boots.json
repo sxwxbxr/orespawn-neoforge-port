@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "* *",
+    "* *"
+  ],
+  "key": {
+    "*": {
+      "item": "orespawn:lavaeel"
+    }
+  },
+  "result": {
+    "id": "orespawn:lavaeel_boots"
+  }
+}

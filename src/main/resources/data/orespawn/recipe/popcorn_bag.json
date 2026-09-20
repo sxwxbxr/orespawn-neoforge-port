@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:popcorn_buttered_salted"
+    },
+    {
+      "item": "orespawn:popcorn_buttered_salted"
+    },
+    {
+      "item": "orespawn:popcorn_buttered_salted"
+    },
+    {
+      "item": "orespawn:popcorn_buttered_salted"
+    },
+    {
+      "item": "orespawn:popcorn_buttered_salted"
+    },
+    {
+      "item": "orespawn:popcorn_buttered_salted"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "id": "orespawn:popcorn_bag"
+  }
+}

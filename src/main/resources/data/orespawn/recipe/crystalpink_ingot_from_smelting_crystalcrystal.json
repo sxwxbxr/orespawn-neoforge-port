@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "orespawn:crystalcrystal"
+  },
+  "result": {
+    "id": "orespawn:crystalpink_ingot"
+  },
+  "experience": 0.3,
+  "cookingtime": 200
+}

@@ -1,0 +1,8 @@
+{
+  "type": "orespawn:legacy",
+  "dispatcher": "orespawn:overworld_dungeon",
+  "biomes": "#minecraft:is_overworld",
+  "step": "top_layer_modification",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

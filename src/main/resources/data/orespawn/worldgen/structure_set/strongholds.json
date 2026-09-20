@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "orespawn:legacy_stronghold",
+    "count": 3,
+    "distance": 32.0,
+    "spread": 3
+  },
+  "structures": [
+    {
+      "structure": "orespawn:stronghold",
+      "weight": 1
+    }
+  ]
+}

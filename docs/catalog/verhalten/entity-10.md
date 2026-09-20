@@ -1,0 +1,507 @@
+# Verhalten: entity-10
+
+Dieser Batch umfasst neun Kreaturen aus drei Familien. Erstens der zähm- und reitbare Flugdrache `Leon` (Leonopteryx) mit einer eigenen Zustandsmaschine aus Boden- und Flugmodus. Zweitens die „Battle Mobs" `Lizard` und `Ostrich` auf der gemeinsamen Basis `EntityCannonFodder` (Team-Hüte, zwei Besitzer, Klonen per Maiskolben); dazu kommen beim `Ostrich` eine eigene Reitsteuerung mit Wandklettern und beim `Lizard` eine Wassersuche. Drittens die feindlichen Riesen `LurkingTerror`, `Mantis`, `Mothra` (fliegen über rohe Bewegungsvektoren statt Pathfinding), `Molenoid` (gräbt und wirft selbstlöschende Erde) und `Nastysaurus` (Nahkampf-Dinosaurier), sowie der friedliche `Peacock`, der Termiten jagt und Spawn-Eier legt. Keine Klasse überschreitet die 1.21.1-Grenzen (Leben max. 250 fest bzw. 400 per Config, Rüstung max. 22 per Config-Deckel), virtuelles Leben ist also nirgends nötig. Die größten Portierungsrisiken sind: die globale statische Fly-up-Taste für alle Reiter, `Mothra`s geerbter Dimensions-Teleport per Rechtsklick, eine im Code angelegte Selbstschaden-Schleife der `Mantis` und Spawn-Kategorien, die im Original für feindliche Riesen `ambient` lauten.
+
+Gemeinsame Hilfsklassen, auf die unten verwiesen wird:
+
+| Klasse | Verhalten (Quelle) |
+|---|---|
+| `GenericTargetSorter` | sortiert nach Abstand², bei `EntityCreeper` halbiert, bei `height*width > 1` durch dieses Produkt geteilt, große Ziele wirken also näher (GenericTargetSorter.java:13-29) |
+| `MyUtils.isIgnoreable` | `RockBase`, `EntityAnt`, `EntityButterfly`, `EntityMosquito`, `Dragonfly`, `Firefly`, `Cricket`, `Cockateil`, `Termite`, `Ghost`, `GhostSkelly`, `Elevator` (MyUtils.java, Zeile mit `isIgnoreable`) |
+| `MyUtils.isAttackableNonMob` | `EntityMob`, `Mothra`, `Leon`, `Dragon`, `Spyro`, Royalty, `GammaMetroid`, `Cephadrome`, `WaterDragon`, `Girlfriend`, `Boyfriend`, `EntityVillager`, `Stinky` |
+| `MyEntityAIWander` | startet mit 1/90 je Tick, Ziel `findRandomTarget(10, 7)`, nicht wenn sitzend (MyEntityAIWander.java:18-31) |
+| `MyEntityAIWanderALot` | startet mit 1/30, Reichweite xz = Konstruktorwert, y 7 (MyEntityAIWanderALot.java:25-40) |
+| `MyEntityAIFollowOwner` | läuft, wenn Abstand² > (max/2)² bei `posY<60` oder Nacht, sonst ab max²; teleportiert bei Pfadfehler ab Abstand² ≥ 144 auf festen Boden im 5×5-Ring (MyEntityAIFollowOwner.java:28-89) |
+| `MyEntityAIAvoidEntity` | inaktiv, sobald `EntityCannonFodder.get_is_activated() != 0`; Fluchtziel 16/7 Blöcke; unter Abstand² 49 nahe Geschwindigkeit (MyEntityAIAvoidEntity.java:27-89) |
+| `OreSpawnMain.get_mobstats` | Config-Werte werden geklemmt: Leben [h/2, 2h], Angriff [a/2, 2a], Verteidigung [d-4, d+4] und höchstens 22 (OreSpawnMain.java:5738-5762) |
+
+SRG-Namen in diesem Batch, Bedeutung aus der Signatur in `reference/jar/mcp/joined.srg` und der Nutzung abgeleitet (in `methods.csv` nicht gemappt, außer `func_110163_bv`):
+`func_152115_b(String)` = Besitzer-UUID setzen; `func_152114_e(EntityLivingBase)` = „ist Besitzer"; `func_152113_b()` = Besitzer-UUID lesen; `func_145881_a()` = `TileEntityMobSpawner` → `MobSpawnerBaseLogic`; `func_110163_bv` = `enablePersistence` (methods.csv).
+
+Dimensionen: `DimensionID2` = „Dimension-Extreme" (WorldProviderOreSpawn2.java:13, laut Research die Mining Dimension), `DimensionID4` = „Dimension-Islands" (WorldProviderOreSpawn4.java:19, laut Research die Danger Dimension), `DimensionID5` = „Dimension-Crystal" (WorldProviderOreSpawn5.java:19), `DimensionID6` = „Dimension-Chaos" (WorldProviderOreSpawn6.java:19). Die Spawnlisten dieser Dimensionen stehen in `BiomeGenUtopianPlains.setIslandCreatures/setCrystalCreatures/setChaosCreatures` (aufgerufen in WorldProviderOreSpawn4/5/6.java:27).
+
+---
+
+### Leon - Leonopteryx (`leonopteryx`)
+
+- **Rolle:** zähmbarer, reitbarer Flugdrache auf Basis von `EntityTameable` (Leon.java:20). Er ist nicht `IMob`, gilt aber bei anderen Mobs über `MyUtils.isAttackableNonMob` als angreifbar. Keine Boss-Leiste, keine Teile. Aufzucht gibt es nicht: `createChild` liefert `null` (Leon.java:1130-1132), und `interact` ruft `super.interact` nicht auf.
+- **Werte:**
+  - XP 300 (Leon.java:65); `fireResistance` 10, nicht feuerimmun (Leon.java:66-67).
+  - Leben 250, Rüstung 16 und Angriff 55 sind **fest** kodiert (Leon.java:151, :174, :99). Die Config-Schlüssel `Leonopteryx_health/attack/defense` (150/20/8) werden zwar gelesen (OreSpawnMain.java:6195), von `Leon` aber nie benutzt.
+  - Unverwundbarkeit nach Treffer: `hurt_timer` = 15 Ticks, danach liefert jedes `attackEntityFrom` sofort `false` (Leon.java:286-288, :303).
+  - Regeneration: mit 1/250 je Tick +2 Leben, serverseitig in `always_do` (Leon.java:925-927).
+  - Kein Fallschaden (Leon.java:118-122); immun gegen `inWall` (Leon.java:289-291).
+  - Im Wasser `motionY += 0.07` je Tick (Leon.java:497-499); `canBreatheUnderwater` = false; `canBePushed` = false (Leon.java:216).
+  - `jump()` gibt zusätzlich +0.25 `motionY` (Leon.java:177-180).
+  - Reiter: `getMountedYOffset` 3.75 (Leon.java:220-222), Reiter 0.65 Blöcke nach hinten versetzt (Leon.java:956-957).
+  - Sound-Lautstärke 1.75, Tonhöhe 0.85 (Leon.java:208-214).
+  - Die Methoden `getTrackingRange` 64, `getUpdateFrequency` 10 und `sendsVelocityUpdates` (Leon.java:106-116) überschreiben in 1.7.10 nichts. Maßgeblich ist die Registrierung (64, 1, false) (OreSpawnMain.java:4041).
+- **KI und Angriffe:**
+  - Tasks: 0 `EntityAISwimming`; 1 `MyEntityAIFollowOwner(1.1, max 16, min 2)`; 2 `EntityAITempt(1.25, beef)`; 3 `MyEntityAIWander(0.75)`; 4 `EntityAIWatchClosest(EntityLiving, 9)`; 5 `EntityAILookIdle` (Leon.java:68-73).
+  - Target-Tasks: 1 `EntityAINearestAttackableTarget(EntityLiving, 0, true, false, IMob.mobSelector)`, nur bei `PlayNicely==0`; 2 `EntityAIHurtByTarget` (Leon.java:74-77). Es gibt keinen Nahkampf-Task, das Angriffsziel dient nur als Zustand. `updateAITasks` löscht es mit 1/200 (Leon.java:321-323).
+  - **Zustandsmaschine über DataWatcher 21 `activity`:**
+    - 0 = am Boden: `super.onLivingUpdate()`, Vanilla-KI läuft.
+    - ≠0 = Flug: kein `super.onLivingUpdate()`, also keine Vanilla-KI, kein `despawnEntity`, keine Vanilla-Bewegung (Leon.java:706-712). Stattdessen läuft `fly_with_rider` bzw. `fly_without_rider` (Leon.java:739-908).
+  - Wechsel auf 1:
+    - bei Treffer (Leon.java:295-297);
+    - am Boden mit 1/10, wenn `findSomethingToAttack` etwas findet (Leon.java:919-924);
+    - wenn der Besitzer mit `capabilities.isFlying` fliegt (Leon.java:932-937);
+    - bei Besitzer-Abstand² > 400 (Leon.java:938-943);
+    - bei Abstand² > 144 im Bodenmodus (Leon.java:503-508).
+  - Wechsel zurück: mit 1/50 je Tick, ohne Ziel und ohne Reiter, dann 1/15 → 1, sonst → 0. Er landet also meistens (Leon.java:944-951).
+  - `findSomethingToAttack`: Box ±20/20/20, sortiert (Leon.java:414-415). Die Prüfung `isSuitableTarget` (Leon.java:368-408) verlangt: nicht Peaceful, `PlayNicely==0`, lebendig, nicht `isIgnoreable`, sichtbar, kein `Leon`. Dann gilt:
+    - `EntityMob` → ja.
+    - Spieler → nur wenn nicht Creative **und** Leon ungezähmt.
+    - Ungezähmt zusätzlich alles aus `isAttackableNonMob`, also auch Dorfbewohner.
+  - **Flug ohne Reiter** (Leon.java:511-690):
+    - Hängt er 50 Ticks auf demselben x/z, startet ein `unstick_timer` von 100 mit neuem Ziel (Leon.java:545-555).
+    - Neues Ziel zusätzlich mit 1/300 (Leon.java:570) oder bei Abstand² < 4.1 (Leon.java:616).
+    - Gezähmt und Besitzer-Abstand² > 144 → Angriff abbrechen, neues Ziel beim Besitzer (Leon.java:573-586).
+    - Angriffsscan mit 1/8, nur ohne `toofar`/`unstick`, nicht Peaceful (Leon.java:590-615): Ist er gezähmt und hat unter 25 % Leben, flieht er zum gespiegelten Punkt (Leon.java:593-599). Sonst fliegt er aufs Ziel (y+1) und greift an, wenn Abstand² < (7 + Breite/2)² (Leon.java:600-609).
+    - Zielsuche mit bis zu 50 Versuchen, Ziel muss Luft und per Strahl von y+0.75 aus sichtbar sein (Leon.java:620-652, :460-462). Mit Besitzer: dessen Position ±6..17 (Besitzer am Boden) bzw. ±0..7 (Besitzer fliegt). Ohne Besitzer: eigene Position ±6..25. y-Streuung `rand(9 + owner_flying*2) - 4`.
+    - Hindernis unter der Flugbahn: +0.05 je Block auf `motionY` und `posY` (Leon.java:654-668).
+    - `speed_factor` 0.5; bei fliegendem Besitzer 1.75; zusätzlich bei Besitzer-Abstand² > 49 → 3.5 (Leon.java:669-681).
+    - Beschleunigung `(signum - motion) * 0.15/0.21/0.15 * speed_factor`, Drehung Gier/5 (Leon.java:682-689).
+    - Das Feld `flyaway` wird nie > 0 gesetzt, der Pfad dahinter ist toter Code.
+  - **Flug mit Reiter:** Mit 1/7 je Tick, nicht Peaceful, nimmt er das aktuelle Ziel oder sucht eines, setzt `attacking` 1 und schlägt zu, wenn Abstand² < (9 + Breite/2)². Ein gerittener Leon greift also selbstständig an (Leon.java:326-356).
+  - **`attackEntityAsMob`** (Leon.java:253-281):
+    - Gegen `EntityDragon`: Explosions-`DamageSource` 55 auf `dragonPartHead` mit 1/6, sonst auf `dragonPartBody`.
+    - Gegen jedes andere `EntityLivingBase`: 55 Mob-Schaden, ×4 gegen `Kraken`.
+    - Rückstoß horizontal 1.25, vertikal 0.15 (0.3 gegen Spieler oder tote Ziele).
+    - Der Schaden ist fest kodiert und ignoriert das Attribut. Rückgabe immer `true`.
+  - **`attackEntityFrom`** (Leon.java:283-314): Schaden von einem anderen `Leon` wird ignoriert. Der Angreifer wird Ziel und per Pfad angelaufen (1.2). **Falle:** Ist Leon gezähmt und der Angreifer ein Spieler, kommt `false` zurück, der Schaden wurde aber schon angewandt.
+- **Interaktion** (Leon.java:974-1091), alles nur bei Abstand² < 49:
+  - `diamond_block`: **immer** zähmen, auch wenn er schon einem anderen Spieler gehört. Besitzer wird der Klickende, volle Heilung, 1 Block wird verbraucht (Leon.java:980-996).
+  - Ungezähmt mit `beef`: mit 1/3 (`nextInt(3)==1`) zähmen und voll heilen, sonst Rauch; das Rindfleisch wird immer verbraucht (Leon.java:997-1020).
+  - Gezähmt, Klick durch Nicht-Besitzer: `false` (Leon.java:1023-1025).
+  - Besitzer mit leerer Hand: aufsteigen, `activity` 1, Sitzen aus (Leon.java:1026-1033).
+  - Besitzer mit `beef`: volle Heilung, verbraucht 1. Die Herzchen erscheinen nur clientseitig (Leon.java:1034-1050).
+  - Besitzer mit `deadbush`: Zähmung aufheben, Besitzer "" (Leon.java:1051-1066).
+  - Besitzer mit `name_tag`: Name setzen, verbraucht (Leon.java:1067-1077).
+  - Besitzer mit irgendeinem anderen Item, ohne Reiter: Sitzen umschalten, `activity` 0 (Leon.java:1078-1088).
+  - **Reitsteuerung** (Leon.java:740-905):
+    - `motionX/Z` auf ±2 geklemmt.
+    - Block 1.55 unter ihm → `motionY` +0.03 und `posY` +0.1; sonst Schwerkraft −0.018 (Leon.java:755-763).
+    - Hindernis voraus hebt ihn: +0.07 je Block, `motionY` höchstens 2.0 (Leon.java:764-781).
+    - Gier folgt dem Reiter mit Nachlauf `clamp(|1.85 - v|, 0.01, 0.9)` (Leon.java:782-809); Neigung = 2·v (Leon.java:810).
+    - Vorwärts: `deltav` 0.028 + 0.06 (da `max_speed` 1.15 > 1.0 immer), in Zehntelschritten geglättet. Rückwärts: `max_speed` 0.35, `deltav` −0.02 (Leon.java:836-877).
+    - Steigen über `OreSpawnMain.flyup_keystate`: +0.035 + v·0.038 (Leon.java:821-824). Eine Sinken-Taste gibt es nicht.
+    - Dämpfung 0.985/0.94/0.985 (Leon.java:887-889); schiebt Entities in der Box 2.25/2/2.25 (Leon.java:891-899).
+- **Drops** (Leon.java:238-251), jeweils Einzelstacks ±3 Blöcke gestreut, y+2, `beef` aus `getDropItem` wird nicht benutzt:
+  - `chicken` 4-9 (`4+nextInt(6)`)
+  - `feather` 16-21
+  - `krakenrepellent` 2-7
+  - `battleaxesmall` mit 1/5
+  - Looting wird ignoriert. XP 300.
+- **Spawnen:**
+  - `getCanSpawnHere` (Leon.java:433-458): Ein Spawner „Leonopteryx" in x/z −3..2, y 0..4 → sofort ja. Sonst gilt: 1/16, Tag, kein anderer `Leon` in ±48/16/48, `posY ≥ 50`.
+  - Kein Overworld-`addSpawn` (manifest: spawns leer).
+  - Chaos-Dimension, Monsterliste, Gewicht 1, 1-1, bei `LeonEnable` (BiomeGenUtopianPlains.java:424-425).
+  - Leonopteryx-Nest in `DimensionID2`: `recently_placed==0` und 1/95, dann Fall 6 von 7 (OreSpawnWorld.java:65-86). `addLeonNest` sucht Gras bei y 81..128 (OreSpawnWorld.java:2222-2250). `makeLeonNest` setzt genau einen Spawner „Leonopteryx" (GenericDungeon.java:4762-4765).
+  - `canDespawn`: nur wenn nicht persistent, ohne Reiter und ungezähmt (Leon.java:1134-1136). Im Flugmodus läuft allerdings kein Vanilla-Despawn (siehe oben).
+- **Zustand:**
+  - DataWatcher: 20 `attacking` (int), 21 `activity` (int), 22 `beingRidden` (int) (Leon.java:130-132); die Setter wirken nur serverseitig (Leon.java:1101-1128). Dazu die Vanilla-Werte von `EntityTameable` (Sitzen/Gezähmt, Besitzer).
+  - NBT: `LeonAttacking`, `LeonActivity` (Leon.java:1138-1148) plus Vanilla-Tameable.
+  - `RenderInfo` ist reiner Client-Zwischenspeicher.
+- **Sounds:**
+  - `orespawn:leon_living` nur bei `activity==1`, nicht sitzend, ohne Reiter (Leon.java:190-198).
+  - `orespawn:leon_hit` (3 Varianten, sounds_dump), `orespawn:leon_death`.
+  - `orespawn:MothraWings` (neu `mothrawings`, manifest problems) im Flug alle >20 Ticks mit Lautstärke 0.5 (Leon.java:488-496).
+  - Zähm-Partikel `heart`/`smoke` (Leon.java:961-972).
+- **Config:** `LeonEnable` (nur die Chaos-Spawnliste), `PlayNicely` (Zielwahl), `flyup_keystate` (Laufzeit). `Leonopteryx_health/attack/defense` sind in `Leon` ungenutzt.
+- **Portierung 1.21.1:**
+  - Basis `TamableAnimal`; `EntityDimensions.scalable(3.5f, 8.25f)`.
+  - Attribute 250/16/55 liegen unter den Deckeln. Den Schaden 55 fest in `doHurtTarget` behalten.
+  - Die Zustandsmaschine gehört in `aiStep()`: bei `activity!=0` darf `super.aiStep()` nicht laufen. Dabei fallen Vanilla-Despawn, Sprung und Reibung weg, das ist 1:1 so gewollt.
+  - Reiten über `getControllingPassenger`/`tickRidden`/`travel` oder direkt im `aiStep`; `positionRider` bzw. `getPassengerAttachmentPoint` statt `updateRiderPosition`.
+  - **Falle `flyup_keystate`:** Im Original ist das ein globales `static`, das `RiderControlMessageHandler` für **alle** Spieler setzt (RiderControlMessageHandler.java:17). Im Port gehört das als Payload-Paket in einen Zustand je Reiter (`ServerPlayer`-Attachment).
+  - Drachen-Treffer: `EnderDragon.hurt(EnderDragonPart, DamageSource, float)` mit `damageSources().explosion(null, null)`.
+  - `IMob.mobSelector` → `NearestAttackableTargetGoal<>(this, Mob.class, 0, true, false, e -> e instanceof Enemy)`; `EntityAITempt(beef)` → `TemptGoal(Ingredient.of(Items.BEEF))`.
+  - `setAvoidsWater(true)` → `setPathfindingMalus(PathType.WATER, -1)`.
+  - Die Diamantblock-Übernahme fremder Leons ist ein Originalverhalten, es sollte bewusst erhalten bleiben.
+  - Spawn-Ei `eggleon` (manifest).
+
+### Lizard - Lizard (`lizard`)
+
+- **Rolle:** zeitweiliger Begleiter und „Battle Mob"; `EntityCannonFodder` → `EntityTameable` (Lizard.java:15). Grundsätzlich friedlich, jagt aber Spinnen, Hühner und Attack Squids. Vermehrbar.
+- **Werte:**
+  - XP 15 (Lizard.java:41); `fireResistance` 3 (Lizard.java:42).
+  - Leben 30 und Rüstung 5 fest; `getTotalArmorValue` ersetzt die Battle-Mob-Rüstung 3/0 (Lizard.java:77, :82).
+  - Geschwindigkeit 0.3 (Lizard.java:33, :38, :72).
+  - Nahkampf 6, fest in `attackEntityAsMob` (Lizard.java:311); im Battle-Modus ebenfalls 6 (EntityCannonFodder.java:364-366).
+  - Regeneration: mit 1/300 +1 (Lizard.java:281-283), zusätzlich mit 1/250 +1 aus der Basisklasse (EntityCannonFodder.java:384-386).
+  - Immun gegen `cactus` (Lizard.java:96).
+  - `follow_time` nach Farbstoff-Fütterung 3000-4999 Ticks (Lizard.java:143).
+- **KI und Angriffe:**
+  - Tasks: 0 `EntityAISwimming`; 1 `MyEntityAIFollowOwner(2.0, 10, 2)`; 2 `EntityAIMate(1.0)`; 3 `EntityAITempt(1.25, Items.dye)`; 4 `MyEntityAIWanderALot(16, 1.0)`; 5 `EntityAIWatchClosest(Player, 8)`; 5 `EntityAILookIdle`. Target: 1 `EntityAIHurtByTarget` (Lizard.java:45-52).
+  - **Wassersuche** (Lizard.java:259-280): an Land mit 1/100 je Tick. Hüllenscan mit i = 1,2,3,4,5,7,9,11,13, y-Radius höchstens 5, nach `water`/`flowing_water`. Dann `tryMoveToXYZ(tx, ty-1, tz, 1.33)`.
+  - **Jagd** (Lizard.java:284-304): nicht Peaceful, mit 1/10.
+    - `findSomethingToAttack` sucht in ±12/4/12 (Lizard.java:354). Mit 1/100 wird das Ziel gelöscht (Lizard.java:359-361).
+    - Ein **noch lebendes Angriffsziel hat Vorrang ohne Eignungsprüfung** (Lizard.java:362-365). Wer die Echse schlägt, Spieler eingeschlossen, wird verfolgt.
+    - Sonst geeignet: `AttackSquid`, `EntitySpider`, `EntityCaveSpider`, `EntityChicken` (Lizard.java:332-343).
+    - Eine andere `Lizard` wird mit 1/10 zum `buddy`, wenn `follow_time ≤ 0` (Lizard.java:344-346).
+    - Abstand² < 12 → `attacking` 1 und Angriff mit Wahrscheinlichkeit „1/4 oder 1/5"; sonst Pfad 1.2 (Lizard.java:288-296).
+    - Ohne Ziel: mit 1/15 zum `buddy` laufen (1.0), `attacking` 0 (Lizard.java:299-302).
+    - Solange `follow_time > 0`: mit 1/20 dem Buddy folgen (Lizard.java:305-307).
+  - **Battle-Modus** aus der Basisklasse, nur bei `is_activated==2` (EntityCannonFodder.java:346-387):
+    - Scan mit 1/5, Box ±10/4/10.
+    - Ziele: `EntityMob`; andere `EntityCannonFodder` mit Hut ≠ 0 und ≠ eigenem Hut; Spieler, die weder `name_one` noch `name_two` sind und nicht Creative.
+    - Sitzend (Wache) nur Ziele innerhalb Abstand² 144 um den Wachpunkt.
+    - Pfad 1.25; Abstand² < 9 → 6 Schaden mit „1/(8+1) oder 1/8"; ohne Ziel zurück zum Wachpunkt (0.65).
+    - Diese Pfade prüfen `PlayNicely` nicht.
+- **Interaktion:**
+  - Zuerst `EntityCannonFodder.interact` (EntityCannonFodder.java:66-209):
+    - `super.interact` → Vanilla-Paarung mit `crystalapple` (`isBreedingItem`, Lizard.java:410-412).
+    - Ist sie gezähmt und `name_one` gesetzt, rotiert jeder Klick die Besitzer: der Klickende wird `name_one`, der alte `name_two`, `is_activated` = 2. Ein fremder dritter Spieler wird ignoriert.
+    - `carrot` → Hut 1, `potato` → Hut 3, `quinoa` → Hut 2 (Abstand² < 16): zähmen, persistent, volle Heilung, `is_activated` mindestens 1.
+    - `corncob` bei `is_activated==2`: klont eine „Lizard" mit Hut, Besitzern und Aktivierung; Sound `random.explode` 0.75/2.0.
+    - **Jeder** Klick in Abstand² < 16 bei `is_activated==2` schaltet die Wache um. Die Farbstoff-Logik unten ist dann unerreichbar.
+  - Danach `Lizard` (Lizard.java:140-160):
+    - `Items.dye`, **jede Metadaten-Variante**, in Abstand² < 16: der Spieler wird `buddy` für 3000-4999 Ticks, Herzchen, 1 wird verbraucht.
+    - Jeder andere Klick: Buddy löschen, Rauch, `true`.
+  - Aufzucht: `createChild` → neue `Lizard` (Lizard.java:398-404). `isWheat(apple)` ist ein toter Altname.
+- **Drops:** keine, `getDropItem` → `null` (Lizard.java:126-128); die Basisklasse hat kein `dropFewItems`. XP 15.
+- **Spawnen:**
+  - `getCanSpawnHere`: nur `posY ≥ 50` (Lizard.java:385-387).
+  - Kategorie `waterCreature`: Fluss 5, Sumpf 4, Ozean 2, je 2-4 Tiere (manifest).
+  - `canDespawn`: Jungtiere nie (und werden dabei persistent gesetzt); sonst nur wenn nicht persistent, ungezähmt und `should_despawn`, das während `follow_time > 0` auf false steht (Lizard.java:252-258, :389-395).
+- **Zustand:**
+  - DataWatcher: 20 `is_activated`, 21 `hat_color` (Basis, alle 5 Ticks synchronisiert, EntityCannonFodder.java:46-63); 23 `attacking` (Lizard.java:67, :377-383).
+  - NBT (Basis): `NameOne`, `NameTwo`, `IsActivated`, `HatColor`, `PatrolX/Y/Z`. Beim Laden mit `NameOne` → gezähmt (EntityCannonFodder.java:238-278).
+  - `buddy`/`follow_time` werden nicht gespeichert.
+- **Sounds:** kein Living-Sound; Treffer `orespawn:alo_hurt`, Tod `orespawn:alo_death`, Lautstärke 1.0, Tonhöhe 1.0 (Lizard.java:106-124).
+- **Config:** `LizardEnable`, `PlayNicely` (nur `findSomethingToAttack`, Lizard.java:351).
+- **Portierung 1.21.1:**
+  - `TamableAnimal` + `SynchedEntityData`-Werte.
+  - Research spricht von „ink sacs"; der Code nimmt **jeden** `Items.dye`. In 1.21.1 gibt es keine Metadaten mehr, nötig ist also ein Tag über alle 16 Farbstoffe plus `ink_sac`. Die 1:1-Entscheidung liegt beim Port.
+  - `waterCreature` mit Landtier: in 1.21.1 `MobCategory.WATER_CREATURE` plus `SpawnPlacementTypes.IN_WATER`. Die Echse spawnt dann im Wasser und läuft an Land.
+  - Die Besitzer-Rotation braucht zwei UUIDs; Vanilla-Tameable kennt nur eine.
+  - Spawn-Ei `egglizard`.
+
+### LurkingTerror - Lurking Terror (`lurking_terror`)
+
+- **Rolle:** kleiner fliegender Feind, `EntityMob` (LurkingTerror.java:14). Er hat **keine** KI-Tasks; gesteuert wird alles in `updateAITasks` über Bewegungsvektoren.
+- **Werte:**
+  - XP 20 (LurkingTerror.java:27); `fireResistance` 5 (LurkingTerror.java:29).
+  - `motionY *= 0.6` je Tick als Schwebeverhalten (LurkingTerror.java:117); kein Fallschaden (LurkingTerror.java:187-191).
+  - **Tatsächlicher Nahkampf fest 5.0** (LurkingTerror.java:121). Der Config-Angriff (Standard 6, manifest) landet nur im Attribut und wirkt nicht.
+  - Leben und Rüstung aus der Config (LurkingTerror.java:104, :108).
+  - Sound-Lautstärke 0.55 (LurkingTerror.java:84).
+- **KI und Angriffe** (LurkingTerror.java:129-181):
+  - Neues Flugziel mit 1/120 oder bei Abstand² < 2.1: x/z ±2..11, y −2..+2, bis zu 50 Versuche, Ziel Luft und sichtbar (LurkingTerror.java:140-156).
+  - Sonst mit 1/9 `findSomethingToAttack` in ±12/8/12 (LurkingTerror.java:322): `attacking` 1, Flugziel y+1, Abstand² < 6 → 5 Schaden (LurkingTerror.java:157-170).
+  - Bewegung: horizontal `(signum*0.4 - m)*0.3`, vertikal `(signum*0.7 - m)*0.2`, `moveForward` 0.75, Gier/4 (LurkingTerror.java:171-180).
+  - Ziele: alles Lebendige und Sichtbare außer `LurkingTerror`, `RockBase`, `EnderReaper`, `LeafMonster`, `TerribleTerror`, `Mothra`, `CloudShark`, `Rotator`, `Bee`, `Mantis`, `CreepingHorror`, `Triffid`, `PitchBlack`, `Dragon`, `Island`, `IslandToo`, `EntityButterfly`, `Firefly` sowie Creative-Spielern (LurkingTerror.java:239-316). Tiere und Dorfbewohner sind also Ziele.
+  - Bei Treffer: Flugziel = Position des Angreifers (LurkingTerror.java:197-204).
+  - Research: „knocks players off high places". Im Code gibt es nur den Vanilla-Rückstoß des Treffers, keinen eigenen Stoß.
+- **Interaktion:** keine.
+- **Drops:** `getDropItem` würfelt einmal zwischen `beef`, `flint` und `feather`, je 1/3 (LurkingTerror.java:337-346). Die Menge kommt aus dem Vanilla-`EntityLiving.dropFewItems` (offen: im Repo-Quelltext nicht belegt). XP 20.
+- **Spawnen** (LurkingTerror.java:206-237):
+  - Spawner „Lurking Terror" in x/z −2..1, y 0..4 → ja.
+  - Sonst: `isValidLightLevel` (Dunkelheitsprüfung von `EntityMob`) **und** `isDaytime`, das heißt dunkle Stellen am Tag. Dazu 1/2; in `DimensionID6` zusätzlich 1/6; kein weiterer in ±32/16/32; `posY ≥ 10`.
+  - Listen: Islands-Dimension Monster, Gewicht 1 (BiomeGenUtopianPlains.java:104-105); Chaos-Dimension Monster, Gewicht 1 (BiomeGenUtopianPlains.java:430-431). Kein Overworld-`addSpawn`.
+  - Spawner in Strukturen: `makeDungeon` (GenericDungeon.java:196), Stockwerke von `makeEnormousCastle` (GenericDungeon.java:326), `makeMiniDungeon` (GenericDungeon.java:2418, :2426), `makeEnormousCastleQ` (GenericDungeon.java:6487-6502).
+  - `canDespawn`: nur ohne `attacking` (LurkingTerror.java:56-58).
+- **Zustand:** DataWatcher 20 `attacking`; kein eigenes NBT.
+- **Sounds:** `orespawn:lurkinghorror_living`, `orespawn:lurkinghorror_hit`, `orespawn:lurkinghorror_dead` (LurkingTerror.java:91-101).
+- **Config:** `LurkingTerrorEnable`, `LurkingTerror_health/attack/defense` (30/6/5), `PlayNicely`, `DimensionID6`.
+- **Portierung 1.21.1:**
+  - `Monster` mit `customServerAiStep` und direkter `setDeltaMovement`-Rechnung, ohne `FlyingMoveControl`, damit das Flattern 1:1 bleibt.
+  - `isValidLightLevel` → `Monster.isDarkEnoughToSpawn`; `isDaytime` → `level.isDay()`.
+  - Spawner-Ausnahme über `MobSpawnType.SPAWNER` im `SpawnPlacements`-Prädikat.
+  - Den festen Schaden 5 behalten; die Config wirkt nur aufs Attribut (Tooltip/Anzeige).
+  - Spawn-Ei `egglurkingterror`.
+
+### Mantis - Mantis (`mantis`)
+
+- **Rolle:** großer, springend-fliegender Insekten-Feind, `EntityMob` (Mantis.java:16). Keine KI-Tasks, Steuerung in `updateAITasks`.
+- **Werte:**
+  - XP 100 (Mantis.java:35); `fireResistance` 5.
+  - Geschwindigkeit 0.32 (Mantis.java:44).
+  - Angriff aus der Config; wirkt über das Vanilla-`EntityMob.attackEntityAsMob`, da nicht überschrieben (Mantis.java:45).
+  - Leben und Rüstung aus der Config (Mantis.java:93, :278).
+  - Regeneration: mit 1/100 +1 (Mantis.java:208-210).
+  - `motionY *= 0.6` (Mantis.java:129); kein Fallschaden.
+  - `canBePushed` true, `collideWithEntity` leer (Mantis.java:85-90). Lautstärke 0.35.
+- **KI und Angriffe:**
+  - **Wasser:** mit 1/20 je Tick `attackEntityAsMob(this)`, sie schlägt sich also selbst mit dem Angriffsattribut (Mantis.java:130-132). Research: „lure it into water".
+  - **Selbstschaden-Schleife (im Code angelegt):** Dieser Selbsttreffer löst `attackEntityFrom` mit sich selbst als Quelle aus und setzt `rt = this` (Mantis.java:227-233). Im Angriffszweig wird `rt` bevorzugt, solange es lebt, und ohne Eignungsprüfung angegriffen (Mantis.java:180-191); der Abstand zu sich selbst ist 0. Die Mantis greift sich daher mit 1/8 je Tick weiter an, bis ein anderer Angreifer `rt` überschreibt oder sie stirbt. Gebremst wird das nur durch die Vanilla-Unverwundbarkeitsticks.
+  - Hängen: 50 Ticks auf demselben x/z (Mantis.java:147-154).
+  - Neues Flugziel bei Hängen, mit 1/300 oder bei Abstand² < 2.1: x/z ±4..12, y −3..+2, 50 Versuche (Mantis.java:158-177).
+  - Sonst mit 1/8: Ziel = `rt`, falls nicht tot, sonst `findSomethingToAttack` in ±16/8/16 (Mantis.java:372). `attacking` 1, Flugziel y+1, Abstand² < (5 + Breite/2)² → Angriff (Mantis.java:178-197).
+  - Bewegung: horizontal `(signum*0.5 - m)*0.3`, vertikal `(signum*0.7 - m)*0.2`, `moveForward` 1.0, Gier/4 (Mantis.java:198-207).
+  - Ziele (Mantis.java:284-366):
+    - Nichts, was im Wasser ist.
+    - Spieler → nicht Creative.
+    - Ausgeschlossen: `Mantis`, `Irukandji`, `Skate`, `Flounder`, `Whale`, `EntitySquid`, `WaterDragon`, `AttackSquid`, `TerribleTerror`, `LurkingTerror`, `CloudShark`, `Rotator`, `Bee`, `Mothra`.
+    - Ja: `EntityMob`, `EntityButterfly`, `Cockateil`, `Fairy`; sonst `isAttackableNonMob`.
+  - Bei Treffer durch ein Lebewesen: `rt` = Angreifer, Flugziel = dessen Position (Mantis.java:227-235).
+- **Interaktion:** keine.
+- **Drops** (Mantis.java:105-121), ±4 Blöcke gestreut, y+1; `yellow_flower` aus `getDropItem` ungenutzt:
+  - `mantisclaw` 2
+  - `item_frame` 1
+  - `gold_nugget` 2-11
+  - `uranium_nugget` 1-3
+  - `titanium_nugget` 1-3
+  - `diamond` 2-4
+  - XP 100.
+- **Spawnen** (Mantis.java:237-275):
+  - Spawner „Mantis" in x/z −2..2, y 1..3 → ja.
+  - Sonst: Luft in x/z −2..1, y 1..5; in `DimensionID6` 1/6; `posY ≥ 50`; Tag; keine andere Mantis in ±32/16/32.
+  - Listen: Overworld `ambient` (manifest, 9 Biome); Crystal-Dimension Höhlenkreaturen, Gewicht 1 (BiomeGenUtopianPlains.java:139-140); Chaos-Dimension Monster, Gewicht 1 (BiomeGenUtopianPlains.java:427-428).
+  - Mantis-Nest: Overworld mit 1/230 je Chunk in Forest/ForestHills/Jungle/JungleHills/Birch Forest (+Hills) (OreSpawnWorld.java:999-1012). `makeMantisHive` setzt 3 Spawner (GenericDungeon.java:1097-1102).
+  - Stockwerke von `makeEnormousCastle`/`makeEnormousCastleQ` (GenericDungeon.java:338, :6528).
+  - `canDespawn`: nur Persistenz (Mantis.java:53-55).
+- **Zustand:** DataWatcher 20 `attacking`; kein eigenes NBT, `rt` wird nicht gespeichert.
+- **Sounds:** Living `orespawn:Beebuzz`, Treffer `orespawn:dragonfly_hurt`, Tod `orespawn:alo_death` (Mantis.java:73-83).
+- **Config:** `MantisEnable`, `Mantis_health/attack/defense` (120/16/10, OreSpawnMain.java:6139), `PlayNicely`, `DimensionID6`. Research nennt aus [NW] 150 Leben, der Code-Default ist 120.
+- **Portierung 1.21.1:**
+  - `Monster` mit Vektorflug wie `LurkingTerror`.
+  - Die Selbstschaden-Schleife muss bewusst entschieden werden: 1:1 übernehmen (so im Original) oder `rt != this` prüfen. Die Abweichung gehört dann dokumentiert.
+  - `isInWater()` ist gleich; `attackEntityAsMob(this)` → `doHurtTarget(this)`.
+  - Kategorie `ambient` für einen Feind: prüfen, ob `neoforge:add_spawns` die Kategorie aus dem `EntityType` nimmt; der Typ müsste dann `MobCategory.AMBIENT` tragen.
+  - Spawn-Ei `eggmantis`.
+
+### Molenoid - Molenoid (`molenoid`)
+
+- **Rolle:** großer grabender Feind, `EntityMob` (Molenoid.java:16). Wandert per Tasks und greift aus `updateAITasks` an.
+- **Werte:**
+  - XP 40 (Molenoid.java:27); `fireResistance` 100 (Molenoid.java:28).
+  - Geschwindigkeit 0.35 (Molenoid.java:24, :55).
+  - Angriff aus der Config über das Vanilla-Nahkampfattribut (Molenoid.java:42, :130); Leben und Rüstung aus der Config.
+  - Rückstoß beim Treffer: horizontal 0.8, vertikal 0.1 (0.2 gegen Spieler/Tote) (Molenoid.java:132-138).
+  - Immun gegen `inWall` (Molenoid.java:126) – er steckt in seiner eigenen Erde nicht fest.
+  - Lautstärke 1.1; meidet Wasser (Molenoid.java:26).
+- **KI und Angriffe:**
+  - Tasks: 0 `EntityAISwimming`; 1 `EntityAIMoveThroughVillage(1.0, false)`; 2 `MyEntityAIWanderALot(16, 1.0)`; 3 `EntityAIWatchClosest(Player, 8)`; 4 `EntityAILookIdle`. Target: 1 `EntityAIHurtByTarget` (Molenoid.java:30-35). Das Target-Ziel wird von der eigenen Angriffslogik nicht gelesen.
+  - Zielsuche mit 1/4 in ±12/6/12 (Molenoid.java:151-152, :264). Sichtprüfung `MyCanSee`: ein 10er-Strahl vom Kopf (2 Blöcke voraus, y+1), der `air`, `moledirt`, `dirt`, `grass`, `tallgrass`, `sand` und `gravel` durchlässt (Molenoid.java:327-393).
+  - Ziele: Spieler (nicht Creative), `EntityMob`, `isAttackableNonMob`; keine `Molenoid` (Molenoid.java:233-258).
+  - Mit Ziel: `faceEntity(10, 10)` (Molenoid.java:154). Innerhalb Abstand² < (6 + Breite/2)²:
+    - `attacking` 1.
+    - Bei Abstand² < 16 und Wahrscheinlichkeit „1/4 oder 1/5" → Nahkampf.
+    - **sonst Erdwurf** (nur `PlayNicely==0`): 1-4 `moledirt`-Blöcke an Ziel-x/z ±2, jeweils auf die erste Oberfläche von Ziel-y+4 bis y−2 (Molenoid.java:155-173). Das erstickt oder bremst.
+  - Außerhalb der Reichweite: Pfad 1.25 (Molenoid.java:175-177).
+  - Server, mit 1/2 je Tick: Chance `100·min(v, 0.35)/0.35` Prozent, 1 `moledirt` 6 Blöcke von `rotationYawHead` versetzt (±3 zufällig) auf die erste Oberfläche von y+4 bis y−3 (Molenoid.java:186-206). Nach Vanilla-Konvention (vorne = −sin, +cos) liegt dieser Punkt **hinter** dem Kopf. Er hinterlässt also eine Spur.
+  - **Graben jeden Tick** (Molenoid.java:207-230): Punkt 3 Blöcke voraus (±3 zufällig), Höhen `dir..dir+2` mit `dir` 1, bzw. 2 wenn das Ziel höher, 0 wenn tiefer.
+    - `dirt`/`grass`/`gravel`/`sand`/`leaves` → Luft, nur bei `mobGriefing`.
+    - `moledirt` → Luft auch ohne `mobGriefing`.
+    - Beides nur bei `PlayNicely==0`.
+- **Interaktion:** `interact` → `false` (Molenoid.java:121-123).
+- **Drops** (Molenoid.java:107-116), ±3 gestreut, y+1:
+  - `molenoidnose` 1
+  - `item_frame` 1
+  - `gold_nugget` 10
+  - `beef` 6
+  - XP 40.
+- **Spawnen** (Molenoid.java:287-325):
+  - Spawner „Molenoid" in x/z −3..2, y 0..4 → ja.
+  - Sonst: `isValidLightLevel`; `posY ≥ 50`; **Nacht**; Luft in x/z −1..0, y 1..3; kein weiterer in ±16/8/16.
+  - Listen: Overworld `ambient` Plains 2 (1-2), Savanna 2, Savanna Plateau 2 (manifest); Chaos-Dimension Monster, Gewicht 1 (BiomeGenUtopianPlains.java:391-392).
+  - Spawner in der Inca-Pyramide (GenericDungeon.java:3981-3984), die in `DimensionID4` generiert wird (OreSpawnWorld.java:119-133).
+  - `canDespawn`: nur Persistenz.
+- **Zustand:** DataWatcher 20 `attacking`; kein NBT.
+- **Sounds:** `orespawn:molenoid_living` nur mit 1/3 (3 Varianten), `orespawn:molenoid_hit` (6 Varianten), `orespawn:molenoid_death` (Molenoid.java:75-88; sounds_dump).
+- **Config:** `MolenoidEnable`, `Molenoid_health/attack/defense` (200/18/12), `PlayNicely`; Gamerule `mobGriefing`.
+- **Portierung 1.21.1:**
+  - `Monster`; Blöcke über `level().setBlock` mit Flag 3.
+  - `mobGriefing` → `EventHooks.canEntityGrief(level, this)`.
+  - `MoleDirtBlock` braucht `randomTick` → Luft (MoleDirtBlock.java:22-27) und die verkleinerte Kollisionsbox (MoleDirtBlock.java:29-30) als eigenen Block `moledirt`.
+  - Graben jeden Tick kostet bei vielen Molenoids Leistung. 1:1 behalten, aber `level.getBlockState` nur bei geladenen Chunks aufrufen.
+  - `MoveThroughVillage` → `MoveThroughVillageGoal(this, 1.0, false, 4, () -> false)`.
+  - Kategorie `ambient` wie bei der Mantis.
+  - Spawn-Ei `eggmolenoid`.
+
+### Mothra - Mothra (`mothra`)
+
+- **Rolle:** fliegender Boss-Falter; `EntityButterfly` → `EntityAmbientCreature`, implementiert `IMob` (Mothra.java:17). Er erbt von `EntityButterfly` **das Rechtsklick-Verhalten und die Flugroutine**.
+- **Werte:**
+  - XP 100 (Mothra.java:42); `isImmuneToFire` true, `fireResistance` 500 (Mothra.java:43-44).
+  - Geschwindigkeit 0.35 (Mothra.java:39, :52).
+  - Angriffsattribut aus der Config (Mothra.java:53). **Einen eigenen Nahkampf gibt es nicht**; nur das geerbte `attackEntityAsMob` (50 %, fest 1 Schaden, EntityButterfly.java:170-179) wird unter der Butterfly-Bedingung unten ausgelöst.
+  - Leben und Rüstung aus der Config (Mothra.java:118, :71).
+  - Regeneration: `health_ticker` startet bei 100, danach alle 200 Ticks +1 (Mothra.java:137-143); zusätzlich +1 bei jedem Schuss (Mothra.java:427-429).
+  - Kein Fallschaden, löst keine Druckplatten aus, `canTriggerWalking` false (Mothra.java:260-275).
+  - `motionY *= 0.6` (Mothra.java:129); schiebbar, aber ohne Kollision (Mothra.java:104-114). Lautstärke 1.5.
+- **KI und Angriffe:**
+  - `super.updateAITasks()` (Mothra.java:159) führt **zuerst** die Butterfly-Routine mit eigenem privatem Flugziel aus: Ziel ±6 Blöcke, Beschleunigung ×0.1, volle Gierdrehung (EntityButterfly.java:134-168). Dort greift sie mit 1/10 an, wenn `DimensionID4` **und** `butterfly_type==1` (Zufall 0-3, EntityButterfly.java:40, :148-157). Danach überschreibt Mothras eigene Routine die Bewegung.
+  - Hängen: gleiches x/y/z (Mothra.java:160-168). `shoot` = 3, auf HARD 2 (Mothra.java:155, :169-171).
+  - Neues Flugziel bei Hängen > 50, mit 1/300 oder bei Abstand² < 9 (Mothra.java:175-219):
+    - Bodenabstand an 9 Rasterpunkten (±5), je bis 19 Blöcke tief. Ist der kleinste > 10 → `down = dist − 9`.
+    - Ziel x/z ±8..27, y `rand(7) − 1 − down`, 50 Versuche, Luft und sichtbar.
+  - Sonst mit 1/10, nicht Peaceful, `MothraPeaceful==0` (Mothra.java:220-246):
+    - Nächster Spieler in ±25/20/25, nicht Creative und sichtbar → Flugziel über ihm (y+4), mit 1/`shoot` Schuss.
+    - Ohne Spieler mit 1/3: `findSomethingToAttack` in ±15/20/15 (Mothra.java:498) → Ziel y+5, mit 1/`shoot` Schuss.
+  - Bewegung: horizontal `(signum*0.5 - m)*0.30001`, vertikal `(signum*0.7 - m)*0.20001`, `moveForward` 1.0, Gier/4 (Mothra.java:247-256).
+  - **`attackWithSomething`** (Mothra.java:384-430), Mündung 2.25 Blöcke voraus:
+    - EASY: vanilla `EntitySmallFireball` + `random.bow` 0.75.
+    - NORMAL: 50 % `EntitySmallFireball`, sonst `BetterFireball` mit `setNotMe()` + `random.fuse` 1.0.
+    - HARD: immer `BetterFireball` mit `setNotMe()`.
+  - **`BetterFireball`** (so von Mothra benutzt):
+    - Beschleunigung 0.1 × Richtung (BetterFireball.java:66-68).
+    - Volltreffer 10 Schaden + 5 s Feuer (BetterFireball.java:236-238).
+    - Getroffene `EntityLiving` mit `Breite·Höhe > 30` (außer Royalty/Godzilla/GodzillaHead/PitchBlack/Kraken) verlieren **die Hälfte ihres Lebens** (BetterFireball.java:230-234).
+    - Explosion Stärke 1 mit Feuer, Blockschaden nach `mobGriefing` (BetterFireball.java:37, :279-281).
+    - **Mit `notme` kollidiert der Ball im Flug nicht mit Spielern, `Dragon` und `Mothra`** (BetterFireball.java:155-157). Trifft er doch direkt, verschwindet er ohne Schaden (BetterFireball.java:225-228). Spieler werden also nur von der Explosion am Blocktreffer getroffen.
+    - Mothra ist immun gegen `BetterFireball`-Treffer (BetterFireball.java:222-224).
+  - Werte des vanilla `EntitySmallFireball`: offen, Vanilla-1.7.10-Klasse, im Repo nicht als Quelltext vorhanden.
+  - Ziele (Mothra.java:432-492): nicht Peaceful, nicht `isIgnoreable`, sichtbar, nicht Creative. Ausgeschlossen: `Mothra`, `Brutalfly`, `Vortex`, `VelocityRaptor`, `Cryolophosaurus`, `TerribleTerror`, `LurkingTerror`, `CloudShark`, `Rotator`, `Bee`, `Mantis`. Alles andere ist Ziel, auch Tiere und Dorfbewohner.
+  - Bei Treffer: Schaden von `Mothra` wird ignoriert; Flugziel = Angreifer y+2 (Mothra.java:277-288).
+- **Interaktion:** geerbt aus `EntityButterfly.interact` (EntityButterfly.java:249-271). Ein `EntityPlayerMP` mit **leerer Hand** wird nach `DimensionID6` (Chaos) teleportiert, bzw. aus der Chaos-Dimension nach Dimension 0 (`OreSpawnTeleporter`). Mit Item in der Hand passiert nichts. Mothra überschreibt das nicht.
+- **Drops** (Mothra.java:347-368), ±7 gestreut, y+1:
+  - `item_frame` 1
+  - `gold_nugget` 53
+  - `mothscale` 25
+  - `blaze_rod` 3
+  - `nether_star` 1
+  - 20 Partikel `largeexplode`: serverseitig aufgerufen, im Original daher wahrscheinlich unsichtbar.
+  - **20× „Moth"** (`EntityLunaMoth`, id `moth`) an Position +0.5/+1, jeweils mit `playLivingSound` (Mothra.java:365-367, :370-382).
+  - XP 100.
+- **Spawnen** (Mothra.java:300-336):
+  - Spawner „Mothra" in x/z −2..2, y 1..3 → ja.
+  - Sonst: `posY ≥ 70`; **Nacht**; Luft in x −3..2, z −4..3, y 1..9; keine andere Mothra in ±64/32/64.
+  - Listen: Overworld `ambient` Extreme Hills 2 und Extreme Hills+ 2 (manifest); Chaos-Dimension Monster, Gewicht 1 (BiomeGenUtopianPlains.java:394-395).
+  - Stockwerke von `makeEnormousCastle`/`makeEnormousCastleQ` (GenericDungeon.java:342, :6532).
+  - `canDespawn`: nur Persistenz (Mothra.java:57-59).
+- **Zustand:** DataWatcher 20 `butterfly_type`, alle 25 Ticks synchronisiert (EntityButterfly.java:89, :220-233). NBT `ButterflyType` (EntityButterfly.java:297-305); Mothra selbst schreibt nichts.
+- **Sounds:**
+  - Kein Living-, kein Hurt-Sound; Tod `random.explode` (Mothra.java:88-101).
+  - Flügel `orespawn:MothraWings` (neu `mothrawings`) alle >30 Ticks mit 1.0/1.0 (Mothra.java:130-136).
+  - Schüsse: `random.bow` bzw. `random.fuse`.
+- **Config:** `MothraEnable`, `MothraPeaceful` (Standard 0, schaltet Schüsse und Zielwahl ab), `Mothra_health/attack/defense` (150/12/8), `PlayNicely`, `DimensionID4`/`DimensionID6` (geerbt). Research nennt „Attack 12"; das ist nur das Attribut, im Code gibt es keinen Nahkampf mit diesem Wert.
+- **Portierung 1.21.1:**
+  - `AmbientCreature implements Enemy` bzw. eine eigene `OreButterfly`-Basis. Die Butterfly-Vererbung muss mit portiert werden, sonst fehlen Doppel-Flugroutine, Teleport und `butterfly_type`.
+  - Teleport → `player.changeDimension(new DimensionTransition(...))`, nur serverseitig.
+  - `EntitySmallFireball` → `new SmallFireball(level, this, Vec3)`.
+  - `BetterFireball` als eigene `AbstractHurtingProjectile`-Unterklasse inklusive `notme`- und Halbierungslogik.
+  - Hitbox 5×2; Tracking 128 → `clientTrackingRange(8)`.
+  - Die 20 Motten in `dropCustomDeathLoot` bzw. `die` spawnen.
+  - Textur: Das Manifest listet nur `creeper_armor.png` (zweiter Render-Pass). Die Grundtextur `eyemoth.png` kommt aus `EntityButterfly.getTexture` (EntityButterfly.java:55-57, :312).
+  - Kategorie `ambient` wie bei der Mantis.
+
+### Nastysaurus - Nastysaurus (`nastysaurus`)
+
+- **Rolle:** großer Nahkampf-Dinosaurier, `EntityMob` (Nastysaurus.java:16), feindlich gegen fast alles.
+- **Werte:**
+  - XP 40 (Nastysaurus.java:31); `fireResistance` 100 (Nastysaurus.java:32).
+  - Geschwindigkeit 0.35 (Nastysaurus.java:26, :85).
+  - Angriff aus der Config über den Vanilla-Nahkampf (Nastysaurus.java:46, :160); Rückstoß horizontal 1.2, vertikal 0.1 (0.2 gegen Spieler/Tote) (Nastysaurus.java:161-169).
+  - Leben und Rüstung aus der Config (Nastysaurus.java:90, :94).
+  - Immun gegen `cactus` (Nastysaurus.java:177). Lautstärke 1.5. Keine Regeneration. Meidet Wasser.
+- **KI und Angriffe:**
+  - Tasks wie beim Molenoid: 0 `EntityAISwimming`; 1 `EntityAIMoveThroughVillage(1.0, false)`; 2 `MyEntityAIWanderALot(16, 1.0)`; 3 `EntityAIWatchClosest(Player, 8)`; 4 `EntityAILookIdle`. Target 1 `EntityAIHurtByTarget` (Nastysaurus.java:34-39).
+  - Mit 1/5 (Nastysaurus.java:187-226):
+    - Ziel = `rt` (letzter lebender Angreifer), außer bei `PlayNicely`. `rt` wird bei Tod oder mit 1/250 vergessen und in diesem Durchlauf ignoriert, wenn unsichtbar.
+    - Sonst `findSomethingToAttack` in ±32/8/32 (Nastysaurus.java:265).
+    - `faceEntity(10, 10)`. Abstand² < (4.5 + Breite/2)² → `attacking` 1 und Angriff mit „1/4 oder 1/5"; sonst Pfad 1.25.
+  - Ziele: nicht `isIgnoreable`; ausgeschlossen `Nastysaurus`, `Cryolophosaurus`, `VelocityRaptor`; sichtbar; Spieler nicht Creative; **alles andere ja** (Nastysaurus.java:228-259).
+  - Bei Treffer durch ein Lebewesen: `rt` = Angreifer (Nastysaurus.java:175-185).
+- **Interaktion:** `interact` → `false` (Nastysaurus.java:155-157).
+- **Drops** (Nastysaurus.java:137-150), ±3 gestreut, y+3; `beef` aus `getDropItem` ungenutzt:
+  - `iron_ingot` 10
+  - `rotten_flesh` 10
+  - `leather` 10
+  - `string` 10
+  - XP 40.
+- **Spawnen** (Nastysaurus.java:288-326):
+  - Spawner „Nastysaurus" in x/z −3..2, y 0..4 → ja.
+  - Sonst: `isValidLightLevel`; `posY ≥ 50`; Nacht; Luft in x/z −1..0, y 1..5; kein weiterer in ±16/8/16.
+  - Listen: keine Overworld-Spawns (manifest); `DimensionID2` Monsterliste des ChunkProviders, Gewicht 6, 1-2 (ChunkProviderOreSpawn2.java:363-365); Chaos-Dimension Monster, Gewicht 1 (BiomeGenUtopianPlains.java:412-413).
+  - In `GenericDungeon.addLevelDecorationsQ` als `critter` (GenericDungeon.java:6789, :6818, :6851, :6888, :6928). Offen: was dort mit dem Namen geschieht, ist in diesem Batch nicht geprüft.
+  - `canDespawn`: nur Persistenz.
+- **Zustand:** DataWatcher 20 `attacking`; kein NBT; `RenderInfo` nur Client.
+- **Sounds:** `orespawn:alo_living` mit 1/4, `orespawn:alo_hurt`, `orespawn:alo_death` (Nastysaurus.java:105-118).
+- **Config:** `NastysaurusEnable`, `Nastysaurus_health/attack/defense` (200/32/17), `PlayNicely`.
+- **Portierung 1.21.1:**
+  - `Monster`; Suchbox ±32 alle 5 Ticks ist bei vielen Tieren teuer, 1:1 behalten.
+  - Knockback über `target.push(...)`; Tracking 128.
+  - Die `DimensionID2`-Liste gehört in die Spawn-Einstellungen des eigenen Biome- bzw. ChunkGenerators.
+  - Spawn-Ei `eggnastysaurus`.
+
+### Ostrich - Ostrich (`ostrich`)
+
+- **Rolle:** friedliches Reittier und „Battle Mob"; `EntityCannonFodder` → `EntityTameable` (Ostrich.java:17). Auch ungezähmt reitbar, vermehrbar.
+- **Werte:**
+  - XP 10 (Ostrich.java:45); `fireResistance` 100 (Ostrich.java:42).
+  - Leben 25 fest (Ostrich.java:149).
+  - Geschwindigkeit: das Feld startet mit 0.2 und wird im Konstruktor auf 0.38 gesetzt (Ostrich.java:36, :41). `onUpdate` schreibt den Wert jeden Tick ins Attribut (Ostrich.java:103), wirksam ist also 0.38.
+  - Angriffsattribut 6 (Ostrich.java:66), selbst ungenutzt; der Battle-Modus schlägt mit 4 (EntityCannonFodder.java:359).
+  - Rüstung 3 bei `is_activated==2`, sonst 0 (EntityCannonFodder.java:335-340).
+  - Regeneration: mit 1/250 +1 in `updateAITick` (Ostrich.java:131-133) plus mit 1/250 +1 aus der Basis (EntityCannonFodder.java:384-386).
+  - **`attackEntityFrom` liefert immer `false`**, der Schaden wirkt aber (außer `cactus`) (Ostrich.java:117-122).
+  - Kein Fallschaden (Ostrich.java:559-563).
+  - Lautstärke 0.4; Tonhöhe Jungtier 1.5 ± 0.1, erwachsen 1.0 ± 0.1 (Ostrich.java:266-290).
+  - Reiter: `getMountedYOffset` 1.4, Reiter 0.15 nach vorn versetzt (Ostrich.java:313-315, :539-544); `jump()` +0.25 (Ostrich.java:308-311).
+  - Die Methoden `getTrackingRange` 128 und `getUpdateFrequency` 10 (Ostrich.java:296-306) überschreiben nichts; die Registrierung lautet (64, 1, true) (OreSpawnMain.java:3599).
+- **KI und Angriffe:**
+  - Tasks: 0 `EntityAISwimming`; 1 `EntityAIMate(1.0)`; 2 `MyEntityAIFollowOwner(2.0, 10, 2)`; 3 `MyEntityAIAvoidEntity(EntityMob, 8, 1.0, 1.9)`; 4 `EntityAITempt(1.2, apple)`; 5 `EntityAIPanic(1.5)`; 6 `EntityAIWatchClosest(Player, 6)`; 7 `EntityAIWatchClosest(EntityLiving, 5)`; 8 `MyEntityAIWander(1.0)`; 9 `EntityAILookIdle`; 10 `EntityAIMoveIndoors` (Ostrich.java:47-57). Keine Target-Tasks.
+  - `updateAITick`: mit 1/200 das Rache-Ziel löschen; mit Reiter endet die Methode vor `super.updateAITick()` (Ostrich.java:124-138).
+  - Battle-Modus aus der Basis wie beim `Lizard` beschrieben, mit Scan 1/5, Treffer „1/8 oder 1/7", Schaden 4 (EntityCannonFodder.java:357-383).
+  - **Reiten** (Ostrich.java:356-537): Serverseitig ohne Reiter läuft `super.onLivingUpdate()`, sonst die eigene Physik; der Client interpoliert fest über 10 Schritte (Ostrich.java:334, :381-395).
+    - `motionX/Z` auf ±2 geklemmt.
+    - **Wandklettern:** Hindernisse voraus ab Fußhöhe addieren je 0.075 auf `motionY` **und** `posY`, `motionY` höchstens 4 (Ostrich.java:410-427).
+    - Gier folgt dem Reiter wie bei `Leon` (Ostrich.java:429-451).
+    - Vorwärts: `deltav` 0.045, `max_speed` 0.75. Rückwärts: `max_speed` 0.25, `deltav` −0.03 (Ostrich.java:481-502).
+    - **Sprung:** `flyup_keystate` bei `didjump==0` → `motionY += 1 + v·6`, dann 20 Ticks Sperre, die nur bei losgelassener Taste herunterzählt (Ostrich.java:460-469).
+    - Nach `moveEntity`: Schwerkraft `motionY −= 0.25`, Dämpfung 0.95/0.85/0.95 (Ostrich.java:528-532).
+- **Interaktion** (Ostrich.java:156-249), Abstand² < 16:
+  - Zuerst `EntityCannonFodder.interact`: Paarung mit `crystalapple` (Ostrich.java:586-588); Hüte `carrot`/`potato`/`quinoa`; Besitzer-Rotation; `corncob`-Klon „Ostrich". **Bei `is_activated==2` schaltet jeder Klick die Wache um**, alles Folgende ist dann unerreichbar, auch das Aufsteigen.
+  - `apple`:
+    - Ungezähmt: 50 % (`nextInt(2)==0`) zähmen + volle Heilung, sonst Rauch.
+    - Gezähmt durch den Besitzer: volle Heilung.
+    - Der Apfel wird **immer** verbraucht, auch bei fremdem Besitzer (Ostrich.java:166-199).
+  - Gezähmt, Besitzer, `deadbush` → Zähmung aufheben (Ostrich.java:200-215).
+  - Gezähmt, Besitzer, **irgendein** Item → Sitzen umschalten. Hinsetzen nur auf `sand`, `gravel`, `dirt`, `farmland` oder `grass` darunter (Ostrich.java:216-229). Deshalb ist der folgende `name_tag`-Zweig (Ostrich.java:230-240) für den Besitzer unerreichbar.
+  - Leere Hand, **auch ungezähmt**: aufsteigen, Sitzen aus (Ostrich.java:241-247).
+- **Drops** (Ostrich.java:270-286):
+  - Gezähmt: `red_flower` 2-6 (`nextInt(5)+2`).
+  - Ungezähmt: Vanilla-`dropFewItems` mit `getDropItem` = `feather`. Offen: die Menge ist Vanilla und im Repo nicht belegt.
+  - XP 10.
+- **Spawnen:**
+  - `getCanSpawnHere`: `posY ≥ 50`; Tag; 1/4; kein weiterer Strauß in ±16/6/16 (Ostrich.java:317-330).
+  - Listen: Overworld `ambient` Desert, Stone Beach, Savanna, Savanna Plateau, je Gewicht 1 (manifest); Chaos-Dimension Höhlenkreaturen, Gewicht 1, 1-2 (BiomeGenUtopianPlains.java:311-312).
+  - `canDespawn`: Jungtiere nie (werden persistent); sonst nur ohne Reiter, nicht persistent, ungezähmt (Ostrich.java:565-571).
+- **Zustand:** DataWatcher 20 `is_activated`, 21 `hat_color` (Basis). NBT nur die Basisschlüssel `NameOne`, `NameTwo`, `IsActivated`, `HatColor`, `PatrolX/Y/Z`; `writeEntityToNBT` von Ostrich ruft nur `super` (Ostrich.java:107-115). `didjump`/`deltasmooth` flüchtig.
+- **Sounds:**
+  - Kein Living-Sound (Ostrich.java:251-256); Treffer `orespawn:cryo_hurt`, Tod `orespawn:cryo_death`.
+  - Klon-Sound `random.explode` (Basis), Zähm-Partikel `heart`/`smoke` (Ostrich.java:546-557).
+- **Config:** `OstrichEnable`; `flyup_keystate` (Laufzeit). `PlayNicely` wird von keinem Pfad dieser Klasse gelesen.
+- **Portierung 1.21.1:**
+  - `TamableAnimal` mit zweiter Besitzer-UUID.
+  - `hurt()` muss `false` zurückgeben und trotzdem `super.hurt()` anwenden. Vanilla-Folgen wie Pfeil-Abprall und fehlender Rückstoß entstehen daraus 1:1.
+  - Reitphysik in `aiStep` bzw. `tickRidden`; der Sprung braucht dasselbe Tastenpaket je Spieler wie bei `Leon`, nicht die globale Variable.
+  - Wandklettern verschiebt `posY` direkt: `setPos` statt `move`, sonst gehen Kollisionen verloren.
+  - `EntityAIMoveIndoors` gibt es in 1.21.1 nicht mehr. Nächstliegend ist `MoveBackToVillageGoal` bzw. ein eigener Goal, der Dorf-Türen sucht; eine direkte Entsprechung ist offen.
+  - Spawn-Ei `eggostrich`.
+
+### Peacock - Peacock (`peacock`)
+
+- **Rolle:** friedlicher Vogel, `EntityAnimal` (Peacock.java:16). Vermehrbar, flieht vor Spielern und Monstern, frisst Termiten und legt Spawn-Eier.
+- **Werte:**
+  - XP 8 (Peacock.java:33); `fireResistance` 100 (Peacock.java:32).
+  - Leben 15 fest (Peacock.java:109); Geschwindigkeit 0.38 (Peacock.java:26, :68).
+  - Angriffsattribut 4 (Peacock.java:56), der tatsächliche Schaden ist fest **6** (Peacock.java:146). Research nennt „Attack 0".
+  - Lautstärke 0.4.
+  - Blinzeln (nur Render-Zustand, nicht synchronisiert): Start nach 20-69 Ticks, offen 50-349 Ticks, geschlossen 25-124 Ticks (Peacock.java:34, :67-82).
+- **KI und Angriffe:**
+  - Tasks: 0 `EntityAISwimming`; 1 `EntityAIMate(1.0)`; 2 `EntityAIAvoidEntity(EntityMob, 8, 1.0, 1.4)`; 3 `EntityAIAvoidEntity(EntityPlayer, 12, 1.2, 1.6)`; 4 `EntityAIPanic(1.5)`; 5 `MyEntityAIWander(1.0)`; 6 `EntityAILookIdle`. Target (nur bei `PlayNicely==0`): 1 `EntityAINearestAttackableTarget(Termite, 6, true)` (Peacock.java:39-48). Ohne Nahkampf-Task ist das Target nur Zustand.
+  - `updateAITasks`: mit 1/200 das Rache-Ziel löschen (Peacock.java:161-163). Nicht Peaceful und mit 1/10: nächste sichtbare `Termite` in ±10/2/10 (Peacock.java:192). Abstand² < 4 → 6 Schaden, sonst Pfad 1.2 (Peacock.java:168-178).
+  - **Eierlegen:** mit 1/5000 je Tick 1-3 × `eggpeacock` (das Spawn-Ei-Item) ±1 Block, y+1 (Peacock.java:179-181, :150-158).
+- **Interaktion:** kein Override; Vanilla-`EntityAnimal.interact` mit Paarungs-Item `crystalapple` (Peacock.java:227-229), Nachwuchs `Peacock` (Peacock.java:215-221). `isWheat(apple)` ist ein toter Altname.
+- **Drops** (Peacock.java:135-143), ohne Looting:
+  - `rawpeacock` 1, mit 1/3 ein weiteres
+  - `peacockfeather` mit 1/2
+  - XP 8.
+- **Spawnen:**
+  - `getCanSpawnHere` (Peacock.java:84-98): Luft in x/z −1..0, y 1..2; `worldTime % 24000 ≤ 12000`; `50 ≤ posY ≤ 100`; höchstens 2 Pfaue in ±16/10/16. Die Suche schließt sich selbst ein (Peacock.java:231-234).
+  - Listen: Overworld `ambient` Mesa und Mesa Plateau, Gewicht 1, 1-3 (manifest); Crystal-Dimension Höhlenkreaturen, Gewicht 5, 4-8 (BiomeGenUtopianPlains.java:136-137); Chaos-Dimension Höhlenkreaturen, Gewicht 2, 2-4 (BiomeGenUtopianPlains.java:305-306).
+  - `canDespawn`: Jungtiere nie (werden persistent); Erwachsene immer, sofern nicht persistent (Peacock.java:207-213).
+- **Zustand:** keine DataWatcher-Werte, kein NBT; Blinzeln läuft auf beiden Seiten unabhängig.
+- **Sounds:** `orespawn:peacocklive` mit 1/8, `orespawn:peacockhit`, `orespawn:peacockdead` (Peacock.java:112-125).
+- **Config:** `PeacockEnable`, `PlayNicely`. Die `Peacock_*`-Armor-Schlüssel gehören zur Rüstung, nicht zu dieser Klasse.
+- **Portierung 1.21.1:**
+  - `Animal`; `isFood` → `crystalapple`.
+  - `AvoidEntityGoal<>(this, Monster.class, 8, 1.0, 1.4)` bzw. `Player.class` 12/1.2/1.6.
+  - Die Eier sind das Spawn-Ei-Item `eggpeacock`; im Port ein `DeferredSpawnEggItem`.
+  - Die Tageszeitprüfung über `level.getDayTime() % 24000`.
+  - Das Blinzeln bleibt clientseitig im Renderer-Zustand (`com.swbr.orespawn.client`), nicht in der Entity.
+  - Den festen Schaden 6 in `doHurtTarget` behalten.

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:blocktitanium"
+    }
+  ],
+  "result": {
+    "id": "orespawn:ingottitanium",
+    "count": 9
+  }
+}

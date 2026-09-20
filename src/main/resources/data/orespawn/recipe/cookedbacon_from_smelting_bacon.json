@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "orespawn:bacon"
+  },
+  "result": {
+    "id": "orespawn:cookedbacon"
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

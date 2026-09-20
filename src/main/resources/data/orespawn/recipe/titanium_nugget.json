@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:ingottitanium"
+    }
+  ],
+  "result": {
+    "id": "orespawn:titanium_nugget",
+    "count": 9
+  }
+}

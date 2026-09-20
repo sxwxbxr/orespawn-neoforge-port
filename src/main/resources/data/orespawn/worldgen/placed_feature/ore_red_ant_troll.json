@@ -1,0 +1,19 @@
+{
+  "feature": "orespawn:ore_red_ant_troll",
+  "placement": [
+    {
+      "type": "orespawn:legacy_count",
+      "base": 4,
+      "extra": 4,
+      "less_ore_divisor": 2
+    },
+    {
+      "type": "orespawn:legacy_ore_position",
+      "offset": 3,
+      "spread": 10,
+      "y_bound": 128,
+      "min_y": 5,
+      "max_y": 50
+    }
+  ]
+}

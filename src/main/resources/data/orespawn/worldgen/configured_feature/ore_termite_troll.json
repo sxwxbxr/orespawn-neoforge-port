@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:termitetroll"
+    },
+    "size": 4,
+    "target": "stone"
+  }
+}

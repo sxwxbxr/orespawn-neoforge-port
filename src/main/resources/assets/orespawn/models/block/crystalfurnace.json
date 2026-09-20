@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "top": "orespawn:block/crystalfurnace_top",
+    "front": "orespawn:block/crystalfurnace_front_off",
+    "side": "orespawn:block/crystalfurnace_side"
+  }
+}

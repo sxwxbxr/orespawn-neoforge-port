@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:cookedbacon"
+    },
+    {
+      "item": "orespawn:lettuce_seed"
+    },
+    {
+      "item": "orespawn:tomato_seed"
+    },
+    {
+      "item": "orespawn:butter"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "id": "orespawn:blt_sandwich"
+  }
+}

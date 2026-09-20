@@ -1,0 +1,39 @@
+{
+  "wave": "w03",
+  "title": "Ausruestung und Werkstatt",
+  "goal": "15 tool materials and 14 armor materials from the manifest with all tools, swords (without summoning behaviour), all 56 armor pieces, the Crystal Furnace and Crystal Workbench with menus and screens, the one-use building items, and the 3D renderers of Battle Axe, Chainsaw and Queen Scale Battle Axe. See docs/catalog/README.md section 4.4. Tier and ArmorMaterial values through EarlyConfig (R3), damage conversion R6, pre-enchantments R7, crystalfurnace one block with LIT (R2), GUI handler becomes MenuType + Screen registration (R15), 3D weapons as BEWLR via IClientItemExtensions (R8). Registry ids only from docs/catalog/manifest.json; resource files only for the ids backed by your classes.",
+  "workers": [
+    {
+      "key": "w03-tools",
+      "task": "Create the 15 Tier implementations from manifest tool_materials read through EarlyConfig (ULTIMATE, NIGHTMARE, REALEMERALD, RUBY, AMETHYST, BERTHA, CRYSTALWOOD, CRYSTALSTONE, CRYSTALPINK, TIGERSEYE, ROYAL, HAMMY, BATTLE, CHAINSAW, QUEENBATTLE) with harvest level -> incorrect_for_* tag mapping (R6) and the sword damage conversion (R6). Port every tool and sword class listed including the special hit/mine behaviour (UltimatePickaxe, ExperienceSword, NightmareSword, PoisonSword, MantisClaw, BigHammer) and the pre-enchantment helper per R7 (onCraftedBy plus first inventoryTick fallback; levels above vanilla max allowed; duplicate entries summed per R18/catalogue 5.8). The Battle Axe, Chainsaw and Queen Scale Battle Axe items live here (manifest item_renderer); their renderers belong to w03-bigweapons. Girlfriend/Boyfriend PvP protection branches are // PORT: TODO W04.",
+      "classes": ["AmethystAxe", "AmethystHoe", "AmethystPickaxe", "AmethystShovel", "AmethystSword", "EmeraldAxe", "EmeraldHoe", "EmeraldPickaxe", "EmeraldShovel", "EmeraldSword", "RubyAxe", "RubyHoe", "RubyPickaxe", "RubyShovel", "RubySword", "CrystalAxe", "CrystalHoe", "CrystalPickaxe", "CrystalShovel", "CrystalSword", "UltimateAxe", "UltimateHoe", "UltimatePickaxe", "UltimateShovel", "UltimateSword", "NightmareSword", "PoisonSword", "MantisClaw", "BigHammer", "ExperienceSword"],
+      "owns": ["src/main/java/com/swbr/orespawn/item/tool/", "src/main/java/com/swbr/orespawn/item/enchant/", "item model files for the ids of these classes under assets/orespawn/models/item/", "data/orespawn/tags/block/ files for the tier tags"]
+    },
+    {
+      "key": "w03-armor",
+      "task": "Port ItemOreSpawnArmor (56 pieces) and create the 14 ArmorMaterials as a DeferredRegister on Registries.ARMOR_MATERIAL from manifest armor_materials via EarlyConfig, with layers 'orespawn:<set>' (textures already at assets/orespawn/textures/models/armor/<set>_layer_1/_2.png, copied by tools/assets.py - verify the 1.21.1 Layer path resolution in the sources). Durability multipliers as the original EnumHelper.addArmorMaterial factors (verify, catalogue 6.4). Armor tick effects (gliding boots, slow fall, experience armor) and auto-enchantments e_* per R7. Fill the item tag the W01 combat code uses for the legacy armor formula (read src/main/java/com/swbr/orespawn/combat/ to find its name).",
+      "classes": ["ItemOreSpawnArmor"],
+      "owns": ["src/main/java/com/swbr/orespawn/item/armor/", "item model files for the armor ids under assets/orespawn/models/item/", "src/main/resources/data/orespawn/tags/item/ (legacy armor tag only)"]
+    },
+    {
+      "key": "w03-workshop",
+      "task": "Port the Crystal Furnace (one block with LIT, R2; block entity with the original cook time, fuel list only per R18, slot layout, XP) and the Crystal Workbench (3x3 crafting on vanilla recipes as the original) with MenuTypes, menus and client Screens using the original GUI textures. OreSpawnGUIHandler becomes the MenuType/Screen registration.",
+      "classes": ["CrystalFurnace", "CrystalWorkbench", "TileEntityCrystalFurnace", "ContainerCrystalFurnace", "CrystalFurnaceGUI", "ContainerCrystalWorkbench", "CrystalWorkbenchGUI", "OreSpawnGUIHandler"],
+      "owns": ["src/main/java/com/swbr/orespawn/block/workshop/", "src/main/java/com/swbr/orespawn/block/entity/", "src/main/java/com/swbr/orespawn/menu/", "src/main/java/com/swbr/orespawn/client/screen/", "resource files for crystalfurnace and crystalworkbench ids (blockstates, models, loot tables)"]
+    },
+    {
+      "key": "w03-utility",
+      "task": "Port the one-use building and utility items: InstantShelter, InstantGarden, ItemMinersDream (tunnel 64x11x5 with torches, MinersDreamExpensive config), StepUp/StepDown/StepAccross (including the negative-yaw bug, R18), ZooCage, ExperienceCatcher, ItemCreeperLauncher, ItemZooKeeper, ItemNetherLost. Block placement 1:1 with the original block lists and order; use the W01 world write helpers.",
+      "classes": ["InstantShelter", "InstantGarden", "ItemMinersDream", "StepUp", "StepDown", "StepAccross", "ZooCage", "ExperienceCatcher", "ItemCreeperLauncher", "ItemZooKeeper", "ItemNetherLost"],
+      "owns": ["src/main/java/com/swbr/orespawn/item/utility/", "item model files for the ids of these classes under assets/orespawn/models/item/"]
+    },
+    {
+      "key": "w03-bigweapons",
+      "task": "Port the client renderers RenderBattleAxe, RenderChainsaw, RenderQueenBattleAxe and their models ModelBattleAxe, ModelChainsaw, ModelQueenBattleAxe: model classes in client/model/ baking the generated client/model/geom/*Geometry layers (never edit geometry), animation from the original render() (ModelChainsaw time binding -> ageInTicks per R18), a BlockEntityWithoutLevelRenderer per weapon registered through IClientItemExtensions (verify RegisterClientExtensionsEvent in the sources), in-hand transforms from the original renderSword/renderSwordF5 GL calls (reference/jar/renderers_dump.txt) expressed as item display transforms in the item model JSON (builtin/entity parent). Textures are the original *texture.png files mapped in manifest texture_map.",
+      "classes": ["RenderBattleAxe", "RenderChainsaw", "RenderQueenBattleAxe", "ModelBattleAxe", "ModelChainsaw", "ModelQueenBattleAxe"],
+      "owns": ["src/main/java/com/swbr/orespawn/client/item/", "src/main/java/com/swbr/orespawn/client/model/BattleAxeModel.java", "src/main/java/com/swbr/orespawn/client/model/ChainsawModel.java", "src/main/java/com/swbr/orespawn/client/model/QueenBattleAxeModel.java"]
+    }
+  ],
+  "gametests": "durability and attack damage of one item per tool material match the manifest after the R6 conversion (Ultimate Sword 40 attack); pre-enchanted items carry their enchantments after crafting; a full Queen Scale set makes blockable damage zero per R5 while a single Emerald piece reduces per the 1.7.10 formula; the Crystal Furnace smelts in its original cook time (README says 150 ticks, verify) and lights; InstantShelter, InstantGarden, ItemMinersDream and ZooCage build their complete structure; all earlier tests still pass.",
+  "reviewClasses": ["UltimateSword", "UltimatePickaxe", "ExperienceSword", "NightmareSword", "PoisonSword", "MantisClaw", "BigHammer", "ItemOreSpawnArmor", "TileEntityCrystalFurnace", "ContainerCrystalFurnace", "InstantShelter", "InstantGarden", "ItemMinersDream", "ZooCage", "ExperienceCatcher", "StepUp", "ItemCreeperLauncher", "CrystalWorkbench"]
+}

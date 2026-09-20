@@ -1,0 +1,45 @@
+{
+  "wave": "w04",
+  "title": "Projektile, Fernkampf, Girlfriend und Boyfriend",
+  "goal": "All thrown and shot entities with their items and dispenser behaviours, the Bertha family, Ultimate Bow, Skate Bow, Ultimate Fishing Rod, plus Girlfriend, Boyfriend and the hoverboard (Elevator) with their AI building blocks. See docs/catalog/README.md section 4.5 and 4.14 (back-edges: fill in the // PORT: TODO W04 branches left by W01-W03, e.g. the Ultimate tools' Girlfriend/Boyfriend protection - grep for 'TODO W04'). Entities: EntityType registration, attributes (EntityAttributeCreationEvent), renderers and layer definitions go through registry_entries. Models bake the generated client/model/geom/*Geometry layers and port animation from the original render()/setRotationAngles() per DECISIONS R8. BetterFireball and ThunderBolt need registry ids (catalogue 6.6) - use better_fireball and thunder_bolt. Registry ids otherwise only from docs/catalog/manifest.json.",
+  "workers": [
+    {
+      "key": "w04-throwables",
+      "task": "Port LaserBall first as the base with its mode flags, then the small throwables, BetterFireball (its double tick is reproduced on purpose, README 4.5) and ThunderBolt, their items, the dispenser behaviours for them, and RenderItemUrchin. Sprite projectiles use the W01 RenderSpinner (client/renderer/). Original damage, velocity, gravity (vanilla EntityThrowable values per catalogue 6.4 - read them from reference/jar/mcp/client-1.7.10.jar with javap if the behaviour chapter says 'offen') and side effects exactly.",
+      "classes": ["LaserBall", "Acid", "IceBall", "DeadIrukandji", "WaterBall", "InkSack", "SunspotUrchin", "BetterFireball", "ThunderBolt", "ItemAcid", "ItemIceBall", "ItemIrukandji", "ItemLaserBall", "ItemRayGun", "ItemSunspotUrchin", "ItemThunderStaff", "ItemWaterBall", "MyDispenserBehaviorAcid", "MyDispenserBehaviorDeadIrukandji", "MyDispenserBehaviorIceball", "MyDispenserBehaviorLaserball", "MyDispenserBehaviorSunspotUrchin", "MyDispenserBehaviorWDCharge", "RenderItemUrchin"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/projectile/", "src/main/java/com/swbr/orespawn/item/ranged/", "src/main/java/com/swbr/orespawn/dispenser/", "src/main/java/com/swbr/orespawn/client/renderer/projectile/", "item model files for the ids of these classes"]
+    },
+    {
+      "key": "w04-rocks",
+      "task": "Port the thrown rock family: EntityThrownRock (12 rock variants with item textures), RockBase (the placed rock entity with its model and translucency pass), ItemRock (including the +0.5 offset bug at coordinate 0, R18), its dispenser behaviour, ItemSifter (including the extra wheat bug, R18), and their renderers/model.",
+      "classes": ["EntityThrownRock", "RockBase", "ItemRock", "MyDispenserBehaviorRock", "ItemSifter", "RenderThrownRock", "RenderRockBase", "ModelRockBase"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/rock/", "src/main/java/com/swbr/orespawn/item/rock/", "src/main/java/com/swbr/orespawn/client/renderer/rock/", "src/main/java/com/swbr/orespawn/client/model/RockBaseModel.java", "item model files for the ids of these classes"]
+    },
+    {
+      "key": "w04-bows-bertha",
+      "task": "Port UltimateArrow, IrukandjiArrow (renderer missing in the original, catalogue 6.6 - use the vanilla arrow renderer with its original texture if one exists, document), UltimateFishHook (must extend FishingHook), Bertha and BerthaHit (swing hook without mixin - verify in the sources which NeoForge event or item hook fires on an empty swing server-side, catalogue 6.3; if none, use a C2S payload and document), UltimateBow (instant fire, healing arrows), SkateBow, UltimateFishingRod (ItemAbilities.FISHING_ROD_CAST), ItemIrukandjiArrow, the arrow dispenser behaviour, and the 3D renderers for Big Bertha, Slice, Royal Guardian Sword and Attitude Adjuster (BEWLR via IClientItemExtensions like W03's client/item/ - read it first and follow the same pattern).",
+      "classes": ["UltimateArrow", "IrukandjiArrow", "UltimateFishHook", "Bertha", "BerthaHit", "UltimateBow", "SkateBow", "UltimateFishingRod", "ItemIrukandjiArrow", "MyDispenserBehaviorArrow", "RenderBertha", "RenderSlice", "RenderRoyal", "RenderHammy", "ModelBertha", "ModelSlice", "ModelHammy"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/arrow/", "src/main/java/com/swbr/orespawn/item/bow/", "src/main/java/com/swbr/orespawn/item/bertha/", "src/main/java/com/swbr/orespawn/client/item/bertha/", "src/main/java/com/swbr/orespawn/client/model/BerthaModel.java", "src/main/java/com/swbr/orespawn/client/model/SliceModel.java", "src/main/java/com/swbr/orespawn/client/model/HammyModel.java", "item model files for the ids of these classes"]
+    },
+    {
+      "key": "w04-ai",
+      "task": "Port the shared targeting and companion AI: MyEntityAITarget, MyEntityAINearestAttackableTarget (+Sorter), MyEntityAIFollowOwner, MyEntityAIJealousy, MyEntityAIDance, MyValentineTarget (+Sorter) as 1.21.1 Goals and comparators, KEEPING the original class names in package com.swbr.orespawn.entity.ai (the companion porter codes against these names in parallel). Original tick rates (reducedTickDelay semantics per catalogue 6.3), chances, ranges, target predicates using the W01 MyUtils marker interfaces.",
+      "classes": ["MyEntityAITarget", "MyEntityAINearestAttackableTarget", "MyEntityAINearestAttackableTargetSorter", "MyEntityAIFollowOwner", "MyEntityAIJealousy", "MyEntityAIDance", "MyValentineTarget", "MyValentineTargetSorter"],
+      "owns": ["new files in src/main/java/com/swbr/orespawn/entity/ai/ named after these classes"]
+    },
+    {
+      "key": "w04-companions",
+      "task": "Port Girlfriend (XL) and Boyfriend (L): taming, following, jealousy, dancing, throwing Shoes, the Valentine's behaviour and date check (R18), all 62 and 48 texture variants selected through synched data (R8, R16), the tamed/wild branches and the original bugs (ownership takeover by diamond block, unreachable name tag branch - R18). Port Shoes (entity), ItemShoes (icon index bug per catalogue 6.5 - check), RenderShoe, RenderGirlfriend (vanilla HumanoidModel, glScalef(5) branch -> scale()), RenderBoyfriend. Use the AI classes by their original names in com.swbr.orespawn.entity.ai (written in parallel by w04-ai). Health bar overlay is W11 - leave // PORT: TODO W11.",
+      "classes": ["Girlfriend", "Boyfriend", "Shoes", "ItemShoes", "RenderShoe", "RenderGirlfriend", "RenderBoyfriend"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/companion/", "src/main/java/com/swbr/orespawn/item/companion/", "src/main/java/com/swbr/orespawn/client/renderer/companion/", "item model files for the ids of these classes"]
+    },
+    {
+      "key": "w04-hoverboard",
+      "task": "Port Elevator (the hoverboard, manifest id hoverboard) with riding physics in tickRidden/getRiddenInput using the W01 per-player fly-up key state (R15) instead of EntityClientPlayerMP (which would break the dedicated server), its 10 texture variants, ItemElevator, ModelElevator (bake ElevatorGeometry) and RenderElevator.",
+      "classes": ["Elevator", "ItemElevator", "ModelElevator", "RenderElevator"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/vehicle/", "src/main/java/com/swbr/orespawn/item/vehicle/", "src/main/java/com/swbr/orespawn/client/renderer/vehicle/", "src/main/java/com/swbr/orespawn/client/model/ElevatorModel.java", "item model files for the ids of these classes"]
+    }
+  ],
+  "gametests": "every W04 projectile entity spawns, flies and hits a target with its original damage and side effect (sample LaserBall, Acid, IceBall, BetterFireball, ThunderBolt, EntityThrownRock, UltimateArrow); each dispenser behaviour fires its projectile; Girlfriend can be tamed, follows her owner and throws Shoes; Boyfriend spawns and ticks 100 ticks; the hoverboard moves with a rider and rises when the rider's fly-up state is set through the W01 payload; Bertha swing produces BerthaHit; all earlier tests still pass.",
+  "reviewClasses": ["LaserBall", "Acid", "IceBall", "BetterFireball", "ThunderBolt", "EntityThrownRock", "RockBase", "UltimateArrow", "UltimateFishHook", "Bertha", "BerthaHit", "UltimateBow", "Girlfriend", "Boyfriend", "Elevator", "MyEntityAIFollowOwner", "MyEntityAIJealousy", "MyEntityAINearestAttackableTarget"]
+}

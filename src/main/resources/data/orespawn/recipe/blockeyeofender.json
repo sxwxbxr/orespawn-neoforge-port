@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "id": "orespawn:blockeyeofender"
+  }
+}

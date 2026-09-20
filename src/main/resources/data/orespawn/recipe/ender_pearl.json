@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:blockenderpearl"
+    }
+  ],
+  "result": {
+    "id": "minecraft:ender_pearl",
+    "count": 9
+  }
+}

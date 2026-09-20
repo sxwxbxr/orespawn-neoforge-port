@@ -1,0 +1,8 @@
+{
+  "type": "orespawn:legacy",
+  "dispatcher": "orespawn:utopia_other_trees",
+  "biomes": "orespawn:utopia",
+  "step": "top_layer_modification",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

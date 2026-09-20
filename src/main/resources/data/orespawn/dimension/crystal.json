@@ -1,0 +1,12 @@
+{
+  "type": "orespawn:crystal",
+  "generator": {
+    "type": "orespawn:crystal",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "orespawn:crystal"
+    },
+    "root_height": 0.1,
+    "height_variation": 0.5
+  }
+}

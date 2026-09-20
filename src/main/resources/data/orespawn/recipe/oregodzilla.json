@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    },
+    {
+      "item": "orespawn:oregodzillapart"
+    }
+  ],
+  "result": {
+    "id": "orespawn:oregodzilla"
+  }
+}

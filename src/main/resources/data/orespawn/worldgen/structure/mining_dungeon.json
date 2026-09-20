@@ -1,0 +1,8 @@
+{
+  "type": "orespawn:legacy",
+  "dispatcher": "orespawn:mining_dungeon",
+  "biomes": "orespawn:mining",
+  "step": "top_layer_modification",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

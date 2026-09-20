@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:oreamethyst"
+    },
+    "size_stat": "amethyst",
+    "target": "stone"
+  }
+}

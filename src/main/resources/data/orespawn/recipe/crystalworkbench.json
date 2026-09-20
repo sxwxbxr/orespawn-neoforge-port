@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:crystalplanks"
+    },
+    {
+      "item": "orespawn:crystalplanks"
+    },
+    {
+      "item": "orespawn:crystalplanks"
+    },
+    {
+      "item": "orespawn:crystalplanks"
+    }
+  ],
+  "result": {
+    "id": "orespawn:crystalworkbench"
+  }
+}

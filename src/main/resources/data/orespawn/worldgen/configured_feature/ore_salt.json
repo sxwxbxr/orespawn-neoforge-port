@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:oresalt"
+    },
+    "size_stat": "salt",
+    "target": "stone"
+  }
+}

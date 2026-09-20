@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "orespawn:block/tigerseye"
+  },
+  "render_type": "minecraft:cutout"
+}

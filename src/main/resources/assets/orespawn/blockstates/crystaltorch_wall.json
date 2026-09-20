@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "orespawn:block/crystaltorch_wall"
+    },
+    "facing=south": {
+      "model": "orespawn:block/crystaltorch_wall",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "orespawn:block/crystaltorch_wall",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "orespawn:block/crystaltorch_wall",
+      "y": 270
+    }
+  }
+}

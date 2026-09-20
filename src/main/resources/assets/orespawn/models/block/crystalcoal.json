@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "orespawn:block/crystalcoal"
+  },
+  "render_type": "minecraft:cutout"
+}

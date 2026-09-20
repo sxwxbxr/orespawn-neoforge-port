@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "orespawn:girlfriend",
+    "orespawn:boyfriend",
+    "orespawn:gold_fish",
+    "orespawn:flounder",
+    "orespawn:whale",
+    "orespawn:frog",
+    "orespawn:beaver",
+    "orespawn:hydrolisc",
+    "orespawn:cloud_shark",
+    "orespawn:sea_monster",
+    "orespawn:sea_viper",
+    "orespawn:skate",
+    "orespawn:irukandji",
+    "orespawn:crab",
+    "orespawn:dragon",
+    "orespawn:baby_dragon",
+    "orespawn:water_dragon",
+    "orespawn:stinky",
+    "orespawn:the_prince",
+    "orespawn:the_young_prince",
+    "orespawn:the_princess",
+    "orespawn:the_young_adult_prince"
+  ]
+}

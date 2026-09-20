@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "orespawn:oresalt",
+    "orespawn:oreuranium",
+    "orespawn:oretitanium",
+    "orespawn:oreamethyst",
+    "orespawn:oreruby",
+    "orespawn:blockteleport",
+    "orespawn:lavafoam",
+    "orespawn:blockuranium",
+    "orespawn:blocktitanium",
+    "orespawn:blockruby",
+    "orespawn:blockamethyst",
+    "orespawn:blockmobzillascale",
+    "orespawn:crystalstone",
+    "orespawn:crystalcoal",
+    "orespawn:crystalcrystal",
+    "orespawn:crystalpink_block",
+    "orespawn:tigerseye",
+    "orespawn:tigerseye_block",
+    "orespawn:crystalrat",
+    "orespawn:crystalfairy",
+    "orespawn:redanttroll",
+    "orespawn:termitetroll",
+    "orespawn:crystalfurnace"
+  ]
+}

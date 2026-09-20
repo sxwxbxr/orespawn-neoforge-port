@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": "orespawn:ultimatesword",
+      "components": {
+        "minecraft:damage": 0
+      },
+      "strict": false
+    },
+    {
+      "type": "neoforge:components",
+      "items": "orespawn:ultimateaxe",
+      "components": {
+        "minecraft:damage": 0
+      },
+      "strict": false
+    },
+    {
+      "item": "orespawn:greengoo"
+    }
+  ],
+  "result": {
+    "id": "orespawn:battleaxesmall"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "spawn_ores": true,
+    "size_stat": "spawn_ores",
+    "target": "stone"
+  }
+}

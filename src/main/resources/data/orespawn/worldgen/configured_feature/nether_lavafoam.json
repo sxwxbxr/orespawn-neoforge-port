@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:lavafoam"
+    },
+    "size": 6,
+    "target": "netherrack"
+  }
+}

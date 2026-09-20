@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "minecraft:emerald_block"
+    },
+    "size_stat": "block_emerald",
+    "target": "stone"
+  }
+}

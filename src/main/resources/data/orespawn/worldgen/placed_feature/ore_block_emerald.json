@@ -1,0 +1,17 @@
+{
+  "feature": "orespawn:ore_block_emerald",
+  "placement": [
+    {
+      "type": "orespawn:legacy_count",
+      "stat": "block_emerald",
+      "requires_no_less_ore": true
+    },
+    {
+      "type": "orespawn:legacy_ore_position",
+      "offset": 3,
+      "spread": 10,
+      "y_bound": 128,
+      "stat": "block_emerald"
+    }
+  ]
+}

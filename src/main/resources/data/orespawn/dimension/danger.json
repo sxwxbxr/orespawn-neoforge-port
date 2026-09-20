@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:danger",
+  "generator": {
+    "type": "orespawn:danger",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "orespawn:islands"
+    }
+  }
+}

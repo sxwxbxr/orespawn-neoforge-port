@@ -1,0 +1,45 @@
+{
+  "wave": "w07",
+  "title": "Feindliche Landmobs, Roboter, Wuermer",
+  "goal": "Dinosaurs, scorpions, insects, ender mobs, Fairy, the Robo series with Jeffery (GiantRobot) and the three worms (docs/catalog/README.md section 4.8). Read the hand-off notes docs/port/W01.md up to the previous wave first. Apply DECISIONS R20 (NoStepTrigger where the original canTriggerWalking returns false; Mth.floor for coordinate casts) and the W04 XP lesson (1.7.10 EntityAnimal.getExperiencePoints returns 1 + rand.nextInt(3) regardless of experienceValue - check each entity's base class before porting XP). ENTITY PORTER CONTRACT for every entity in this wave: (1) the entity class with the original class name, attributes from the manifest/MobStats at runtime, SynchedEntityData for every DataWatcher index, NBT save/load, AI goals in original priority order, custom movement/physics in customServerAiStep in original order, drops as Java in dropCustomDeathLoot (R10) with pre-enchanted drops per R7, sounds via ModSounds, XP, despawn rules, spawn placement predicate ported from getCanSpawnHere (spawner detection via MobSpawnType.SPAWNER), registration via registry_entries (natural biome spawns are W12); (2) EntityType registration with the manifest id, MobCategory per R9/R18, hitbox from the manifest size, tracking range per R9 - via registry_entries; (3) attribute creation via registry_entries; (4) the model class <Name>Model in client/model/ baking the generated <Name>Geometry (never edit geometry) with setupAnim ported from the original render()/setRotationAngles() per R8, translucent/GL passes per docs/research/06-models-design.md; (5) the renderer with scale() from preRenderCallback, texture variants via getTextureLocation, shadow size from the original; renderer + layer registration via registry_entries; (6) the spawn egg for the entity (manifest kind spawn_egg, match its name) using the W01 generic spawn egg class, registered via registry_entries, with its item model on the original egg texture. Classes implement the W01 MyUtils marker interfaces where the original predicates name them; the 1.7.10 armor formula (R5) applies automatically through W01 combat. Back-edges into this wave: grep for 'TODO W07' and fill those in files you own, report the rest via registry_entries.",
+  "workers": [
+    {
+      "key": "w07-dinos",
+      "task": "Port the carnivorous dinosaurs and the basilisk with renderers and models.",
+      "classes": ["Alosaurus", "Cryolophosaurus", "TRex", "Nastysaurus", "Pointysaurus", "Basilisk", "RenderAlosaurus", "ModelAlosaurus", "RenderCryolophosaurus", "ModelCryolophosaurus", "RenderTRex", "ModelTRex", "RenderNastysaurus", "ModelNastysaurus", "RenderPointysaurus", "ModelPointysaurus", "RenderBasilisk", "ModelBasilisk"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/dino/", "src/main/java/com/swbr/orespawn/client/renderer/dino/", "client/model/ files for AlosaurusModel, CryolophosaurusModel, TRexModel, NastysaurusModel, PointysaurusModel, BasiliskModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w07-arthropods",
+      "task": "Port the scorpions, Cave Fisher, Bee, Hercules Beetle, Spit Bug and Trooper Bug with renderers and models (ModelTrooperBug has 134 parts - bake the geometry, port only the animation). Poison duration bugs 1:1 (R18).",
+      "classes": ["Scorpion", "EmperorScorpion", "CaveFisher", "Bee", "HerculesBeetle", "SpitBug", "TrooperBug", "RenderScorpion", "ModelScorpion", "RenderEmperorScorpion", "ModelEmperorScorpion", "RenderCaveFisher", "ModelCaveFisher", "RenderBee", "ModelBee", "RenderHerculesBeetle", "ModelHerculesBeetle", "RenderSpitBug", "ModelSpitBug", "RenderTrooperBug", "ModelTrooperBug"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/arthropod/", "src/main/java/com/swbr/orespawn/client/renderer/arthropod/", "client/model/ files for ScorpionModel, EmperorScorpionModel, CaveFisherModel, BeeModel, HerculesBeetleModel, SpitBugModel, TrooperBugModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w07-monsters",
+      "task": "Port Alien, Molenoid, Kyuubi (whole-model GL transform and translucency), BandP (the politician thief: stolen goods lose components, no offhand theft, R18), Leaf Monster and Hammerhead with renderers and models.",
+      "classes": ["Alien", "Molenoid", "Kyuubi", "BandP", "LeafMonster", "Hammerhead", "RenderAlien", "ModelAlien", "RenderMolenoid", "ModelMolenoid", "RenderKyuubi", "ModelKyuubi", "RenderBandP", "ModelBandP", "RenderLeafMonster", "ModelLeafMonster", "RenderHammerhead", "ModelHammerhead"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/monster/", "src/main/java/com/swbr/orespawn/client/renderer/monster/", "client/model/ files for AlienModel, MolenoidModel, KyuubiModel, BandPModel, LeafMonsterModel, HammerheadModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w07-ender-fairy",
+      "task": "Port Ender Knight, Ender Reaper, Fairy (FairyType/fairyType bug 1:1 per R18, 9 texture variants, tint pass) and the Fairy Sword with renderers and models. The fairy spawner in the fairy tree comes with Trees in W12.",
+      "classes": ["EnderKnight", "EnderReaper", "Fairy", "FairySword", "RenderEnderKnight", "ModelEnderKnight", "RenderEnderReaper", "ModelEnderReaper", "RenderFairy", "ModelFairy"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/ender/", "src/main/java/com/swbr/orespawn/entity/fairy/", "src/main/java/com/swbr/orespawn/item/fairy/", "src/main/java/com/swbr/orespawn/client/renderer/ender/", "client/model/ files for EnderKnightModel, EnderReaperModel, FairyModel", "item model files for these ids and spawn eggs"]
+    },
+    {
+      "key": "w07-robots",
+      "task": "Port Robot1-Robot5 (Robo Pounder, Gunner, Warrior, Sniper, Bomb-omb per manifest names; Robo-Gunner and Robo-Sniper fire the W04 LaserBall; Robot4 shield never blocks, R18) and GiantRobot (Jeffery) with RenderGiantRobotInfo, renderers and models.",
+      "classes": ["Robot1", "Robot2", "Robot3", "Robot4", "Robot5", "GiantRobot", "RenderGiantRobotInfo", "RenderRobot1", "ModelRobot1", "RenderRobot2", "ModelRobot2", "RenderRobot3", "ModelRobot3", "RenderRobot4", "ModelRobot4", "RenderRobot5", "ModelRobot5", "RenderGiantRobot", "ModelGiantRobot"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/robot/", "src/main/java/com/swbr/orespawn/client/renderer/robot/", "client/model/ files for Robot1Model..Robot5Model and GiantRobotModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w07-worms",
+      "task": "Port WormSmall, WormMedium and WormLarge (digging with noPhysics, block list 1:1 plus deepslate per R18, WormLarge spawns its brood on the first tick) with renderers and models.",
+      "classes": ["WormSmall", "WormMedium", "WormLarge", "RenderWormSmall", "ModelWormSmall", "RenderWormMedium", "ModelWormMedium", "RenderWormLarge", "ModelWormLarge"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/worm/", "src/main/java/com/swbr/orespawn/client/renderer/worm/", "client/model/ files for WormSmallModel, WormMediumModel, WormLargeModel", "item model files for these entities' spawn eggs"]
+    }
+  ],
+  "gametests": "every W07 entity type spawns and ticks 100 ticks without exception (R17) with its manifest max health and hitbox; one melee mob per worker attacks a target and deals its original damage with knockback; Robo-Gunner and Robo-Sniper fire LaserBalls at a target; WormLarge creates its brood on its first tick; each spawn egg of this wave spawns its entity; all earlier tests still pass.",
+  "reviewClasses": ["TRex", "Basilisk", "Pointysaurus", "EmperorScorpion", "Bee", "HerculesBeetle", "TrooperBug", "Alien", "Kyuubi", "BandP", "Hammerhead", "EnderKnight", "Fairy", "Robot2", "Robot4", "GiantRobot", "WormLarge", "Molenoid"]
+}

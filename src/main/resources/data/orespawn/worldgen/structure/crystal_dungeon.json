@@ -1,0 +1,8 @@
+{
+  "type": "orespawn:legacy",
+  "dispatcher": "orespawn:crystal_dungeon",
+  "biomes": "orespawn:crystal",
+  "step": "top_layer_modification",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

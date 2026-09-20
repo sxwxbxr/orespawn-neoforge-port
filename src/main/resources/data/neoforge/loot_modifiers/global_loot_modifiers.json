@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "entries": [
+    "orespawn:dungeon_chest",
+    "orespawn:pyramid_jungle_chest",
+    "orespawn:pyramid_desert_chest"
+  ]
+}

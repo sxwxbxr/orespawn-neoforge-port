@@ -1,0 +1,33 @@
+{
+  "wave": "w02",
+  "title": "Rohstoffe, Bloecke, Pflanzen, Nahrung",
+  "goal": "Every block, raw material, food and crop without an entity dependency: ores and storage blocks, the Crystal dimension blocks, the 121 Ancient Dried Spawn Egg blocks, trees' logs and leaves, torches, flowers, crops with their seed items, foods and fish. No world generation yet (W05/W12), no recipes yet (W12). See docs/catalog/README.md section 4.3. Every block needs blockstate JSON, block and item model JSON on the original texture, and a loot table (or a getDrops override where the original drop logic cannot be expressed as a loot table) that reproduces getItemDropped/quantityDropped/dropBlockAsItemWithChance exactly. Registry ids come only from docs/catalog/manifest.json. Resource files: write only files named after the ids backed by YOUR classes (manifest field 'class').",
+  "workers": [
+    {
+      "key": "w02-ores",
+      "task": "Port the ores, storage blocks and misc blocks listed. OreGenericEgg backs 121 manifest blocks (the Ancient Dried Spawn Eggs) - one class, 121 registrations; note from the catalogue that MyEnderPearlBlock and MyEyeOfEnderBlock are 3x3 storage blocks despite that class (verify in the source and register them accordingly). Titanium/Uranium glow per DECISIONS R18 (static field read by the lightLevel function). Lavafoam bounce and fall damage, RTPBlock player relocation and MoleDirtBlock exactly as the original.",
+      "classes": ["OreUranium", "OreTitanium", "OreRuby", "OreAmethyst", "OreCrystal", "OreCrystalCrystal", "OreSalt", "OreBasicStone", "OreGenericEgg", "BlockUranium", "BlockTitanium", "BlockRuby", "BlockCrystal", "MoleDirtBlock", "Lavafoam", "RTPBlock"],
+      "owns": ["src/main/java/com/swbr/orespawn/block/ore/", "src/main/java/com/swbr/orespawn/block/misc/", "resource files named after the ids of these classes under src/main/resources/assets/orespawn/{blockstates,models/block,models/item}/ and src/main/resources/data/orespawn/loot_table/blocks/"]
+    },
+    {
+      "key": "w02-trees-crystal",
+      "task": "Port logs, leaves, torches, flowers and the Crystal dimension blocks listed. Leaves get the original decay logic, not vanilla distance (README 4.3). Torches need a standing block <id> and a wall block <id>_wall (DECISIONS R18) plus the original canBlockStay rules. Crystal block opacity per R18 (original isOpaqueCube, cutout render type set on the client). BlockSkyTreeLog double drop 1:1.",
+      "classes": ["CrystalGrass", "CrystalWood", "BlockCrystalTreeLog", "BlockSkyTreeLog", "BlockDuplicatorLog", "BlockCrystalLeaves", "BlockCrystalPlant", "BlockCrystalTorch", "BlockExtremeTorch", "BlockAppleLeaves", "BlockScaryLeaves", "BlockExperienceLeaves", "BlockExperiencePlant", "MyBlockFlower"],
+      "owns": ["src/main/java/com/swbr/orespawn/block/tree/", "src/main/java/com/swbr/orespawn/block/plant/", "src/main/java/com/swbr/orespawn/block/torch/", "src/main/java/com/swbr/orespawn/client/BlockRenderTypes.java", "resource files named after the ids of these classes (and the _wall torch ids) under assets/orespawn/{blockstates,models/block,models/item}/ and data/orespawn/loot_table/blocks/"]
+    },
+    {
+      "key": "w02-crops",
+      "task": "Port the crop and placeable-food blocks with their seed and produce items. Stacking crops (Tomato, Corn, Quinoa) keep the original target-height reroll and 4-bit overflow behaviour (DECISIONS R18). BlockRadish/BlockRice harvest yields 1:1 including the unripe full yield. BlockPizza bites and BlockDuctTape repair behaviour as the original. ItemAppleSeed and ItemExperienceTreeSeed only place what exists in this wave; tree growth that needs W12 generators becomes // PORT: TODO W12.",
+      "classes": ["BlockPizza", "BlockDuctTape", "BlockRadish", "BlockRice", "BlockStrawberry", "BlockLettuce", "BlockTomato", "BlockCorn", "BlockQuinoa", "ItemRadish", "ItemCornCob", "ItemTomato", "ItemLettuce", "ItemStrawberry", "ItemStrawberrySeed", "ItemPizza", "ItemDuctTape", "ItemAppleSeed", "ItemExperienceTreeSeed"],
+      "owns": ["src/main/java/com/swbr/orespawn/block/crop/", "src/main/java/com/swbr/orespawn/item/crop/", "resource files named after the ids of these classes under assets/orespawn/{blockstates,models/block,models/item}/ and data/orespawn/loot_table/blocks/"]
+    },
+    {
+      "key": "w02-materials-food",
+      "task": "Port the material and food items listed: ingots, salt (27 ItemSalt instances), crystal sticks, popcorn (15 instances), the fish family. Food values and effects exactly from the source (hunger, saturation modifier as 1.21.1 FoodProperties saturation - verify the formula change between 1.7.10 saturationModifier and 1.21.1 saturation in the sources and convert, do not copy blindly), effect ids mapped to 1.21.1 MobEffects.",
+      "classes": ["IngotTitanium", "IngotUranium", "ItemSalt", "ItemCrystalSticks", "ItemPopcorn", "ItemSunFish", "ItemFireFish", "ItemLavaEel", "ItemSparkFish", "ItemGenericFish"],
+      "owns": ["src/main/java/com/swbr/orespawn/item/material/", "src/main/java/com/swbr/orespawn/item/food/", "item model files named after the ids of these classes under assets/orespawn/models/item/"]
+    }
+  ],
+  "gametests": "every W02 block can be placed and broken and drops exactly its original drop (sample at least: each ore, one dried egg block, each storage block, each crop at max age and below); crops grow with bonemeal/random ticks to their original max age and drop; leaves without a log decay; Lavafoam bounces a falling entity; RTPBlock relocates a player; torches stand and hang on walls; food items restore the original hunger; all W00 and W01 tests still pass.",
+  "reviewClasses": ["OreGenericEgg", "Lavafoam", "RTPBlock", "MoleDirtBlock", "BlockCrystalLeaves", "BlockCrystalTorch", "BlockSkyTreeLog", "BlockTomato", "BlockCorn", "BlockPizza", "BlockDuctTape", "ItemAppleSeed", "ItemPopcorn", "ItemGenericFish", "BlockRadish", "OreSalt", "BlockCrystalPlant", "BlockExtremeTorch"]
+}

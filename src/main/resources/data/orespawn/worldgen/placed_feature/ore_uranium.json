@@ -1,0 +1,18 @@
+{
+  "feature": "orespawn:ore_uranium",
+  "placement": [
+    {
+      "type": "orespawn:legacy_count",
+      "stat": "uranium",
+      "extra": 9,
+      "less_ore_divisor": 3
+    },
+    {
+      "type": "orespawn:legacy_ore_position",
+      "offset": 3,
+      "spread": 10,
+      "y_bound": 128,
+      "stat": "uranium"
+    }
+  ]
+}

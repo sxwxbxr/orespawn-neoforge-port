@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EAE",
+    "EEE"
+  ],
+  "key": {
+    "A": {
+      "type": "neoforge:components",
+      "items": "orespawn:emerald_boots",
+      "components": {
+        "minecraft:damage": 0
+      },
+      "strict": false
+    },
+    "E": {
+      "item": "minecraft:experience_bottle"
+    }
+  },
+  "result": {
+    "id": "orespawn:experience_boots"
+  }
+}

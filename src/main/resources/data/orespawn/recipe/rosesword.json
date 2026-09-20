@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E",
+    "E",
+    "I"
+  ],
+  "key": {
+    "E": {
+      "type": "neoforge:difference",
+      "base": {
+        "tag": "minecraft:small_flowers"
+      },
+      "subtracted": {
+        "item": "minecraft:dandelion"
+      }
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "orespawn:rosesword"
+  }
+}

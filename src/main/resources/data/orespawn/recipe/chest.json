@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "F F",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "orespawn:crystalplanks"
+    }
+  },
+  "result": {
+    "id": "minecraft:chest"
+  }
+}

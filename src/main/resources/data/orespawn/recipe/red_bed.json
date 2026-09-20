@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:peacockfeather"
+    },
+    {
+      "item": "orespawn:crystalplanks"
+    },
+    {
+      "item": "orespawn:peacockfeather"
+    },
+    {
+      "item": "orespawn:crystalplanks"
+    },
+    {
+      "item": "orespawn:peacockfeather"
+    },
+    {
+      "item": "orespawn:crystalplanks"
+    }
+  ],
+  "result": {
+    "id": "minecraft:red_bed"
+  }
+}

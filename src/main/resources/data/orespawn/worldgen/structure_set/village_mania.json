@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 10387312,
+    "separation": 7,
+    "spacing": 9,
+    "spread_type": "linear"
+  },
+  "structures": [
+    {
+      "structure": "orespawn:village_mania",
+      "weight": 1
+    }
+  ]
+}

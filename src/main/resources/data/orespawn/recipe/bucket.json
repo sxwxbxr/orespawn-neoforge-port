@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "orespawn:crystalpink_ingot"
+    }
+  },
+  "result": {
+    "id": "minecraft:bucket"
+  }
+}

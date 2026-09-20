@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "orespawn:crystalpink_ingot"
+    }
+  },
+  "result": {
+    "id": "orespawn:crystalpink_block"
+  }
+}

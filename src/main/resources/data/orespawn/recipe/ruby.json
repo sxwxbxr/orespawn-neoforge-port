@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:blockruby"
+    }
+  ],
+  "result": {
+    "id": "orespawn:ruby",
+    "count": 9
+  }
+}

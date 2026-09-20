@@ -1,0 +1,17 @@
+{
+  "feature": "orespawn:ore_ruby",
+  "placement": [
+    {
+      "type": "orespawn:legacy_count",
+      "stat": "ruby",
+      "extra": 5
+    },
+    {
+      "type": "orespawn:legacy_ore_position",
+      "offset": 3,
+      "spread": 10,
+      "y_bound": 128,
+      "stat": "ruby"
+    }
+  ]
+}

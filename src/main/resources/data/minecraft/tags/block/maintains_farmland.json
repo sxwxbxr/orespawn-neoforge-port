@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "orespawn:radish_plant",
+    "orespawn:strawberry_plant",
+    "orespawn:rice_plant",
+    "orespawn:butterfly_plant",
+    "orespawn:moth_plant",
+    "orespawn:mosquito_plant",
+    "orespawn:firefly_plant"
+  ]
+}

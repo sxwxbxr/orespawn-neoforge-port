@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "orespawn:block/pizza"
+    },
+    "bites=1": {
+      "model": "orespawn:block/pizza_slice1"
+    },
+    "bites=2": {
+      "model": "orespawn:block/pizza_slice2"
+    },
+    "bites=3": {
+      "model": "orespawn:block/pizza_slice3"
+    },
+    "bites=4": {
+      "model": "orespawn:block/pizza_slice4"
+    },
+    "bites=5": {
+      "model": "orespawn:block/pizza_slice5"
+    }
+  }
+}

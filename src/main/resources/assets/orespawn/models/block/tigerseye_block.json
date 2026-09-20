@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "orespawn:block/tigerseye_block"
+  },
+  "render_type": "minecraft:cutout"
+}

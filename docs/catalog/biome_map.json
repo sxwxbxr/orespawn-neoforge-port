@@ -1,0 +1,160 @@
+{
+  "_about": "1.7.10 BiomeGenBase field names used by OreSpawn's 348 addSpawn calls -> 1.21.1 biome ids or biome tags (\"#ns:path\"). Targets verified against net/minecraft/world/level/biome/Biomes.java and net/minecraft/tags/BiomeTags.java IS_NETHER (1.21.1). Only direct successors are mapped: in 1.7.10 the mutated variants (sunflower plains, flower forest, ...) copied their spawn lists from the parent at class-load time, before any mod called addSpawn, so they never carried OreSpawn mobs. Biomes merged away in 1.18 map to the biome that absorbed them. DECISIONS R26 (R22 category rule): biomes that 1.21.1 split off a 1.7.10 biome count as that biome - hell is the whole Nether (#minecraft:is_nether), ocean adds lukewarm/warm/cold, deepOcean adds deep_lukewarm/deep_cold, swampland adds mangrove_swamp, jungle/jungleHills add bamboo_jungle. frozen_ocean/deep_frozen_ocean stay out: 1.7.10 already had them as separate biomes without OreSpawn spawns.",
+  "map": {
+    "beach": [
+      "minecraft:beach"
+    ],
+    "birchForest": [
+      "minecraft:birch_forest"
+    ],
+    "birchForestHills": [
+      "minecraft:birch_forest"
+    ],
+    "coldTaiga": [
+      "minecraft:snowy_taiga"
+    ],
+    "coldTaigaHills": [
+      "minecraft:snowy_taiga"
+    ],
+    "deepOcean": [
+      "minecraft:deep_ocean",
+      "minecraft:deep_lukewarm_ocean",
+      "minecraft:deep_cold_ocean"
+    ],
+    "desert": [
+      "minecraft:desert"
+    ],
+    "extremeHills": [
+      "minecraft:windswept_hills"
+    ],
+    "extremeHillsEdge": [
+      "minecraft:windswept_hills"
+    ],
+    "extremeHillsPlus": [
+      "minecraft:windswept_forest"
+    ],
+    "forest": [
+      "minecraft:forest"
+    ],
+    "forestHills": [
+      "minecraft:forest"
+    ],
+    "frozenRiver": [
+      "minecraft:frozen_river"
+    ],
+    "hell": [
+      "#minecraft:is_nether"
+    ],
+    "icePlains": [
+      "minecraft:snowy_plains"
+    ],
+    "jungle": [
+      "minecraft:jungle",
+      "minecraft:bamboo_jungle"
+    ],
+    "jungleHills": [
+      "minecraft:jungle",
+      "minecraft:bamboo_jungle"
+    ],
+    "megaTaiga": [
+      "minecraft:old_growth_pine_taiga"
+    ],
+    "megaTaigaHills": [
+      "minecraft:old_growth_pine_taiga"
+    ],
+    "mesa": [
+      "minecraft:badlands"
+    ],
+    "mesaPlateau": [
+      "minecraft:badlands"
+    ],
+    "mesaPlateau_F": [
+      "minecraft:wooded_badlands"
+    ],
+    "mushroomIsland": [
+      "minecraft:mushroom_fields"
+    ],
+    "ocean": [
+      "minecraft:ocean",
+      "minecraft:lukewarm_ocean",
+      "minecraft:warm_ocean",
+      "minecraft:cold_ocean"
+    ],
+    "plains": [
+      "minecraft:plains"
+    ],
+    "river": [
+      "minecraft:river"
+    ],
+    "roofedForest": [
+      "minecraft:dark_forest"
+    ],
+    "savanna": [
+      "minecraft:savanna"
+    ],
+    "savannaPlateau": [
+      "minecraft:savanna_plateau"
+    ],
+    "stoneBeach": [
+      "minecraft:stony_shore"
+    ],
+    "swampland": [
+      "minecraft:swamp",
+      "minecraft:mangrove_swamp"
+    ],
+    "taiga": [
+      "minecraft:taiga"
+    ],
+    "taigaHills": [
+      "minecraft:taiga"
+    ]
+  },
+  "spawn_type_to_mob_category": {
+    "creature": "CREATURE",
+    "ambient": "AMBIENT",
+    "monster": "MONSTER",
+    "waterCreature": "WATER_CREATURE"
+  },
+  "legacy_names": {
+    "_about": "OreSpawnWorld compared BiomeGenBase.biomeName with equals (OreSpawnWorld.java:311, 968, 1004, 1131, 1293 and the structure passes). Each tag data/orespawn/tags/worldgen/biome/legacy_name/<tag>.json is the union of the map targets of the listed 1.7.10 biome fields whose biomeName the original tested; tools/gen_spawns.py writes them. Only the exact names count: \"Extreme Hills\" is not \"Extreme Hills Edge\", \"Taiga\" is not \"TaigaHills\", \"Ocean\" is not \"Deep Ocean\".",
+    "birch_forest": [
+      "birchForest",
+      "birchForestHills"
+    ],
+    "desert": [
+      "desert"
+    ],
+    "extreme_hills": [
+      "extremeHills"
+    ],
+    "forest": [
+      "forest",
+      "forestHills"
+    ],
+    "ice_plains": [
+      "icePlains"
+    ],
+    "jungle": [
+      "jungle",
+      "jungleHills"
+    ],
+    "ocean": [
+      "ocean"
+    ],
+    "plains": [
+      "plains"
+    ],
+    "river": [
+      "river"
+    ],
+    "roofed_forest": [
+      "roofedForest"
+    ],
+    "swampland": [
+      "swampland"
+    ],
+    "taiga": [
+      "taiga"
+    ]
+  }
+}

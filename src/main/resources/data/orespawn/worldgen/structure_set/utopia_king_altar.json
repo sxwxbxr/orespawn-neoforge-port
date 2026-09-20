@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1470231605,
+    "separation": 3,
+    "spacing": 10,
+    "spread_type": "linear"
+  },
+  "structures": [
+    {
+      "structure": "orespawn:utopia_king_altar",
+      "weight": 1
+    }
+  ]
+}

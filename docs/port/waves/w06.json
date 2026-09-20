@@ -1,0 +1,39 @@
+{
+  "wave": "w06",
+  "title": "Friedliche Tiere und Battle Mobs",
+  "goal": "Birds, fish, cows, herbivore dinosaurs, ghosts and the EntityCannonFodder family (docs/catalog/README.md section 4.7). Read the hand-off notes docs/port/W01.md up to the previous wave first. Apply DECISIONS R20 (NoStepTrigger where the original canTriggerWalking returns false; Mth.floor for coordinate casts) and the W04 XP lesson (1.7.10 EntityAnimal.getExperiencePoints returns 1 + rand.nextInt(3) regardless of experienceValue - check each entity's base class before porting XP). ENTITY PORTER CONTRACT for every entity in this wave: (1) the entity class with the original class name, attributes from the manifest/MobStats at runtime, SynchedEntityData for every DataWatcher index, NBT save/load, AI goals in original priority order, custom movement/physics in customServerAiStep in original order, drops as Java in dropCustomDeathLoot (R10), sounds via ModSounds, XP, despawn rules, spawn placement predicate ported from getCanSpawnHere (registration via registry_entries; natural biome spawns are W12); (2) EntityType registration with the manifest id, MobCategory per R9/R18, hitbox from the manifest size, tracking range per R9 - via registry_entries; (3) attribute creation via registry_entries; (4) the model class <Name>Model in client/model/ baking the generated <Name>Geometry (never edit geometry) with setupAnim ported from the original render()/setRotationAngles() per R8, translucent/GL passes per docs/research/06-models-design.md; (5) the renderer with scale() from preRenderCallback, texture variants via getTextureLocation, shadow size from the original; renderer + layer registration via registry_entries; (6) the spawn egg for the entity (manifest kind spawn_egg, match its name) using the W01 generic spawn egg class, registered via registry_entries, with its item model on the original egg texture. Classes implement the W01 MyUtils marker interfaces where the original MyUtils predicates name them. Back-edges from docs/catalog/README.md 4.14 into this wave: grep the tree for 'TODO W06' and fill them if they are in files you own; otherwise report them in registry_entries for the integrator.",
+  "workers": [
+    {
+      "key": "w06-birds-bugs",
+      "task": "Port the small flyers and critters listed, with their renderers and models. Flight without navigation as the original motion code (catalogue 5.3).",
+      "classes": ["Cockateil", "RubyBird", "CliffRacer", "Cricket", "Dragonfly", "Coin", "Tshirt", "RenderCockateil", "ModelCockateil", "RenderCliffRacer", "ModelCliffRacer", "RenderCricket", "ModelCricket", "RenderDragonfly", "ModelDragonfly", "RenderCoin", "ModelCoin", "RenderTshirt", "ModelTshirt"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/critter/", "src/main/java/com/swbr/orespawn/client/renderer/critter/", "client/model/ files for CockateilModel, CliffRacerModel, CricketModel, DragonflyModel, CoinModel, TshirtModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w06-cows-fish",
+      "task": "Port RedCow first (base of GoldCow, EnchantedCow, CrystalCow; vanilla CowModel with original textures and the enchanted glint pass), then the water animals GoldFish, Whale, Flounder and Frog with their renderers and models. Sounds without namespace stay silent (R18).",
+      "classes": ["RedCow", "GoldCow", "EnchantedCow", "CrystalCow", "GoldFish", "Whale", "Flounder", "Frog", "RenderEnchantedCow", "RenderGoldFish", "ModelGoldFish", "RenderWhale", "ModelWhale", "RenderFlounder", "ModelFlounder", "RenderFrog", "ModelFrog"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/cow/", "src/main/java/com/swbr/orespawn/entity/aquatic/", "src/main/java/com/swbr/orespawn/client/renderer/cow/", "src/main/java/com/swbr/orespawn/client/renderer/aquatic/", "client/model/ files for GoldFishModel, WhaleModel, FlounderModel, FrogModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w06-herbivores",
+      "task": "Port the herbivores and small animals listed with renderers and models. Hydrolisc heal(-1) health transfer per R18 (setHealth if heal ignores negative amounts - verify).",
+      "classes": ["Baryonyx", "Cassowary", "Camarasaurus", "Beaver", "Peacock", "StinkBug", "Hydrolisc", "RenderBaryonyx", "ModelBaryonyx", "RenderCassowary", "ModelCassowary", "RenderCamarasaurus", "ModelCamarasaurus", "RenderBeaver", "ModelBeaver", "RenderPeacock", "ModelPeacock", "RenderStinkBug", "ModelStinkBug", "RenderHydrolisc", "ModelHydrolisc"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/herbivore/", "src/main/java/com/swbr/orespawn/client/renderer/herbivore/", "client/model/ files for BaryonyxModel, CassowaryModel, CamarasaurusModel, BeaverModel, PeacockModel, StinkBugModel, HydroliscModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w06-cannonfodder",
+      "task": "Port EntityCannonFodder first (base class of the battle mobs, team hats), MyEntityAIAvoidEntity (with the get_is_activated interaction, catalogue 6.5), then Chipmunk, Lizard (eats any dye, catalogue 6.8) and Gazelle (findBuddy finds itself, R18; effective speed 0.3) with renderers and models. Keep EntityCannonFodder non-final with protected hooks: Ostrich and VelocityRaptor extend it in parallel (w06-riders).",
+      "classes": ["EntityCannonFodder", "MyEntityAIAvoidEntity", "Chipmunk", "Lizard", "Gazelle", "RenderChipmunk", "ModelChipmunk", "RenderLizard", "ModelLizard", "RenderGazelle", "ModelGazelle"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/cannonfodder/", "new file src/main/java/com/swbr/orespawn/entity/ai/MyEntityAIAvoidEntity.java", "src/main/java/com/swbr/orespawn/client/renderer/cannonfodder/", "client/model/ files for ChipmunkModel, LizardModel, GazelleModel", "item model files for these entities' spawn eggs"]
+    },
+    {
+      "key": "w06-riders-ghosts",
+      "task": "Port Ostrich and VelocityRaptor (both extend EntityCannonFodder by that class name in com.swbr.orespawn.entity.cannonfodder, written in parallel; riding with the W01 per-player key state R15; VelocityRaptor's player speed as a server-side AttributeModifier per R18) and the ghosts Ghost and GhostSkelly (translucent passes; Halloween spawning is W12) with renderers and models.",
+      "classes": ["Ostrich", "VelocityRaptor", "Ghost", "GhostSkelly", "RenderOstrich", "ModelOstrich", "RenderVelocityRaptor", "ModelVelocityRaptor", "RenderGhost", "ModelGhost", "RenderGhostSkelly", "ModelGhostSkelly"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/rider/", "src/main/java/com/swbr/orespawn/entity/ghost/", "src/main/java/com/swbr/orespawn/client/renderer/rider/", "src/main/java/com/swbr/orespawn/client/renderer/ghost/", "client/model/ files for OstrichModel, VelocityRaptorModel, GhostModel, GhostSkellyModel", "item model files for these entities' spawn eggs"]
+    }
+  ],
+  "gametests": "every W06 entity type spawns in the arena and ticks 100 ticks without exception (R17) and has its manifest max health and hitbox; RedCow family tame/breed with their original items; battle mob hats split teams (EntityCannonFodder); an Ostrich accepts a rider and rises on the rider's fly-up state; each spawn egg of this wave spawns its entity; drops of one sample per worker match the behaviour chapter; all earlier tests still pass.",
+  "reviewClasses": ["Cockateil", "RubyBird", "CliffRacer", "Coin", "RedCow", "EnchantedCow", "GoldFish", "Whale", "Frog", "Beaver", "Hydrolisc", "EntityCannonFodder", "MyEntityAIAvoidEntity", "Chipmunk", "Lizard", "Gazelle", "Ostrich", "VelocityRaptor"]
+}

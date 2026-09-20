@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EE",
+    " I",
+    " I"
+  ],
+  "key": {
+    "E": {
+      "item": "orespawn:crystalstone"
+    },
+    "I": {
+      "item": "orespawn:crystalsticks"
+    }
+  },
+  "result": {
+    "id": "orespawn:crystalstonehoe"
+  }
+}

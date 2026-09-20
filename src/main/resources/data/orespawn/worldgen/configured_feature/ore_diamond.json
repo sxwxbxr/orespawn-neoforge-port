@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "minecraft:diamond_ore"
+    },
+    "size_stat": "diamond",
+    "target": "stone"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "minecraft:item/handheld",
+    "textures": { "layer0": "orespawn:item/hammysmall" }
+  },
+  "perspectives": {
+    "firstperson_righthand": { "parent": "orespawn:item/bigweapon_hand" },
+    "firstperson_lefthand": { "parent": "orespawn:item/bigweapon_hand" },
+    "thirdperson_righthand": { "parent": "orespawn:item/bigweapon_hand" },
+    "thirdperson_lefthand": { "parent": "orespawn:item/bigweapon_hand" }
+  }
+}

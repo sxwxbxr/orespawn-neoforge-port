@@ -1,0 +1,22 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "orespawn:ore_spawn_ores",
+    "orespawn:ore_uranium",
+    "orespawn:ore_titanium",
+    "orespawn:ore_amethyst",
+    "orespawn:ore_salt",
+    "orespawn:ore_red_ant_troll",
+    "orespawn:ore_termite_troll",
+    "orespawn:ore_ruby",
+    "orespawn:ore_diamond",
+    "orespawn:ore_block_diamond",
+    "orespawn:ore_emerald",
+    "orespawn:ore_block_emerald",
+    "orespawn:ore_gold",
+    "orespawn:ore_block_gold",
+    "orespawn:ore_block_ruby"
+  ],
+  "step": "underground_ores"
+}

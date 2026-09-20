@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TUT",
+    " U ",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "T": {
+      "item": "orespawn:ingottitanium"
+    },
+    "U": {
+      "item": "orespawn:ingoturanium"
+    }
+  },
+  "result": {
+    "id": "orespawn:ultimatepickaxe"
+  }
+}

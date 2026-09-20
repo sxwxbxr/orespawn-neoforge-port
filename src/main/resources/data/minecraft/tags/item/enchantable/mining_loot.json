@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "orespawn:ultimatepickaxe",
+    "orespawn:ultimateshovel",
+    "orespawn:ultimateaxe",
+    "orespawn:emeraldpickaxe",
+    "orespawn:emeraldshovel",
+    "orespawn:emeraldaxe",
+    "orespawn:rubypickaxe",
+    "orespawn:rubyshovel",
+    "orespawn:rubyaxe",
+    "orespawn:amethystpickaxe",
+    "orespawn:amethystshovel",
+    "orespawn:amethystaxe",
+    "orespawn:crystalwoodpickaxe",
+    "orespawn:crystalwoodshovel",
+    "orespawn:crystalwoodaxe",
+    "orespawn:crystalpinkpickaxe",
+    "orespawn:crystalpinkshovel",
+    "orespawn:crystalpinkaxe",
+    "orespawn:crystalstonepickaxe",
+    "orespawn:crystalstoneshovel",
+    "orespawn:crystalstoneaxe",
+    "orespawn:tigerseye_pickaxe",
+    "orespawn:tigerseye_shovel",
+    "orespawn:tigerseye_axe"
+  ]
+}

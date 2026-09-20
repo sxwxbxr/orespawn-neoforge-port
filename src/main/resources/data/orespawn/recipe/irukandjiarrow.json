@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:peacockfeather"
+    },
+    {
+      "item": "orespawn:deadirukandji"
+    },
+    {
+      "item": "orespawn:crystalsticks"
+    }
+  ],
+  "result": {
+    "id": "orespawn:irukandjiarrow"
+  }
+}

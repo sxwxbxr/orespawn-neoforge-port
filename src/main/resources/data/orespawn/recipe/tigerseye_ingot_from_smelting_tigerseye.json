@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "orespawn:tigerseye"
+  },
+  "result": {
+    "id": "orespawn:tigerseye_ingot"
+  },
+  "experience": 0.3,
+  "cookingtime": 200
+}

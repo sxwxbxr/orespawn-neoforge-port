@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "orespawn:bluefish"
+  },
+  "result": {
+    "id": "minecraft:cooked_cod"
+  },
+  "experience": 0.2,
+  "cookingtime": 200
+}

@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": {
+    "orespawn:skytreelog": {
+      "burn_time": 300
+    },
+    "orespawn:duplicatortreelog": {
+      "burn_time": 300
+    },
+    "orespawn:crystaltreelog": {
+      "burn_time": 300
+    },
+    "orespawn:crystalplanks": {
+      "burn_time": 300
+    },
+    "orespawn:crystalworkbench": {
+      "burn_time": 300
+    }
+  }
+}

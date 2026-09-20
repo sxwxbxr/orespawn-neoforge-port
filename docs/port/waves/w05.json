@@ -1,0 +1,39 @@
+{
+  "wave": "w05",
+  "title": "Dimensionen, Terrain, Portaltiere",
+  "goal": "The six dimensions per DECISIONS R13, each a datapack dimension_type + dimension under data/orespawn/ with its own Java ChunkGenerator codec porting ChunkProviderOreSpawnN and the WorldProvider rules (sky, day cycle, respawn); ores inside the generators (ChunkOreGenerator, chunk clip of veins kept); the Crystal labyrinth; denser villages; the teleporter; and the creatures that lead there (ants, termite, butterfly, moth) with their nests and spawn plants. See docs/catalog/README.md section 4.6 and verhalten/world-02.md, world-03.md, world-04.md. Mapping (verify in the source which provider class belongs to which dimension id before writing): WorldProviderOreSpawn=Utopia (orespawn:utopia), 2=Extreme (orespawn:mining), 3=VillageMania (orespawn:village), 4=Islands (orespawn:danger), 5=Crystal (orespawn:crystal, min_y 0 so the maze stays at Y 24-28), 6=Chaos (orespawn:chaos). Dimension biomes as datapack JSON here; their spawn lists come with BiomeGenUtopianPlains in W12; the dino list of ChunkProviderOreSpawn2 is a back-edge (// PORT: TODO W12). Codec keys of dimension_type/structure_set come from the 1.21.1 sources, not from record field names (catalogue 6.3). Random sources seeded from world seed + chunk pos (R18).",
+  "workers": [
+    {
+      "key": "w05-utopia-village",
+      "task": "Port WorldProviderOreSpawn + ChunkProviderOreSpawn (Utopia) and WorldProviderOreSpawn3 + ChunkProviderOreSpawn3 (VillageMania) including MapGenMoreVillages (denser vanilla villages - map to a structure_set override for minecraft:villages in that dimension, verify spacing values in the sources). Write their ChunkGenerator classes with MapCodec registration (via registry_entries), dimension_type and dimension JSON, and biome JSON (BiomeGenUtopianPlains' climate/colours only; its spawn list is W12).",
+      "classes": ["WorldProviderOreSpawn", "ChunkProviderOreSpawn", "WorldProviderOreSpawn3", "ChunkProviderOreSpawn3", "MapGenMoreVillages"],
+      "owns": ["src/main/java/com/swbr/orespawn/world/dimension/utopia/", "src/main/java/com/swbr/orespawn/world/dimension/village/", "data/orespawn/{dimension,dimension_type,worldgen/biome,worldgen/structure_set}/ files for utopia and village"]
+    },
+    {
+      "key": "w05-mining-danger",
+      "task": "Port WorldProviderOreSpawn2 + ChunkProviderOreSpawn2 (Extreme/mining, ore generation three times per chunk plus extra lapis via ChunkOreGenerator) and WorldProviderOreSpawn4 + ChunkProviderOreSpawn4 (Islands/danger flat base; the moving islands themselves are W08 entities). Port ChunkOreGenerator as a shared helper in world/gen/ that the other dimension porters may call by that class name. Mineshafts/strongholds only if the original provider calls their generators (R18).",
+      "classes": ["WorldProviderOreSpawn2", "ChunkProviderOreSpawn2", "WorldProviderOreSpawn4", "ChunkProviderOreSpawn4", "ChunkOreGenerator"],
+      "owns": ["src/main/java/com/swbr/orespawn/world/dimension/mining/", "src/main/java/com/swbr/orespawn/world/dimension/danger/", "src/main/java/com/swbr/orespawn/world/gen/", "data/orespawn/{dimension,dimension_type,worldgen/biome}/ files for mining and danger"]
+    },
+    {
+      "key": "w05-crystal-chaos",
+      "task": "Port WorldProviderOreSpawn5 + ChunkProviderOreSpawn5 (Crystal: kyanite/crystal grass terrain, crystal ores, min_y 0) with CrystalMaze (bedrock labyrinth at Y 24-28, seeded per R18), and WorldProviderOreSpawn6 + ChunkProviderOreSpawn6 (Chaos: void below, no bedrock, respawn over the void 1:1 per R18). Use ChunkOreGenerator by class name from world/gen/ (written in parallel by w05-mining-danger).",
+      "classes": ["WorldProviderOreSpawn5", "ChunkProviderOreSpawn5", "CrystalMaze", "WorldProviderOreSpawn6", "ChunkProviderOreSpawn6"],
+      "owns": ["src/main/java/com/swbr/orespawn/world/dimension/crystal/", "src/main/java/com/swbr/orespawn/world/dimension/chaos/", "data/orespawn/{dimension,dimension_type,worldgen/biome}/ files for crystal and chaos"]
+    },
+    {
+      "key": "w05-teleport-ants",
+      "task": "Port OreSpawnTeleporter (target search, platform creation, (int) cast toward zero kept per R18) as a DimensionTransition-based helper, and the portal creatures EntityAnt (Brown Ant -> Utopia), EntityRedAnt (-> mining), EntityRainbowAnt (-> village), EntityUnstableAnt (-> danger), Termite (-> crystal; empty hand, empty inventory, no armor) with right-click travel and return to the Overworld exactly as the original rules (same creature in its own dimension goes home, elsewhere into its dimension). Port AntBlock and CrystalAntBlock (nests), RenderAnt and ModelAnt (bake AntGeometry, animation from the original). The butterfly's travel to Chaos is done by w05-flyers and calls this teleporter by class name OreSpawnTeleporter in com.swbr.orespawn.world.dimension.",
+      "classes": ["OreSpawnTeleporter", "EntityAnt", "EntityRedAnt", "EntityRainbowAnt", "EntityUnstableAnt", "Termite", "AntBlock", "CrystalAntBlock", "RenderAnt", "ModelAnt"],
+      "owns": ["src/main/java/com/swbr/orespawn/world/dimension/OreSpawnTeleporter.java", "src/main/java/com/swbr/orespawn/entity/portal/", "src/main/java/com/swbr/orespawn/block/nest/", "src/main/java/com/swbr/orespawn/client/renderer/portal/", "src/main/java/com/swbr/orespawn/client/model/AntModel.java", "resource files for the ids of these classes"]
+    },
+    {
+      "key": "w05-flyers",
+      "task": "Port EntityButterfly (travel to Chaos via OreSpawnTeleporter, 9 texture variants), EntityLunaMoth (moth_type synced and saved per R18), EntityMosquito, Firefly, their spawn plants BlockButterflyPlant, BlockMothPlant, BlockMosquitoPlant, BlockFireflyPlant and seed items, and RenderButterfly (overlay pass as a RenderLayer), ModelButterfly, RenderMosquito, ModelMosquito, RenderFirefly, ModelFirefly (glColor4f tint pass). Mothra extends EntityButterfly in W08 - keep EntityButterfly non-final with protected hooks.",
+      "classes": ["EntityButterfly", "EntityLunaMoth", "EntityMosquito", "Firefly", "BlockButterflyPlant", "BlockMothPlant", "BlockMosquitoPlant", "BlockFireflyPlant", "ItemButterflySeed", "ItemMothSeed", "ItemMosquitoSeed", "ItemFireflySeed", "RenderButterfly", "ModelButterfly", "RenderMosquito", "ModelMosquito", "RenderFirefly", "ModelFirefly"],
+      "owns": ["src/main/java/com/swbr/orespawn/entity/insect/", "src/main/java/com/swbr/orespawn/block/insectplant/", "src/main/java/com/swbr/orespawn/item/insectseed/", "src/main/java/com/swbr/orespawn/client/renderer/insect/", "src/main/java/com/swbr/orespawn/client/model/ButterflyModel.java", "src/main/java/com/swbr/orespawn/client/model/MosquitoModel.java", "src/main/java/com/swbr/orespawn/client/model/FireflyModel.java", "resource files for the ids of these classes"]
+    }
+  ],
+  "gametests": "each of the six dimensions exists in the registry, a level for it loads and generates chunks without exception; the Crystal maze blocks lie on Y 24-28 in a generated crystal chunk; each portal ant, the termite and the butterfly teleports a player into its dimension and back to the Overworld under the original conditions (termite refuses a player with armor); butterfly, moth, mosquito and firefly spawn and tick 100 ticks; all earlier tests still pass.",
+  "reviewClasses": ["ChunkProviderOreSpawn", "ChunkProviderOreSpawn2", "ChunkProviderOreSpawn3", "ChunkProviderOreSpawn5", "ChunkProviderOreSpawn6", "ChunkOreGenerator", "CrystalMaze", "OreSpawnTeleporter", "EntityAnt", "Termite", "EntityButterfly", "EntityLunaMoth", "AntBlock", "WorldProviderOreSpawn6"]
+}

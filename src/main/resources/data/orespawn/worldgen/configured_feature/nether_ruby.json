@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:oreruby"
+    },
+    "size": 2,
+    "target": "netherrack"
+  }
+}

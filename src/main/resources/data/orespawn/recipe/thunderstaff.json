@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DR ",
+    "RR ",
+    "  R"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "orespawn:ruby"
+    }
+  },
+  "result": {
+    "id": "orespawn:thunderstaff"
+  }
+}

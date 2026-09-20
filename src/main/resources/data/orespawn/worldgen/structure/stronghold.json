@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stronghold",
+  "biomes": [
+    "orespawn:mining",
+    "orespawn:villages"
+  ],
+  "spawn_overrides": {},
+  "step": "surface_structures",
+  "terrain_adaptation": "bury"
+}

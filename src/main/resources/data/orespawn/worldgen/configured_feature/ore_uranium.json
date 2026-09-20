@@ -1,0 +1,10 @@
+{
+  "type": "orespawn:legacy_minable",
+  "config": {
+    "state": {
+      "Name": "orespawn:oreuranium"
+    },
+    "size_stat": "uranium",
+    "target": "stone"
+  }
+}

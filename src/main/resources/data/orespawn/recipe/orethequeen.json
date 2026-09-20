@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    },
+    {
+      "item": "orespawn:orethequeenpart"
+    }
+  ],
+  "result": {
+    "id": "orespawn:orethequeen"
+  }
+}

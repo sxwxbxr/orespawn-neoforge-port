@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "orespawn:bbhandle"
+    },
+    {
+      "item": "orespawn:bbguard"
+    },
+    {
+      "item": "orespawn:bbblade"
+    }
+  ],
+  "result": {
+    "id": "orespawn:berthasmall"
+  }
+}
